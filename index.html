@@ -6,15 +6,15 @@
     <title>Hana GHORBEL - Data Engineer</title>
     <style>
         :root {
-            --gradient-primary: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
-            --color-primary: #545279;
-            --color-secondary: #4a6ea8;
-            --color-background: #656f79;
+            --gradient-primary: linear-gradient(135deg, #FFC0CB 0%, #FFB6C1 100%);
+            --color-primary: #DB7093;
+            --color-secondary: #FFB6C1;
+            --color-background: #FFF0F5;
             --color-card: #ffffff;
-            --color-text: #1e293b;
-            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
-            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
-            --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+            --color-text: #4A4A4A;
+            --shadow-sm: 0 1px 3px rgba(219,112,147,0.1);
+            --shadow-md: 0 4px 6px rgba(219,112,147,0.1);
+            --shadow-lg: 0 10px 15px rgba(219,112,147,0.1);
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
@@ -114,7 +114,44 @@
             background: var(--gradient-primary);
             color: white;
         }
+        .skill-tag {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(219, 112, 147, 0.1);
+            color: var(--color-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            margin: 0.3rem;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        .skill-tag:hover {
+            background: var(--gradient-primary);
+            color: white;
+            transform: scale(1.05);
+        }
+        .timeline::before {
+            background: var(--gradient-primary);
+        }
 
+        .timeline-item::before {
+            background: var(--gradient-primary);
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --color-background: #FFF0F5;
+                --color-card: #ffffff;
+                --color-text: #4A4A4A;
+            }
+
+            .nav {
+                background: rgba(255, 255, 255, 0.9);
+            }
+
+            .skill-tag {
+                background: rgba(219, 112, 147, 0.2);
+            }
+        }
         .container {
             max-width: 1200px;
             margin: -4rem auto 2rem;
