@@ -315,6 +315,44 @@
                 background: rgba(79, 70, 229, 0.2);
             }
         }
+        .project-card {
+            background: var(--color-card);
+            border-radius: 1rem;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+        }
+
+        .project-links {
+            margin-top: 1rem;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            background: var(--gradient-primary);
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .project-link:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .project-tech {
+            margin-top: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
     </style>
 </head>
 <body>
@@ -467,6 +505,78 @@
                 <p class="period">2016</p>
             </div>
         </section>
+      <section id="projects" class="section">
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="project-card">
+                    <h3>Assistant IA pour l'Analyse de Données</h3>
+                    <p class="period">2023 - En cours</p>
+                    <p>Application web permettant d'analyser des données et de générer des visualisations à l'aide de l'IA.</p>
+                    <ul>
+                        <li>Intégration de modèles de langage pour l'analyse conversationnelle</li>
+                        <li>Génération automatique de visualisations de données</li>
+                        <li>Interface utilisateur intuitive pour l'upload et l'analyse de données</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">FastAPI</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">LangChain</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">Github</a>
+                        <a href="#" class="project-link">Démo</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="project-card">
+                    <h3>Système de Recommandation de Films</h3>
+                    <p class="period">2023</p>
+                    <p>Développement d'un système de recommandation de films basé sur l'apprentissage automatique.</p>
+                    <ul>
+                        <li>Algorithmes de filtrage collaboratif</li>
+                        <li>API REST pour l'intégration avec des applications externes</li>
+                        <li>Dashboard de visualisation des recommandations</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Scikit-learn</span>
+                        <span class="skill-tag">Flask</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">Github</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="project-card">
+                    <h3>Dashboard de Monitoring IoT</h3>
+                    <p class="period">2022</p>
+                    <p>Création d'un dashboard pour le monitoring en temps réel de capteurs IoT.</p>
+                    <ul>
+                        <li>Collecte et traitement de données en temps réel</li>
+                        <li>Visualisations interactives avec D3.js</li>
+                        <li>Système d'alertes automatiques</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">D3.js</span>
+                        <span class="skill-tag">MQTT</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">Github</a>
+                        <a href="#" class="project-link">Rapport</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     </main>
 
     <script>
