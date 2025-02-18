@@ -37,6 +37,17 @@
             padding: 6rem 2rem 8rem;
             position: relative;
             overflow: hidden;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .header p {
+            font-size: 1.5rem;
+            opacity: 0.9;
         }
 
         .header::after {
@@ -139,9 +150,12 @@
         }
         @media (prefers-color-scheme: dark) {
             :root {
-                --color-background: #FFF0F5;
-                --color-card: #ffffff;
-                --color-text: #4A4A4A;
+                --color-background: #1e1e2e;
+                --color-card: #2d2d3f;
+                --color-text: #e2e8f0;
+                --shadow-sm: 0 1px 3px rgba(219,112,147,0.2);
+                --shadow-md: 0 4px 6px rgba(219,112,147,0.2);
+                --shadow-lg: 0 10px 15px rgba(219,112,147,0.2);
             }
 
             .nav {
@@ -353,6 +367,47 @@
             flex-wrap: wrap;
             gap: 0.5rem;
         }
+       .menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 10;
+        } 
+       .menu-toggle span {
+            width: 100%;
+            height: 3px;
+            background-color: var(--color-primary);
+            border-radius: 10px;
+            transition: var(--transition);
+        }
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: flex;
+            }
+    
+            .nav-links {
+                position: fixed;
+                top: 4rem;
+                left: 0;
+                right: 0;
+                background: var(--color-card);
+                padding: 1rem;
+                flex-direction: column;
+                gap: 0.5rem;
+                box-shadow: var(--shadow-md);
+                display: none;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+        }
     </style>
 </head>
 <body>
@@ -362,6 +417,11 @@
                 <img src="logo.png" alt="HG Logo" width="100" height="100">
                 <span class="logo-text"></span>
             </div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <div class="nav-links">
                 <button class="nav-link active" data-section="about">À propos</button>
                 <button class="nav-link" data-section="experience">Expérience</button>
