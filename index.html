@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hana GHORBEL - Data Engineer</title>
+    <meta name="description" content="Hana GHORBEL - Data Engineer & Mathematician | Portfolio professionnel">
+    <title>Hana GHORBEL - Data Engineer & Mathematician</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <style>
         :root {
             --color-primary: #FF69B4;
@@ -99,6 +102,104 @@
             margin-bottom: 2rem;
             color: #888;
         }
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        .theme-toggle {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            z-index: 1000;
+            padding: 10px;
+            border-radius: 50%;
+            background: var(--color-card);
+            border: 1px solid var(--color-primary);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .social-links {
+            position: fixed;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            z-index: 1000;
+        }
+
+        .social-link {
+            color: var(--color-text);
+            font-size: 1.5rem;
+            transition: var(--transition);
+        }
+        .social-link:hover {
+            color: var(--color-primary);
+            transform: scale(1.2);
+        }
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--color-background);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+        }
+        .project-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1rem;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
+            opacity: 0;
+            transition: var(--transition);
+        }
+        .project-card:hover::before {
+            opacity: 0.1;
+        }
+
+        
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: var(--gradient-primary);
+            z-index: 1001;
+            transition: width 0.2s ease-out;
+        }
+        @media (max-width: 768px) {
+            .social-links {
+                position: static;
+                flex-direction: row;
+                justify-content: center;
+                padding: 1rem 0;
+            }
+
+            .theme-toggle {
+                bottom: 60px;
+            }
+        }
+        
+        
+
+        
+        
+
+        
         .main-container {
             margin-top: 0;
             position: relative;
@@ -424,6 +525,26 @@
     </style>
 </head>
 <body>
+    <div class="loader">
+        <div class="loader-content">
+            <img src="logo.png" alt="Loading..." width="100">
+        </div>
+    </div>
+    <div class="progress-bar"></div>
+    <button class="theme-toggle" aria-label="Toggle theme">
+        <i class="fas fa-moon"></i>
+    </button>
+    <div class="social-links">
+        <a href="https://github.com/haghob" class="social-link" target="_blank">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/hana-ghorbel-9200391a4/" class="social-link" target="_blank">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="mailto:hanaghorbel@outlook.com" class="social-link">
+            <i class="fas fa-envelope"></i>
+        </a>
+    </div>
     <nav class="nav">
         <div class="nav-container">
             <!--a href="#" class="nav-logo">
@@ -902,8 +1023,12 @@
     </section>
     
     </main>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
         document.addEventListener('DOMContentLoaded', function() {
             const navLinks = document.querySelectorAll('.nav-link');
             const sections = document.querySelectorAll('.section');
@@ -926,7 +1051,25 @@
                     });
                 }
             }
+        window.addEventListener('load', () => {
+            document.querySelector('.loader').style.display = 'none';
+        });
 
+        const themeToggle = document.querySelector('.theme-toggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('light-theme');
+            const icon = themeToggle.querySelector('i');
+            icon.classList.toggle('fa-moon');
+            icon.classList.toggle('fa-sun');
+        });
+
+        // Barre de progression
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+            document.querySelector('.progress-bar').style.width = scrollPercent + '%';
+        });
             navLinks.forEach(link => {
                 link.addEventListener('click', (e) => {
                     e.preventDefault();
