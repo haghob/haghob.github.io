@@ -525,6 +525,32 @@
                 align-items: center;
             }
         }
+        project-links {
+            margin-top: 1.5rem;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: rgba(255, 105, 180, 0.1);
+            border-radius: 0.5rem;
+            color: var(--color-text);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .project-link:hover {
+            background: var(--gradient-primary);
+            transform: translateY(-2px);
+        }
+
+        .project-link i {
+            font-size: 1.2rem;
+        }
             
     </style>
 </head>
@@ -827,8 +853,10 @@
                         
                     </div>
                     <div class="project-links">
-                        <a href="#" class="project-link">Github</a>
-                        <a href="#" class="project-link">Démo</a>
+                        <a href="https://github.com/haghob/AgriFLow" class="project-link">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
                     </div>
                 </div>
             </div>
