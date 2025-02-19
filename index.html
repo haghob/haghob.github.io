@@ -845,7 +845,7 @@
                 <div class="timeline-item">
                     <div class="card">
                         <h3>AgriFlow</h3>
-                        <p class="period"> January 2025 – Present</p>
+                        <!---p class="period"> January 2025 – Present</p>
                         <p>An intelligent agricultural analysis and prediction platform designed for the Sfax region, Tunisia, integrating advanced data engineering and machine learning solutions.</p>
                         <ul>
                             <li>Advanced predictive modeling for crop yields (olives, wheat, vegetables)</li>
@@ -854,8 +854,8 @@
                             <li>Interactive data visualization dashboard for stakeholder insights</li>
                             <li>Machine learning models for agricultural decision support</li>
                             <li>IoT sensor integration for automated data collection</li>
-                        </ul>
-                    <div class="project-tech">
+                    </ul--->
+                    <!--div class="project-tech">
                         <span class="skill-tag">Python</span>
                         <span class="skill-tag">FastAPI</span>
                         <span class="skill-tag">SQLite</span>
@@ -863,14 +863,14 @@
                         <span class="skill-tag">MQTT</span>
                         <span class="skill-tag">Prometheus</span>
                         <span class="skill-tag">Grafana</span>    
-                    </div>
+                    </div-->
                     <div class="project-links">
-                        <a href="https://github.com/haghob/AgriFLow" class="project-link">
+                        <!--a href="https://github.com/haghob/AgriFLow" class="project-link">
                             <i class="fab fa-github"></i>
                             GitHub
-                        </a>
+                    </a-->
                         <button class="project-link view-details" data-project="agriflow">
-                            <i class="fas fa-external-link-alt"></i> Voir plus
+                            <i class="fas fa-external-link-alt"></i> See more
                         </button>
                     </div>
                 </div>
@@ -1160,11 +1160,11 @@
                             <h3>Description</h3>
                             <p>${project.description}</p>
                 
-                            <h3>Caractéristiques principales</h3>
+                            <h3>Main features</h3>
                             <ul>
                                 ${project.features.map(feature => `<li>${feature}</li>`).join('')}
                             </ul>
-                            <h3>Technologies utilisées</h3>
+                            <h3>Technologies used</h3>
                             <div class="project-tech">
                                 ${project.technologies.map(tech => `<span class="skill-tag">${tech}</span>`).join('')}
                             </div>
