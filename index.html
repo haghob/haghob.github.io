@@ -798,42 +798,34 @@
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="card">
-                        <h3><a href="#" class="project-title" data-project="agriflow">AgriFlow</a></h3>
+                        <h3>AgriFlow</h3>
                         <p class="period"> January 2025 – Present</p>
-                        <p>Click on the project name to see details</p>
+                        <p>An intelligent agricultural analysis and prediction platform designed for the Sfax region, Tunisia, integrating advanced data engineering and machine learning solutions.</p>
+                        <ul>
+                            <li>Advanced predictive modeling for crop yields (olives, wheat, vegetables)</li>
+                            <li>Real-time weather data analysis and processing</li>
+                            <li>Comprehensive soil quality monitoring systems</li>
+                            <li>Interactive data visualization dashboard for stakeholder insights</li>
+                            <li>Machine learning models for agricultural decision support</li>
+                            <li>IoT sensor integration for automated data collection</li>
+                        </ul>
+                    <div class="project-tech">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">FastAPI</span>
+                        <span class="skill-tag">SQLite</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">MQTT</span>
+                        <span class="skill-tag">Prometheus</span>
+                        <span class="skill-tag">Grafana</span>    
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/haghob/AgriFLow" class="project-link">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
                     </div>
                 </div>
             </div>
-            </section>
-            <section id="agriflow-details" class="project-details hidden">
-                <h2>AgriFlow - Project Details</h2>
-                <p>An intelligent agricultural analysis and prediction platform designed for the Sfax region, Tunisia, integrating advanced data engineering and machine learning solutions.</p>
-                <ul>
-                    <li>Advanced predictive modeling for crop yields (olives, wheat, vegetables)</li>
-                    <li>Real-time weather data analysis and processing</li>
-                    <li>Comprehensive soil quality monitoring systems</li>
-                    <li>Interactive data visualization dashboard for stakeholder insights</li>
-                    <li>Machine learning models for agricultural decision support</li>
-                    <li>IoT sensor integration for automated data collection</li>
-                </ul>
-                <div class="project-tech">
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">FastAPI</span>
-                    <span class="skill-tag">SQLite</span>
-                    <span class="skill-tag">Docker</span>
-                    <span class="skill-tag">MQTT</span>
-                    <span class="skill-tag">Prometheus</span>
-                    <span class="skill-tag">Grafana</span>    
-                </div>
-                <div class="project-links">
-                    <a href="https://github.com/haghob/AgriFLow" class="project-link">
-                        <i class="fab fa-github"></i>
-                        GitHub
-                    </a>
-                </div>
-                <button class="close-project">Back to Projects</button>
-                
-              
             <div class="timeline-item">
                 <div class="card">
                     <h3>HR Agence</h3>
@@ -1084,29 +1076,6 @@
             const sections = document.querySelectorAll('.section');
             const menuToggle = document.querySelector('.menu-toggle');
             const navLinksContainer = document.querySelector('.nav-links');
-            const projectTitles = document.querySelectorAll('.project-title');
-            const projectDetails = document.querySelectorAll('.project-details');
-            const closeButtons = document.querySelectorAll('.close-project');
-            projectTitles.forEach(title => {
-                title.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const projectId = this.dataset.project;
-                    document.getElementById(`${projectId}-details`).classList.remove('hidden');
-
-                    // Cacher la section principale des projets
-                    document.getElementById('projects').classList.add('hidden');
-                });
-            });
-            closeButtons.forEach(button => {
-                button.addEventListener('click', function () {
-                    // Cacher les détails du projet
-                    this.parentElement.classList.add('hidden');
-
-                    // Réafficher la section principale des projets
-                    document.getElementById('projects').classList.remove('hidden');
-                });
-            });
-            
             function activateSection(sectionId) {
                 sections.forEach(section => section.classList.remove('active'));
                 navLinks.forEach(link => link.classList.remove('active'));
