@@ -540,9 +540,6 @@
         .project-link i {
             font-size: 1.2rem;
         }
-        .hidden {
-            display: none;
-        }
             
     </style>
 </head>
@@ -801,17 +798,9 @@
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="card">
-                        <!--h3>AgriFlow</h3-->
-                        <h3><a href="#" class="project-title" data-project="agriflow">AgriFlow</a></h3>
+                        <h3>AgriFlow</h3>
                         <p class="period"> January 2025 – Present</p>
-                        <p>Click on the project name to see details</p>
-                    </div>
-                </div>
-            </div>
-            </section>
-            <section id="agriflow-details" class="project-details hidden">
-                <h2>AgriFlow - Project Details</h2>
-                <p>An intelligent agricultural analysis and prediction platform designed for the Sfax region, Tunisia, integrating advanced data engineering and machine learning solutions.</p>
+                        <p>An intelligent agricultural analysis and prediction platform designed for the Sfax region, Tunisia, integrating advanced data engineering and machine learning solutions.</p>
                         <ul>
                             <li>Advanced predictive modeling for crop yields (olives, wheat, vegetables)</li>
                             <li>Real-time weather data analysis and processing</li>
@@ -820,9 +809,6 @@
                             <li>Machine learning models for agricultural decision support</li>
                             <li>IoT sensor integration for automated data collection</li>
                         </ul>
-                        <button class="close-project">Back to Projects</button>
-                </section>
-                
                     <div class="project-tech">
                         <span class="skill-tag">Python</span>
                         <span class="skill-tag">FastAPI</span>
@@ -838,8 +824,8 @@
                             GitHub
                         </a>
                     </div>
-                <!--/div>
-    </div-->
+                </div>
+            </div>
             <div class="timeline-item">
                 <div class="card">
                     <h3>HR Agence</h3>
@@ -1086,9 +1072,6 @@
             once: true
         });
         document.addEventListener('DOMContentLoaded', function() {
-            const projectLinks = document.querySelectorAll(".project-title");
-            const projectSections = document.querySelectorAll(".project-details");
-            const closeButtons = document.querySelectorAll(".close-project");
             const navLinks = document.querySelectorAll('.nav-link');
             const sections = document.querySelectorAll('.section');
             const menuToggle = document.querySelector('.menu-toggle');
@@ -1167,21 +1150,6 @@
             }, observerOptions);
 
             sections.forEach(section => observer.observe(section));
-        });
-        projectLinks.forEach(link => {
-            link.addEventListener("click", function (e) {
-                e.preventDefault();
-                const projectId = this.dataset.project + "-details";
-
-                projectSections.forEach(section => section.classList.add("hidden"));
-                document.getElementById(projectId).classList.remove("hidden");
-            });
-        });
-
-        closeButtons.forEach(button => {
-            button.addEventListener("click", function () {
-                projectSections.forEach(section => section.classList.add("hidden"));
-            });
         });
     </script>
 </body>
