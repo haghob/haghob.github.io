@@ -627,6 +627,22 @@
             transform: rotate(180deg);
         }
 
+        .experience-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .experience-list li {
+            padding-left: 1.5em;
+            margin-bottom: 0.5em;
+        }
+
+        .experience-list li::before {
+            content: "•"; 
+            color: var(--pink); 
+            padding-right: 0.5em;
+        }
+
 
         
             
@@ -717,7 +733,7 @@
                             </button>
                         </div>
                         <div class="card-content">
-                            <ul>
+                            <ul class="experience-list">
                                 <li>Development and deployment of interactive dashboards for strategic monitoring of key data: absenteeism tracking for the HR department, activity tracking for lab departments, 
                                     and monitoring of protection measures for workers on construction sites, enabling better decision-making and optimized resource management (Power BI)</li>
                                 <li>Implementation of a data virtualization solution to consolidate heterogeneous sources and simplify queries (Denodo, SQL)</li>
@@ -742,7 +758,7 @@
                             </button>
                         </div>
                         <div class="card-content">
-                            <ul>
+                            <ul class="experience-list">
                                 <li>Evaluation and comparison of AI and Big Data tools: performance analysis of various analysis and machine learning tools in an industrial context (Python, Pandas, Scikit-learn)</li>
                                 <li>Automation of information gathering for client projects: development of web scraping scripts to extract data from web pages using Optical Character Recognition (OCR) (Python, Tesseract, Selenium)</li>
                                 <li>Advanced textual data analysis with NLP (Natural Language Processing): preparation, cleaning, and modeling of textual data for classification and information extraction tasks, particularly using the BERT model (Python, Hugging Face, TensorFlow)</li>
@@ -764,7 +780,7 @@
                             </button>
                         </div>
                         <div class="card-content">
-                            <ul>
+                            <ul class="experience-list">
                                 <li>Development of a WinDev application for planning work orders (OF) linked to the company’s internal ERP</li>
                                 <li>Continuous collaboration with users to validate the specifications (functionalities, design, processes)</li>
                             </ul>
@@ -785,7 +801,7 @@
                         <div class="card-content">
                         
                                
-                        <ul>
+                        <ul class="experience-list">
                             <li>Taught mathematics to students, focusing on delivering clear explanations and fostering understanding in various mathematical concepts. Developed lesson plans, conducted assessments, and provided personalized support to ensure student success.</li>
                         </ul>
                     </div>
