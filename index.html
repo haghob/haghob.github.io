@@ -12,7 +12,7 @@
             --color-primary: #FF69B4;
             --color-secondary: #FFB6C1;
             --color-accent: #4A90E2;
-            --color-background: #1a1a1a;
+            /*--color-background: #1a1a1a;*/
             --color-card: #252525;
             --color-text: #ffffff;
             --gradient-primary: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
@@ -717,6 +717,14 @@
     <button class="theme-toggle" aria-label="Toggle theme">
         <i class="fas fa-moon"></i>
     </button>
+    <button class="theme-switch" aria-label="Toggle theme">
+        <i class="moon">🌙</i>
+        <i class="sun">☀️</i>
+    </button>
+    
+    
+    
+    
     <nav class="nav">
         <div class="nav-container">
             <button class="menu-toggle" aria-label="Toggle menu">
@@ -1152,6 +1160,39 @@
             const themeToggle = document.querySelector('.theme-switch');
             const cards = document.querySelectorAll('.experience-card');
             const currentTheme = localStorage.getItem('theme');
+            
+            if (currentTheme) {
+                document.body.classList.add(currentTheme);
+            }
+            
+
+
+            themeToggle.addEventListener('click', () => {
+                // Toggle le thème
+                document.body.classList.toggle('light-theme');
+        
+                // Sauvegarder la préférence
+                if (document.body.classList.contains('light-theme')) {
+                    localStorage.setItem('theme', 'light-theme');
+                } else {
+                    localStorage.removeItem('theme');
+                }
+             const icon = themeToggle.querySelector('i');
+             icon.classList.toggle('fa-moon');
+             icon.classList.toggle('fa-sun');
+            });
+            
+            
+        //themeToggle.addEventListener('click', () => {
+          //  document.body.classList.toggle('light-theme');
+           // const icon = themeToggle.querySelector('i');
+            //icon.classList.toggle('fa-moon');
+           // icon.classList.toggle('fa-sun');
+        //});
+
+
+
+            
             if (currentTheme) {
                 document.body.classList.add(currentTheme);
             }
@@ -1409,28 +1450,7 @@
         });
 
         
-         themeToggle.addEventListener('click', () => {
-                // Toggle le thème
-                document.body.classList.toggle('light-theme');
-        
-                // Sauvegarder la préférence
-                if (document.body.classList.contains('light-theme')) {
-                    localStorage.setItem('theme', 'light-theme');
-                } else {
-                    localStorage.removeItem('theme');
-                }
-             const icon = themeToggle.querySelector('i');
-             icon.classList.toggle('fa-moon');
-             icon.classList.toggle('fa-sun');
-            });
-            
-            
-        //themeToggle.addEventListener('click', () => {
-          //  document.body.classList.toggle('light-theme');
-           // const icon = themeToggle.querySelector('i');
-            //icon.classList.toggle('fa-moon');
-           // icon.classList.toggle('fa-sun');
-        //});
+         
         
        
             
@@ -1490,10 +1510,7 @@
             sections.forEach(section => observer.observe(section));
         });
     </script>
-    <button class="theme-switch" aria-label="Toggle theme">
-        <i class="moon">🌙</i>
-        <i class="sun">☀️</i>
-    </button>
+
     <div id="project-modal" class="project-modal">
         <div class="project-modal-content">
             <button class="close-modal">
