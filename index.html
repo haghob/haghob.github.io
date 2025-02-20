@@ -796,7 +796,7 @@
     </header>
     <main class="main-container">
         <section id="about" class="section">
-             <h2 class="section-title">About Me</h2>
+             <h2 class="section-title">About me</h2>
              <div class="about-container">
                  <div class="about-image">
                      <img src="image.png" alt="Hana Ghorbel">
@@ -1047,6 +1047,18 @@
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="card">
+                        <h3>haghob Website</h3>
+                        
+                    <div class="project-links">
+                        
+                        <button class="project-link view-details" data-project="haghob">
+                            <i class="fas fa-external-link-alt"></i> See more
+                        </button>
+                    </div>
+                </div>
+            </div>
+                <div class="timeline-item">
+                    <div class="card">
                         <h3>AgriFlow</h3>
                         
                     <div class="project-links">
@@ -1233,6 +1245,45 @@
             });
 
             const projectsData = {
+                haghob: {
+                    title: "haghob Website",
+                    period: "February 2024",
+                    description: "Created a professional portfolio website to showcase my projects and technical journey. Built with modern web technologies and hosted on GitHub Pages, this project demonstrates both my technical skills and my commitment to professional presentation. The portfolio itself became a learning journey and a testament to my dedication to continuous improvement.",
+                    features: [
+                        "Implemented responsive design for optimal viewing across all devices",
+                        "Created dynamic project showcases with detailed documentation",
+                        "Developed custom styling and animations for enhanced user experience",
+                        "Integrated GitHub workflow for continuous deployment",
+                        "Built with accessibility and performance in mind"
+                       
+                    ],
+                    technicalAchievements: [
+                        "Designed and implemented a clean, modern web interface",
+                        "Set up automated deployment through GitHub Actions",
+                        "Optimized website performance and loading times",
+                        "Implemented responsive design principles",
+                        "Created interactive project documentation sections"
+                    ],
+                    results: [
+                        "Successfully created a professional showcase of technical projects and skills",
+                    
+                        "This portfolio was crafted with great enthusiasm and dedication, reflecting my passion for clean code and professional development. Each section was carefully designed to showcase not just my technical skills, but also my journey as a developer."
+                    ],
+                    challenges: [
+                        "Creating an engaging yet professional design",
+                        "Implementing responsive layouts for all screen sizes",
+                        "Organizing projects in a clear and accessible manner",
+                        "Optimizing site performance and load times"
+                    ],
+                    documentation: [
+                        "Detailed development process documentation",
+                        "Design decisions and iterations",
+                        "Performance optimization steps",
+                        "Content organization strategy"
+                    ],
+                    technologies: ["JavaScript", "CSS3", "HTML5","GitHub Actions"],
+                    github: "https://github.com/haghob/haghob.github.io"
+                },
                 agriflow: {
                     title: "AgriFlow",
                     period: "January 2025 - Present",
