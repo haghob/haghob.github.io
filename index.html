@@ -22,7 +22,33 @@
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             
         }
-
+        /* here */
+        .social-link i,
+        .social-link svg {
+            color: #ffffff !important;
+            fill: #ffffff !important; /* Pour les SVG */
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        /* Mode clair */
+        [data-theme="light"] .social-link i,
+        [data-theme="light"] .social-link svg {
+            color: #1a1a1a !important;
+            fill: #1a1a1a !important; /* Pour les SVG */
+        }
+        /* Hover pour les deux thèmes */
+        .social-link:hover i,
+        .social-link:hover svg {
+            color: var(--color-primary) !important;
+            fill: var(--color-primary) !important;
+            transform: scale(1.2);
+        }
+        
+        
+        
+        /* here) */
+        
+        
         [data-theme="light"] { 
             --color-background: #ffffff;
             --color-card: #f5f5f5;
