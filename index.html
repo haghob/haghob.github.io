@@ -33,6 +33,16 @@
             --color-secondary: #FFB6C1;
             --color-accent: #4A90E2;
         }
+        [data-theme="light"] .nav-link {
+            /* Fond plus foncé pour le thème clair */
+            background: rgba(255, 105, 180, 0.15);
+            color: var(--color-text);
+        }
+        [data-theme="light"] .nav-link:hover,
+        [data-theme="light"] .nav-link.active {
+            color: white; /* Assure la lisibilité sur le gradient */
+        }
+        
         
         
         * {
@@ -226,7 +236,8 @@
             left: 0;
             right: 0;
             height: 70px;
-            background: rgba(26, 26, 26, 0.95);
+            background: var(--color-card);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(10px);
             z-index: 1000;
         }
@@ -246,23 +257,27 @@
         .nav-link.active {
             background: var(--gradient-primary);
             color: var(--color-background);
+            box-shadow: 0 4px 10px rgba(255, 105, 180, 0.3);
         }
         .nav-link {
             cursor: pointer;
             border: none;
-            background: none;
+            background: rgba(255, 105, 180, 0.1);
+            border-radius: 6px;
             color: var(--color-text);
             text-decoration: none;
             font-weight: 500;
-            padding: 0.5rem 1rem;
+            padding: 0.6rem 1.2rem;
             border-radius: 4px;
-            transition: var(--transition);
+            transition: all 0.3s ease;
         }
 
         .nav-link:hover {
             background: var(--gradient-primary);
             color: var(--color-background);
+            transform: translateY(-2px);
         }
+        
         .section {
             display: none;
             opacity: 0;
