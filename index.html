@@ -20,6 +20,17 @@
             --shadow-md: 0 4px 6px rgba(255, 105, 180, 0.15);
             --shadow-lg: 0 10px 15px rgba(255, 105, 180, 0.2);
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            /* Theme Light */
+            --background-color-light: #ffffff;
+            --text-color-light: #333333;
+            --card-bg-light: #f5f5f5;
+            --border-color-light: #dddddd;
+    
+            /* Theme Dark */
+            --background-color-dark: #1a1a1a;
+            --text-color-dark: #ffffff;
+            --card-bg-dark: #2d2d2d;
+            --border-color-dark: #404040;
             
         }
         
@@ -31,12 +42,22 @@
         }
 
         body {
-            background-color: var(--color-background);
-            color: var(--color-text);
+            background-color: var(--background-color-dark);
+            color: var(--text-color-dark);
+            transition: all 0.3s ease;
             line-height: 1.6;
             position: relative;
             overflow-x: hidden;
         }
+        
+        /* Classes pour le changement de thème */
+        body.light-theme {
+            background-color: var(--background-color-light);
+            color: var(--text-color-light);
+        }
+        
+        
+        
         body::before {
             content: '';
             position: fixed;
@@ -274,13 +295,19 @@
             -webkit-text-fill-color: transparent;
         }
         .card {
-            background: var(--color-card);
+            background-color: var(--card-bg-dark);
             border-radius: 1rem;
             padding: 2rem;
             margin-bottom: 2rem;
             transition: var(--transition);
-            border: 1px solid rgba(255, 105, 180, 0.1);
+            border: 1px solid var(--border-color-dark);
         }
+        
+        body.light-theme .card {
+            background-color: var(--card-bg-light);
+            border: 1px solid var(--border-color-light);
+        }
+        
 
         .card:hover {
             transform: translateY(-5px);
@@ -641,6 +668,38 @@
             content: "•"; 
             color: var(--pink); 
             padding-right: 0.5em;
+        }
+
+        .theme-switch {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--pink);
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .theme-switch .sun {
+            display: none;
+        }
+
+        .theme-switch .moon {
+            display: block;
+        }
+
+        body.light-theme .theme-switch .sun {
+            display: block;
+        }
+
+        body.light-theme .theme-switch .moon {
+            display: none;
         }
 
 
@@ -1090,7 +1149,17 @@
             const navLinksContainer = document.querySelector('.nav-links');
             const projectModal = document.getElementById('project-modal');
             const projectDetails = document.querySelector('.project-details');
+            const themeToggle = document.querySelector('.theme-switch');
             const cards = document.querySelectorAll('.experience-card');
+            const currentTheme = localStorage.getItem('theme');
+            if (currentTheme) {
+                document.body.classList.add(currentTheme);
+            }
+
+            
+
+            
+            
             
             cards.forEach(card => {
                 const header = card.querySelector('.card-header');
@@ -1339,14 +1408,36 @@
             document.querySelector('.loader').style.display = 'none';
         });
 
-        const themeToggle = document.querySelector('.theme-toggle');
-        themeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('light-theme');
-            const icon = themeToggle.querySelector('i');
-            icon.classList.toggle('fa-moon');
-            icon.classList.toggle('fa-sun');
-        });
         
+         themeToggle.addEventListener('click', () => {
+                // Toggle le thème
+                document.body.classList.toggle('light-theme');
+        
+                // Sauvegarder la préférence
+                if (document.body.classList.contains('light-theme')) {
+                    localStorage.setItem('theme', 'light-theme');
+                } else {
+                    localStorage.removeItem('theme');
+                }
+            });
+            
+            
+        //themeToggle.addEventListener('click', () => {
+          //  document.body.classList.toggle('light-theme');
+           // const icon = themeToggle.querySelector('i');
+            //icon.classList.toggle('fa-moon');
+           // icon.classList.toggle('fa-sun');
+        //});
+        
+       
+            
+            
+            
+            
+            
+        
+            
+            
         window.addEventListener('scroll', () => {
             const scrollTop = window.scrollY;
             const docHeight = document.documentElement.scrollHeight - window.innerHeight;
@@ -1396,7 +1487,10 @@
             sections.forEach(section => observer.observe(section));
         });
     </script>
-
+    <button class="theme-switch" aria-label="Toggle theme">
+        <i class="moon">🌙</i>
+        <i class="sun">☀️</i>
+    </button>
     <div id="project-modal" class="project-modal">
         <div class="project-modal-content">
             <button class="close-modal">
