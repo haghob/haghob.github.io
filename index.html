@@ -1328,18 +1328,40 @@
                     period: "April 2021 – May 2021",
                     description: "Developed a comprehensive implementation of Monte Carlo methods for numerical computation and statistical analysis at the Faculty of Sciences of Sfax. The project focused on creating robust simulations for estimating complex mathematical quantities through random sampling and probability distributions. By implementing various Monte Carlo algorithms and analyzing their convergence properties, I demonstrated how these methods can efficiently solve high-dimensional problems in numerical integration, optimization, and system resolution.",
                     features: [
-                        "Implemented random variable simulation algorithms including: inverse transform sampling method for generating random variables, uniform and exponential distribution simulations and validation through statistical testing and visualization. ",
+                        "Implemented random variable simulation algorithms including: inverse transform sampling method for generating random variables, uniform and exponential distribution simulations and validation through statistical testing and visualization.",
                         "Developed convergence analysis tools: error estimation and confidence interval calculations, performance evaluation using mean square error analysis and implementation of the Law of Large Numbers and Central Limit Theorem",
                         "Created interactive visualizations: distribution histograms for result validation, convergence plots for performance analysis and real-time simulation monitoring tools"
-                       
                     ],
-                    
-                    technologies: ["Python","MATLAB","LaTeX"],
+                    technicalAchievements: [
+                        "Built a modular Python framework for Monte Carlo simulations",
+                        "Implemented advanced statistical calculations using NumPy and SciPy",
+                        "Created dynamic data visualizations using Matplotlib",
+                        "Developed comprehensive testing procedures for result validation",
+                        "Documented theoretical foundations and implementation details in LaTeX"
+                    ],
+                    results: [
+                        "Successfully simulated complex probability distributions with verified accuracy",
+                        "Achieved reliable convergence rates matching theoretical expectations",
+                        "Produced clear visualizations demonstrating method effectiveness",
+                        "Generated comprehensive documentation for future reference"
+                    ],
+                    challenges: [
+                        "Implementing efficient random number generation algorithms",
+                        "Ensuring numerical stability in high-dimensional calculations",
+                        "Optimizing simulation performance while maintaining accuracy",
+                        "Validating results against theoretical expectations"
+                    ],
+                    documentation: [
+                        "Full mathematical derivations and proofs",
+                        "Implementation guides and code documentation",
+                        "Performance analysis reports",
+                        "Visual result presentations"
+                    ],
+                    advisor: "Mr. MASMOUDI Afif",
+                    technologies: ["Python", "MATLAB", "LaTeX"],
                     github: "https://github.com/haghob/Monte-Carlo-Methods"
                 }
-
-                
-                };
+            };
             document.querySelectorAll('.view-details').forEach(button => {
                 button.addEventListener('click', (e) => {
                     const projectId = e.currentTarget.dataset.project;
@@ -1350,23 +1372,46 @@
                         <div class="project-content">
                             <h3>Description</h3>
                             <p>${project.description}</p>
-                
-                            <h3>Main features</h3>
+                            <h3>Main Features</h3>
                             <ul>
                                 ${project.features.map(feature => `<li>${feature}</li>`).join('')}
                             </ul>
-                            <h3>Technologies used</h3>
+
+                            <h3>Technical Achievements</h3>
+                            <ul>
+                                ${project.technicalAchievements.map(achievement => `<li>${achievement}</li>`).join('')}
+                            </ul>
+
+                            <h3>Results & Impact</h3>
+                            <ul>
+                                ${project.results.map(result => `<li>${result}</li>`).join('')}
+                            </ul>
+
+                            <h3>Key Challenges Overcome</h3>
+                            <ul>
+                                ${project.challenges.map(challenge => `<li>${challenge}</li>`).join('')}
+                            </ul>
+
+                            <h3>Documentation</h3>
+                            <ul>
+                                ${project.documentation.map(doc => `<li>${doc}</li>`).join('')}
+                            </ul>
+
+                            <h3>Faculty Advisor</h3>
+                            <p>${project.advisor}</p>
+
+                            <h3>Technologies Used</h3>
                             <div class="project-tech">
                                 ${project.technologies.map(tech => `<span class="skill-tag">${tech}</span>`).join('')}
                             </div>
-                
+
                             <div class="project-links">
                                 <a href="${project.github}" class="project-link" target="_blank">
                                     <i class="fab fa-github"></i> GitHub
                                 </a>
                             </div>
                         </div>
-                        `;
+                    `;
                     projectModal.classList.add('active');
                     document.body.style.overflow = 'hidden';
                 });
