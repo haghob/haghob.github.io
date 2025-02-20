@@ -43,12 +43,6 @@
             fill: var(--color-primary) !important;
             transform: scale(1.2);
         }
-        
-        
-        
-        /* here) */
-        
-        
         [data-theme="light"] { 
             --color-background: #ffffff;
             --color-card: #f5f5f5;
@@ -1232,10 +1226,10 @@
                 const header = card.querySelector('.card-header');
         
                 header.addEventListener('click', () => {
-                    // Toggle the current card
+                    
                     card.classList.toggle('expanded');
             
-                    // Optional: Close other cards
+                    
                     cards.forEach(otherCard => {
                         if (otherCard !== card) {
                             otherCard.classList.remove('expanded');
@@ -1404,38 +1398,37 @@
                 PharmaStock: {
                     title: "PharmaStock",
                     period: "July 2024 – September 2024",
-                    description: "A pharmaceutical inventory management application designed to streamline stock tracking and data analysis",
+                    description: "Developed a comprehensive pharmaceutical inventory management system utilizing modern technologies and best practices in software development. The project involved creating a full-stack application with a RESTful API backend, integrating database management, and implementing data analysis capabilities through Power BI.",
                     features: [
-                        "RESTful API development using Spring Boot",
-                        "Database management with SQL Server",
-                        "Containerization with Docker",
-                        "Data visualization and reporting with Power BI"
+                        "Implemented robust inventory management system: real-time stock tracking and monitoring, automated alerts for low stock levels, batch management and expiration date tracking, advanced search and filtering capabilities",
+                        "Developed RESTful API with Spring Boot: secure authentication and authorization, CRUD operations for inventory management, data validation and error handling, documentation using Swagger/OpenAPI",
+                        "Created comprehensive data analysis solution: interactive Power BI dashboards, stock level analytics and predictions, usage pattern visualization, performance metrics reporting"
                        
                     ],
                     technicalAchievements: [
-                        "here",
-                        "here",
-                        "here",
-                        "here",
-                        "here"
+                        "Designed and implemented a scalable Spring Boot application",
+                        "Created an efficient SQL Server database architecture",
+                        "Implemented containerization using Docker",
+                        "Developed automated testing procedures",
+                        "Integrated Power BI for advanced analytics",
+                        "Applied MVC architecture principles"
                     ],
                     results: [
-                        "here",
-                        "here",
-                        "here",
-                        "here"
+                        "Successfully developed a production-ready inventory management system",
+                        "Improved efficiency in stock management processes",
+                        "Enabled data-driven decision making through analytics",
+                        "Created maintainable and scalable codebase",
+                        "Implemented robust security measures"
                     ],
                     challenges: [
-                        "here",
-                        "here",
-                        "here",
-                        "here"
+                        "Implementing complex database relationships",
+                        "Ensuring system security and data protection",
+                        "Optimizing application performance",
+                        "Managing containerized deployments",
+                        "Developing comprehensive test coverage"
                     ],
                     documentation: [
-                        "here",
-                        "here",
-                        "here",
-                        "here"
+                        "Detailed step-by-step project documentation including: system architecture specifications, database schema and relationships, API documentation and usage guides, development and deployment procedures, testing and validation processes and Power BI dashboard documentation"
                     ],
                     technologies: ["Java", "Spring Boot", "SQL Server","Docker","Power BI"],
                     github: "https://github.com/haghob/PharmaStock"
@@ -1740,7 +1733,7 @@
                                 ${project.results.map(result => `<li>${result}</li>`).join('')}
                             </ul>
 
-                            <h3>Key Challenges</h3>
+                            <h3>Key challenges</h3>
                             <ul>
                                 ${project.challenges.map(challenge => `<li>${challenge}</li>`).join('')}
                             </ul>
