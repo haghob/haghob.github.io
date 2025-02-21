@@ -66,7 +66,6 @@
             box-sizing: border-box;
             font-family: 'Segoe UI', system-ui, sans-serif;
         }
-
         body {
             background-color: var(--color-background);
             color: var(--color-text);
@@ -234,7 +233,6 @@
                 justify-content: center;
                 padding: 1rem 0;
             }
-
             .theme-toggle {
                 bottom: 60px;
             }
@@ -262,7 +260,6 @@
             justify-content: space-between;
             align-items: center;
         }
-
         .nav-links {
             display: flex;
             gap: 2rem;
@@ -345,7 +342,6 @@
             color: var(--color-background);
             text-decoration: none;
         }
-
         .timeline {
             position: relative;
             padding-left: 2rem;
@@ -363,7 +359,6 @@
             position: relative;
             margin-bottom: 3rem;
         }
-
         .timeline-item::before {
             content: '';
             position: absolute;
@@ -554,7 +549,6 @@
             background: var(--gradient-primary);
             transform: translateY(-2px);
         }
-
         .project-link i {
             font-size: 1.2rem;
         }
@@ -592,7 +586,6 @@
         .close-modal:hover {
             color: var(--color-primary);
         }
-
         .project-title {
             font-size: 2.5rem;
             color: var(--color-primary);
@@ -603,7 +596,6 @@
             color: #666;
             margin-bottom: 2rem;
         }
-
         .project-content {
             margin-top: 2rem;
             max-width: 800px;
@@ -648,7 +640,6 @@
         .experience-card {
             transition: all 0.3s ease;
         }
-
         .card-header {
             display: flex;
             justify-content: space-between;
@@ -656,7 +647,6 @@
             padding: 1rem;
             cursor: pointer;
         }
-
         .header-content {
             flex-grow: 1;
         }
@@ -667,25 +657,21 @@
             cursor: pointer;
             padding: 0.5rem;
         }
-
         .expand-btn .icon {
             display: inline-block;
             transition: transform 0.3s ease;
         }
-
         .card-content {
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.3s ease-out;
         }
-
         .experience-card.expanded .card-content {
             max-height: 1000px;
         }
         .experience-card.expanded .expand-btn .icon {
             transform: rotate(180deg);
         }
-
         .experience-list {
             list-style: none;
             padding-left: 0;
@@ -699,9 +685,6 @@
             color: var(--pink); 
             padding-right: 0.5em;
         }
-
-
-        
             
     </style>
 </head>
@@ -811,7 +794,6 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="timeline-item">
                     <div class="card experience-card">
                         <div class="card-header">
@@ -865,9 +847,7 @@
                                 <span class="icon">▼</span>
                             </button>
                         </div>
-                        <div class="card-content">
-                        
-                               
+                        <div class="card-content">  
                         <ul class="experience-list">
                             <li>Taught mathematics to students, focusing on delivering clear explanations and fostering understanding in various mathematical concepts. Developed lesson plans, conducted assessments, and provided personalized support to ensure student success.</li>
                         </ul>
@@ -881,69 +861,67 @@
                 <div class="card">
                     <h3>Programming languages</h3>
                     <div>
-                        <a href="https://www.python.org" target="_blank" class="skill-tag">Python</a>
-                        <a href="https://www.w3schools.com/sql/" target="_blank" class="skill-tag">SQL</a>
-                        <a href="https://dotnet.microsoft.com/en-us/languages/csharp" target="_blank" class="skill-tag">C#</a>
-                    
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">C#</span>
                     </div>
                 </div>
                 <div class="card">
                     <h3>Data Engineering & Big Data</h3>
                     <div>
-                        <a href="https://spark.apache.org/" target="_blank" class="skill-tag">Apache Spark</a>
-                        <a href="https://hadoop.apache.org/" target="_blank" class="skill-tag">Hadoop</a>
-                        <a href="https://www.denodo.com/" target="_blank" class="skill-tag">Denodo</a>
-                        <a href="https://min.io/" target="_blank" class="skill-tag">MinIO</a>
-                        <a href="https://www.dataiku.com/" target="_blank" class="skill-tag">Dataiku</a>
+                        <span class="skill-tag">Apache Spark</span>
+                        <span class="skill-tag">Hadoop</span>
+                        <span class="skill-tag">Denodo</span>
+                        <span class="skill-tag">MinIO</span>
+                        <span class="skill-tag">Dataiku</span>
                     </div>   
                 </div>
                 <div class="card">
                     <h3>Machine Learning & AI</h3>
                     <div>
-                        <a href="https://scikit-learn.org/stable/" target="_blank" class="skill-tag">Scikit-learn</a>
-                        <a href="https://www.tensorflow.org/?hl=fr" target="_blank" class="skill-tag">TensorFlow</a>
-                        <a href="https://pytorch.org/" target="_blank" class="skill-tag">PyTorch</a>
-                        <a href="https://huggingface.co/" target="_blank" class="skill-tag">Hugging Face</a>
-                        <a href="https://github.com/tesseract-ocr/tesseract" target="_blank" class="skill-tag">Tesseract OCR</a>
+                        <span class="skill-tag">Scikit-learn</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">Hugging Face</span>
+                        <span class="skill-tag">Tesseract OCR</span>
                     </div>
                 </div>
                 <div class="card">
                     <h3>DevOps</h3>
                     <div>
-                        <a href="https://www.jenkins.io/" target="_blank" class="skill-tag">Jenkins</a>
-                        <a href="https://github.com/features/actions" target="_blank" class="skill-tag">GitHub Actions</a>
-                        <a href="https://www.docker.com/" target="_blank" class="skill-tag">Docker</a>
-                        <a href="https://www.terraform.io/" target="_blank" class="skill-tag">Terraform</a>
-                        <a href="https://docs.ansible.com/" target="_blank" class="skill-tag">Ansible</a>
-                        <a href="https://releases.ubuntu.com/jammy/" target="_blank" class="skill-tag">Ubuntu 22.04</a>
-                        
+                        <span class="skill-tag">Jenkins</span>
+                        <span class="skill-tag">GitHub Actions</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Terraform</span>
+                        <span class="skill-tag">Ansible</span>
+                        <span class="skill-tag">Ubuntu 22.04</span>
                     </div>
                 </div>
                 <div class="card">
-                    <h3>Data Visualization</h3>
+                    <h3>Data visualization</h3>
                     <div>
-                        <a href="https://www.microsoft.com/fr-fr/power-platform/products/power-bi" target="_blank" class="skill-tag">Power BI</a>
+                        <span class="skill-tag">Power BI</span>
                     </div>
                 </div>
                 <div class="card">
                     <h3>RPA/RDA</h3>
                     <div>
-                        <a href="https://www.uipath.com/fr" target="_blank" class="skill-tag">UiPath</a>
+                        <span class="skill-tag">UiPath</span>
                     </div>
                 </div>
                 <div class="card">
                     <h3>Soft skills</h3>
                     <div>
-                        <a href="https://www.atlassian.com/fr/agile" target="_blank" class="skill-tag">Agile/Scrum</a>
-                        <a href="https://document360.com/blog/technical-documentation/" target="_blank" class="skill-tag">Technical documentation</a>
-                        <a href="https://blog-gestion-de-projet.com/gestion-de-projet/project-management-office/#:~:text=Le%20Project%20Management%20Office%20est,les%20comit%C3%A9s%20hebdomadaires%20de%20suivi." target="_blank" class="skill-tag">Project management</a>
+                        <span class="skill-tag">Agile/Scrum</span>
+                        <span class="skill-tag">Technical documentation</span>
+                        <span class="skill-tag">Project management</span>
                     </div>
                 </div>
                 <div class="card">
                     <h3>Game development</h3>
                     <div>
-                        <a href="https://unity.com/fr" target="_blank" class="skill-tag">Unity</a>
-                        <a href="https://www.unrealengine.com/fr" target="_blank" class="skill-tag">Unreal Engine</a>
+                        <span class="skill-tag">Unity</span>
+                        <span class="skill-tag">Unreal Engine</span>
                     </div>
                 </div>
             </div>
@@ -1020,9 +998,7 @@
                 <div class="timeline-item">
                     <div class="card">
                         <h3>AgriFlow</h3>
-                        
                     <div class="project-links">
-                        
                         <button class="project-link view-details" data-project="agriflow">
                             <i class="fas fa-external-link-alt"></i> See more
                         </button>
@@ -1032,10 +1008,7 @@
             <div class="timeline-item">
                 <div class="card">
                     <h3>HR Agence</h3>
-                   
-                    
                     <div class="project-links">
-                        
                         <button class="project-link view-details" data-project="HRagence">
                             <i class="fas fa-external-link-alt"></i> See more
                         </button>
@@ -1045,9 +1018,7 @@
             <div class="timeline-item">
                 <div class="card">
                     <h3>Your Video Finder</h3>
-                    
                     <div class="project-links">
-                        
                         <button class="project-link view-details" data-project="YourVideoFinder">
                             <i class="fas fa-external-link-alt"></i> See more
                         </button>
@@ -1057,9 +1028,7 @@
             <div class="timeline-item">
                 <div class="card">
                     <h3>PharmaStock</h3>
-                    
                     <div class="project-links">
-                        
                         <button class="project-link view-details" data-project="PharmaStock">
                             <i class="fas fa-external-link-alt"></i> See more
                         </button>
@@ -1069,9 +1038,7 @@
             <div class="timeline-item">
                 <div class="card">
                     <h3>StartMatch</h3>
-                    
                     <div class="project-links">
-                        
                         <button class="project-link view-details" data-project="StartMatch">
                             <i class="fas fa-external-link-alt"></i> See more
                         </button>
@@ -1081,9 +1048,7 @@
             <div class="timeline-item">
                 <div class="card">
                     <h3>PathalogIA</h3>
-                    
                     <div class="project-links">
-                        
                         <button class="project-link view-details" data-project="PathalogIA">
                             <i class="fas fa-external-link-alt"></i> See more
                         </button>
@@ -1093,9 +1058,7 @@
             <div class="timeline-item">
                 <div class="card">
                     <h3>The Maze</h3>
-                    
                     <div class="project-links">
-                        
                         <button class="project-link view-details" data-project="TheMaze">
                             <i class="fas fa-external-link-alt"></i> See more
                         </button>
@@ -1105,7 +1068,6 @@
             <div class="timeline-item">
                 <div class="card">
                     <h3>Space Smuggler</h3>
-                    
                     <div class="project-links">
                         <button class="project-link view-details" data-project="SpaceSmuggler">
                             <i class="fas fa-external-link-alt"></i> See more
@@ -1116,9 +1078,7 @@
             <div class="timeline-item">
                 <div class="card">
                     <h3>iRecipe</h3>
-                   
                     <div class="project-links">
-                       
                         <button class="project-link view-details" data-project="iRecipe">
                             <i class="fas fa-external-link-alt"></i> See more
                         </button>
@@ -1128,9 +1088,7 @@
             <div class="timeline-item">
                 <div class="card">
                     <h3>DevOps</h3>
-                    
                     <div class="project-links">
-                        
                         <button class="project-link view-details" data-project="DevOps">
                             <i class="fas fa-external-link-alt"></i> See more
                         </button>
@@ -1140,9 +1098,7 @@
             <div class="timeline-item">
                 <div class="card">
                     <h3>Monte Carlo Methods</h3>
-                    
                     <div class="project-links">
-                        
                         <button class="project-link view-details" data-project="MonteCarloMethods">
                             <i class="fas fa-external-link-alt"></i> See more
                         </button>
@@ -1178,24 +1134,17 @@
                     icon.classList.replace('fa-sun', 'fa-moon');
                 }
             }
-            
             const savedTheme = localStorage.getItem('theme') || 'dark';
             setTheme(savedTheme);
-            
             themeToggle.addEventListener('click', () => {
                 const currentTheme = htmlElement.getAttribute('data-theme');
                 const newTheme = currentTheme === 'light' ? 'dark' : 'light';
                 setTheme(newTheme);
             });
-
             cards.forEach(card => {
                 const header = card.querySelector('.card-header');
-        
-                header.addEventListener('click', () => {
-                    
+                header.addEventListener('click', () => { 
                     card.classList.toggle('expanded');
-            
-                    
                     cards.forEach(otherCard => {
                         if (otherCard !== card) {
                             otherCard.classList.remove('expanded');
@@ -1203,7 +1152,6 @@
                     });
                 });
             });
-
             const projectsData = {
                 haghob: {
                     title: "haghob Website",
@@ -1290,9 +1238,7 @@
                     features: [
                         "Implemented sophisticated profitability analysis tools : median price per square meter calculations across regions, return on investment projections and comparisons and risk assessment based on market volatility",
                         "Developed market segmentation analysis: city classification based on official Open Data France population statistics, regional market performance comparisons and demographic trend impact assessment",
-                        "Created dynamic visualization solutions: interactive price trend analysis dashboards, geographic heat maps for market opportunities and comparative market performance charts"
-    
-                       
+                        "Created dynamic visualization solutions: interactive price trend analysis dashboards, geographic heat maps for market opportunities and comparative market performance charts"   
                     ],
                     technicalAchievements: [
                         "Designed an intuitive Power BI dashboard interface",
@@ -1329,8 +1275,7 @@
                     description: "Team project - AI development role - Led the AI development for a Chrome extension that revolutionizes French scientific video discovery on YouTube. Working in an agile team environment, designed and implemented a tiered AI analysis system utilizing CamemBERT, Google AI, and ChatGPT models to provide intelligent content evaluation across different subscription levels. ",
                     features: [
                         "Developed tiered AI analysis system: Standard version (implemented Camembert for basic French content analysis), Gold version (integrated Google AI for enhanced video content evaluation), Platinum version (leveraged ChatGPT API for advanced content understanding)",
-                        "Created unified AI pipeline: automated content quality assessment, educational value scoring, scientific accuracy verification, user engagement analysis"
-                       
+                        "Created unified AI pipeline: automated content quality assessment, educational value scoring, scientific accuracy verification, user engagement analysis"      
                     ],
                     technicalAchievements: [
                         "Successfully integrated three distinct AI models for different service tiers",
@@ -1371,8 +1316,7 @@
                     features: [
                         "Implemented robust inventory management system: real-time stock tracking and monitoring, automated alerts for low stock levels, batch management and expiration date tracking, advanced search and filtering capabilities",
                         "Developed RESTful API with Spring Boot: secure authentication and authorization, CRUD operations for inventory management, data validation and error handling, documentation using Swagger/OpenAPI",
-                        "Created comprehensive data analysis solution: interactive Power BI dashboards, stock level analytics and predictions, usage pattern visualization, performance metrics reporting"
-                       
+                        "Created comprehensive data analysis solution: interactive Power BI dashboards, stock level analytics and predictions, usage pattern visualization, performance metrics reporting"  
                     ],
                     technicalAchievements: [
                         "Designed and implemented a scalable Spring Boot application",
@@ -1454,9 +1398,7 @@
                     features: [
                         "Advanced image classification system: multi-class cancer type detection, probability distribution analysis, real-time image processing, high-accuracy diagnosis support",
                         "Medical data processing: histological image analysis, four-class classification system automated feature extraction, pattern recognition capabilities",
-                        "Clinical decision support: probability-based insights, treatment recommendation support, result visualization, diagnostic confidence metrics"
-                    
-                       
+                        "Clinical decision support: probability-based insights, treatment recommendation support, result visualization, diagnostic confidence metrics"  
                     ],
                     technicalAchievements: [
                         "Developed CNN architecture for cancer classification",
@@ -1496,9 +1438,7 @@
                     features: [
                         "Created complete 3D maze game environment: dynamic maze generation system, interactive start and goal points, real-time pathfinding visualization, 3D navigation and camera controls",
                         "Implemented comprehensive backend: REST API using ASP.NET Core MVC, entity Framework ORM integration, database model management, multi-version Unity compatibility",
-                        "Developed intelligent pathfinding: dijkstra's algorithm implementation, extensible agent architecture, path cost optimization, obstacle avoidance system"
-                    
-                       
+                        "Developed intelligent pathfinding: dijkstra's algorithm implementation, extensible agent architecture, path cost optimization, obstacle avoidance system"   
                     ],
                     technicalAchievements: [
                         "Built scalable game architecture in Unity",
@@ -1540,9 +1480,7 @@
                     features: [
                         "Arcade gameplay system: dynamic creature capture mechanics, real-time combat interactions, physics-based movement system, mobile-optimized controls",
                         "Management mechanics: resource management system, client relationship mechanics, economy balancing, inventory management",
-                        "Mobile optimization: touchscreen interface, performance optimization, battery consumption management, responsive UI design"
-                    
-                       
+                        "Mobile optimization: touchscreen interface, performance optimization, battery consumption management, responsive UI design"   
                     ],
                     technicalAchievements: [
                         "Implemented complex C++ game systems",
@@ -1588,9 +1526,7 @@
                         "Complete authentication system: secure Firebase registration, e-mail and password login, user session management, input data validation",
                         "Recipe search functionality: keyword-based search, detailed recipe display, required ingredients list, preparation time",
                         "Favorites management: save preferred recipes, user account synchronization, favorites list modification, recipe deletion option",
-                        "Recipe sharing system: cross-app sharing capability, title and description sharing, social integration, link generation"
-                        
-                       
+                        "Recipe sharing system: cross-app sharing capability, title and description sharing, social integration, link generation"    
                     ],
                     technicalAchievements: [
                         "Implemented MVVM architecture pattern",
@@ -1662,7 +1598,6 @@
                     ],
                     documentation: [
                         "Comprehensive step-by-step documentation: jenkins pipeline configuration guides, terraform module specifications, ansible playbook documentation, AWS infrastructure design, security implementation details, deployment procedures, troubleshooting guides, recovery procedures"
-                
                     ],
                     advisor: "Mahmoud GHORBEL",
                     technologies: ["Ansible","Jenkins","Terraform","AWS","Java"],
@@ -1764,13 +1699,10 @@
                     document.body.style.overflow = 'hidden';
                 });
             });
-            
             document.querySelector('.close-modal').addEventListener('click', () => {
                 projectModal.classList.remove('active');
                 document.body.style.overflow = '';
             });
-
-
             document.addEventListener('keydown', (e) => {
                 if (e.key === 'Escape' && projectModal.classList.contains('active')) {
                     projectModal.classList.remove('active');
@@ -1783,7 +1715,6 @@
                 navLinks.forEach(link => link.classList.remove('active'));
                 const targetSection = document.getElementById(sectionId);
                 const targetLink = document.querySelector(`[data-section="${sectionId}"]`);
-
                 if (targetSection && targetLink) {
                     targetSection.classList.add('active');
                     targetLink.classList.add('active');
@@ -1796,8 +1727,6 @@
         window.addEventListener('load', () => {
             document.querySelector('.loader').style.display = 'none';
         });
-
-        
         window.addEventListener('scroll', () => {
             const scrollTop = window.scrollY;
             const docHeight = document.documentElement.scrollHeight - window.innerHeight;
@@ -1847,7 +1776,6 @@
             sections.forEach(section => observer.observe(section));
         });
     </script>
-
     <div id="project-modal" class="project-modal">
         <div class="project-modal-content">
             <button class="close-modal">
