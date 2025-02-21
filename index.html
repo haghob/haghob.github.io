@@ -702,140 +702,6 @@
 
 
         
-
-        .project-modal-content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem;
-            color: var(--text-color);
-        }
-        .project-header {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
-        .project-logo {
-            width: 96px;
-            height: 96px;
-            background: var(--card-bg);
-            border-radius: 0.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .project-title-section h1 {
-            font-size: 2rem;
-            color: var(--accent-color);
-            margin-bottom: 0.5rem;
-        }
-        .project-date {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--text-secondary);
-        }
-        .project-links {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 2rem;
-        }
-        
-        .project-link-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.5rem 1rem;
-            border-radius: 0.5rem;
-            text-decoration: none;
-            transition: background-color 0.2s;
-        }
-        .project-link-primary {
-            background-color: var(--accent-color-transparent);
-            color: var(--accent-color);
-        }
-        .project-link-secondary {
-            background-color: var(--card-bg);
-            color: var(--text-color);
-        }
-        .project-section {
-            background: var(--card-bg);
-            border-radius: 0.5rem;
-            margin-bottom: 1.5rem;
-            overflow: hidden;
-        }
-        .project-section-header {
-            padding: 1.5rem 1.5rem 0.75rem;
-            border-bottom: 1px solid var(--border-color);
-        }
-        .project-section-title {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--accent-color);
-            font-size: 1.25rem;
-        }
-
-        .project-section-content {
-            padding: 1.5rem;
-        }
-        .tech-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.75rem;
-        }
-        .tech-tag {
-            background-color: var(--accent-color-transparent);
-            color: var(--accent-color);
-            padding: 0.25rem 0.75rem;
-            border-radius: 9999px;
-            font-size: 0.875rem;
-        }
-
-        .feature-list {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        .feature-item {
-            display: flex;
-            align-items: start;
-            gap: 0.5rem;
-            margin-bottom: 0.75rem;
-        }
-        .feature-dot {
-            width: 0.5rem;
-            height: 0.5rem;
-            background-color: var(--accent-color);
-            border-radius: 9999px;
-            margin-top: 0.5rem;
-            flex-shrink: 0;
-        }
-
-        .project-details-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-        }
-        .details-item h4 {
-            color: var(--text-secondary);
-            margin-bottom: 0.25rem;
-        }
-
-        
-        
-        
-
-        
-
-
-
-
-
-
-        
-
-        
             
     </style>
 </head>
@@ -1151,22 +1017,6 @@
                     </div>
                 </div>
             </div>
-            <!--h3>haghob Website</h3-->
-            
-            <div id="project-modal" class="modal">
-                <div class="modal-content">
-                    <span class="close-button">&times;</span>
-                    <div class="project-details">
-                        <!-- Le contenu du template sera injecté ici par JavaScript -->
-                    </div>
-                </div>
-            </div>
-                        
-            
-
-
-
-                
                 <div class="timeline-item">
                     <div class="card">
                         <h3>AgriFlow</h3>
@@ -1301,111 +1151,6 @@
             </div>
         </div>
     </section>
-    
-    <!-- Ajoutez ceci après la section projects mais avant vos scripts -->
-    <script id="project-modal-template" type="text/template">
-        <div class="project-modal-content">
-        <!-- En-tête -->
-        <div class="project-header">
-            <div class="project-logo">
-                <i class="fas fa-code fa-2x"></i>
-            </div>
-            <div class="project-title-section">
-                <h1>${title}</h1>
-                <div class="project-date">
-                    <i class="far fa-calendar"></i>
-                    <span>${period}</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Liens rapides -->
-        <div class="project-links">
-            <a href="${github}" class="project-link-btn project-link-primary" target="_blank">
-                <i class="fas fa-external-link-alt"></i>
-                <span>Live Demo</span>
-            </a>
-            <a href="${github}" class="project-link-btn project-link-secondary" target="_blank">
-                <i class="fab fa-github"></i>
-                <span>Source Code</span>
-            </a>
-        </div>
-
-        <!-- Description -->
-        <div class="project-section">
-            <div class="project-section-header">
-                <h2 class="project-section-title">
-                    <i class="fas fa-book"></i>
-                    Description
-                </h2>
-            </div>
-            <div class="project-section-content">
-                <p>${description}</p>
-            </div>
-        </div>
-
-        <!-- Technologies -->
-        <div class="project-section">
-            <div class="project-section-header">
-                <h2 class="project-section-title">
-                    <i class="fas fa-cogs"></i>
-                    Technologies
-                </h2>
-            </div>
-            <div class="project-section-content">
-                <div class="tech-tags">
-                    ${technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
-                </div>
-            </div>
-        </div>
-
-        <!-- Fonctionnalités principales -->
-        <div class="project-section">
-            <div class="project-section-header">
-                <h2 class="project-section-title">
-                    <i class="fas fa-star"></i>
-                    Main Features
-                </h2>
-            </div>
-            <div class="project-section-content">
-                <ul class="feature-list">
-                    ${features.map(feature => `
-                        <li class="feature-item">
-                            <div class="feature-dot"></div>
-                            <span>${feature}</span>
-                        </li>
-                    `).join('')}
-                </ul>
-            </div>
-        </div>
-
-        <!-- Détails techniques -->
-        <div class="project-section">
-            <div class="project-section-header">
-                <h2 class="project-section-title">
-                    <i class="fas fa-code-branch"></i>
-                    Technical Achievements
-                </h2>
-            </div>
-            <div class="project-section-content">
-                <ul class="feature-list">
-                    ${technicalAchievements.map(achievement => `
-                        <li class="feature-item">
-                            <div class="feature-dot"></div>
-                            <span>${achievement}</span>
-                        </li>
-                    `).join('')}
-                </ul>
-            </div>
-        </div>
-    </div>
-</script>
-
-
-
-
-
-                    
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
@@ -1458,31 +1203,6 @@
                     });
                 });
             });
-
-            function showProjectDetails(projectId) {
-                const project = projectsData[projectId];
-                const template = document.getElementById('project-modal-template').innerHTML;
-                // Remplacer les variables dans le template
-                const content = template.replace(/\${(\w+)}/g, (match, key) => {
-                    if (Array.isArray(project[key])) {
-                        return project[key];
-                    }
-                    return project[key] || '';
-                });
-                projectModal.classList.add('active');
-                projectDetails.innerHTML = content;
-            }
-            document.querySelectorAll('.view-details').forEach(button => {
-                button.addEventListener('click', () => {
-                    const projectId = button.getAttribute('data-project');
-                    showProjectDetails(projectId);
-                });
-            });
-            
-
-
-
-                    
 
             const projectsData = {
                 haghob: {
@@ -2125,10 +1845,7 @@
             }, observerOptions);
 
             sections.forEach(section => observer.observe(section));
-
-            
         });
-    
     </script>
 
     <div id="project-modal" class="project-modal">
