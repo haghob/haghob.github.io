@@ -699,88 +699,6 @@
             color: var(--pink); 
             padding-right: 0.5em;
         }
-        .projects-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            justify-content: center;
-            perspective: 1000px;
-            padding: 3rem;
-        }
-        .project-card-3d {
-            width: 400px;
-            height: 300px;
-            position: relative;
-            transition: transform 0.8s;
-            transform-style: preserve-3d;
-        }
-        .project-card-3d:hover {
-            transform: rotateY(180deg);
-        }
-        .card-front, .card-details {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            backface-visibility: hidden;
-            border-radius: 1rem;
-            overflow: hidden;
-            background: var(--color-card);
-            box-shadow: var(--shadow-md);
-        }
-        .card-front {
-            display: flex;
-            flex-direction: column;
-        }
-        .card-front img {
-            width: 100%;
-            height: 65%;
-            object-fit: cover;
-            opacity: 0.8;
-            transition: opacity 0.3s;
-        }
-        .card-front h3 {
-            padding: 1.5rem;
-            margin: 0;
-            color: var(--color-text);
-            font-size: 1.5rem;
-        }
-        .card-details {
-            transform: rotateY(180deg);
-            padding: 2rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        .tech-stack {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin: 1rem 0;
-        }
-        .tech-stack span {
-            padding: 0.5rem 1rem;
-            background: rgba(255, 105, 180, 0.1);
-            border-radius: 2rem;
-            font-size: 0.9rem;
-            color: var(--color-text-secondary);
-        }
-        .see-more {
-            background: var(--gradient-primary);
-            border: none;
-            padding: 0.8rem 1.5rem;
-            border-radius: 0.5rem;
-            color: white;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-        .see-more:hover {
-            transform: translateY(-2px);
-        }
-        @media (max-width: 768px) {
-            .project-card-3d {
-                width: 100%;
-            }
-        }
 
 
         
@@ -1078,108 +996,48 @@
                    
             </div>
         </section> 
-
-
-
-
-
-
-                    
         <section id="projects" class="section">
             <h2 class="section-title">Projects</h2>
             <div class="timeline">
                 <div class="timeline-item">
-                    
                     <div class="card">
-                        <h3>haghob Website</h3>  
+                        <h3>haghob Website</h3>
+                        
                     <div class="project-links">
+                        
                         <button class="project-link view-details" data-project="haghob">
                             <i class="fas fa-external-link-alt"></i> See more
                         </button>
                     </div>
                 </div>
-
-
-                    
             </div>
-                
-                
                 <div class="timeline-item">
-                    
-                    
-                    <!--div class="card">
-                        <h3>AgriFlow</h3> 
+                    <div class="card">
+                        <h3>AgriFlow</h3>
+                        
                     <div class="project-links">
+                        
                         <button class="project-link view-details" data-project="agriflow">
                             <i class="fas fa-external-link-alt"></i> See more
                         </button>
                     </div>
-                    </div-->
-                    <div class="projects-container">
-                        <div class="project-card-3d">
-                            <div class="card-content">
-                                <div class="card-front">
-                                    <img src="/api/placeholder/400/250" alt="haghob Website" />
-                                    <h3>haghob Website</h3>
-                                </div>
-                                <div class="card-details">
-                                    <h3>haghob Website</h3>
-                                    <p>Professional portfolio website showcasing projects and technical journey.</p>
-                                    <div class="tech-stack">
-                                        <span>HTML</span>
-                                        <span>CSS</span>
-                                        <span>JavaScript</span>
-                                    </div>
-                                    <button class="see-more">See more</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                                    
-                            
-
-                    
+                </div>
             </div>
             <div class="timeline-item">
-
-                
-                <!--div class="card">
+                <div class="card">
                     <h3>HR Agence</h3>
+                   
+                    
                     <div class="project-links">
                         
                         <button class="project-link view-details" data-project="HRagence">
                             <i class="fas fa-external-link-alt"></i> See more
                         </button>
-                    </div-->
-                <div class="projects-container">
-                        <div class="project-card-3d">
-                            <div class="card-content">
-                                <div class="card-front">
-                                    <img src="/api/placeholder/400/250" alt="HR Agence" />
-                                    <h3>HR Agence</h3>
-                                </div>
-                                <div class="card-details">
-                                    <h3>HR Agence</h3>
-                                    <p>HR Agence test</p>
-                                    <div class="tech-stack">
-                                        <span>HTML</span>
-                                        <span>CSS</span>
-                                        <span>JavaScript</span>
-                                    </div>
-                                    <button class="see-more">See more</button>
-                                </div>
-                            </div>
-                        </div>
                     </div>
-
-
-                    
                 </div>
             </div>
             <div class="timeline-item">
-
-                
-                <!--div class="card">
+                <div class="card">
                     <h3>Your Video Finder</h3>
                     
                     <div class="project-links">
@@ -1188,34 +1046,9 @@
                             <i class="fas fa-external-link-alt"></i> See more
                         </button>
                     </div>
-                </div-->
-                <div class="projects-container">
-                        <div class="project-card-3d">
-                            <div class="card-content">
-                                <div class="card-front">
-                                    <img src="/api/placeholder/400/250" alt="Your Video Finder" />
-                                    <h3>Your Video Finder</h3>
-                                </div>
-                                <div class="card-details">
-                                    <h3>Your Video Finder</h3>
-                                    <p>Your Video Finder test</p>
-                                    <div class="tech-stack">
-                                        <span>HTML</span>
-                                        <span>CSS</span>
-                                        <span>JavaScript</span>
-                                    </div>
-                                    <button class="see-more">See more</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                
+                </div>
             </div>
             <div class="timeline-item">
-                
                 <div class="card">
                     <h3>PharmaStock</h3>
                     
@@ -1228,7 +1061,7 @@
                 </div>
             </div>
             <div class="timeline-item">
-                <!--div class="card">
+                <div class="card">
                     <h3>StartMatch</h3>
                     
                     <div class="project-links">
@@ -1237,33 +1070,10 @@
                             <i class="fas fa-external-link-alt"></i> See more
                         </button>
                     </div>
-            </div-->
-                <div class="projects-container">
-                        <div class="project-card-3d">
-                            <div class="card-content">
-                                <div class="card-front">
-                                    <img src="/api/placeholder/400/250" alt="StartMatch" />
-                                    <h3>StartMatch</h3>
-                                </div>
-                                <div class="card-details">
-                                    <h3>StartMatch</h3>
-                                    <p>StartMatch Finder test</p>
-                                    <div class="tech-stack">
-                                        <span>HTML</span>
-                                        <span>CSS</span>
-                                        <span>JavaScript</span>
-                                    </div>
-                                    <button class="see-more">See more</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                
+                </div>
             </div>
             <div class="timeline-item">
-                <!--div class="card">
+                <div class="card">
                     <h3>PathalogIA</h3>
                     
                     <div class="project-links">
@@ -1272,38 +1082,10 @@
                             <i class="fas fa-external-link-alt"></i> See more
                         </button>
                     </div>
-                </div-->
-                <div class="projects-container">
-                        <div class="project-card-3d">
-                            <div class="card-content">
-                                <div class="card-front">
-                                    <img src="/api/placeholder/400/250" alt="PathalogIA" />
-                                    <h3>PathalogIA</h3>
-                                </div>
-                                <div class="card-details">
-                                    <h3>PathalogIA</h3>
-                                    <p>PathalogIA Finder test</p>
-                                    <div class="tech-stack">
-                                        <span>HTML</span>
-                                        <span>CSS</span>
-                                        <span>JavaScript</span>
-                                    </div>
-                                    <button class="see-more">See more</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-                
+                </div>
             </div>
             <div class="timeline-item">
-
-
-                
-                <!--div class="card">
+                <div class="card">
                     <h3>The Maze</h3>
                     
                     <div class="project-links">
@@ -1312,39 +1094,10 @@
                             <i class="fas fa-external-link-alt"></i> See more
                         </button>
                     </div>
-                </div-->
-
-                <div class="projects-container">
-                        <div class="project-card-3d">
-                            <div class="card-content">
-                                <div class="card-front">
-                                    <img src="/api/placeholder/400/250" alt="The Maze" />
-                                    <h3>The Maze</h3>
-                                </div>
-                                <div class="card-details">
-                                    <h3>The Maze</h3>
-                                    <p>The Maze Finder test</p>
-                                    <div class="tech-stack">
-                                        <span>HTML</span>
-                                        <span>CSS</span>
-                                        <span>JavaScript</span>
-                                    </div>
-                                    <button class="see-more">See more</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-                
+                </div>
             </div>
             <div class="timeline-item">
-
-
-                
-                <!--div class="card">
+                <div class="card">
                     <h3>Space Smuggler</h3>
                     
                     <div class="project-links">
@@ -1352,40 +1105,10 @@
                             <i class="fas fa-external-link-alt"></i> See more
                         </button>
                     </div>
-                </div-->
-
-                <div class="projects-container">
-                        <div class="project-card-3d">
-                            <div class="card-content">
-                                <div class="card-front">
-                                    <img src="/api/placeholder/400/250" alt="Space Smuggler" />
-                                    <h3>Space Smuggler</h3>
-                                </div>
-                                <div class="card-details">
-                                    <h3>Space Smuggler</h3>
-                                    <p>Space Smuggler test</p>
-                                    <div class="tech-stack">
-                                        <span>HTML</span>
-                                        <span>CSS</span>
-                                        <span>JavaScript</span>
-                                    </div>
-                                    <button class="see-more">See more</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-                
+                </div>
             </div>
             <div class="timeline-item">
-
-
-
-                
-                <!--div class="card">
+                <div class="card">
                     <h3>iRecipe</h3>
                    
                     <div class="project-links">
@@ -1394,39 +1117,10 @@
                             <i class="fas fa-external-link-alt"></i> See more
                         </button>
                     </div>
-                </div-->
-
-                <div class="projects-container">
-                        <div class="project-card-3d">
-                            <div class="card-content">
-                                <div class="card-front">
-                                    <img src="/api/placeholder/400/250" alt="iRecipe" />
-                                    <h3>iRecipe</h3>
-                                </div>
-                                <div class="card-details">
-                                    <h3>iRecipe</h3>
-                                    <p>iRecipe test</p>
-                                    <div class="tech-stack">
-                                        <span>HTML</span>
-                                        <span>CSS</span>
-                                        <span>JavaScript</span>
-                                    </div>
-                                    <button class="see-more">See more</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                
+                </div>
             </div>
             <div class="timeline-item">
-
-
-
-                
-                <!--div class="card">
+                <div class="card">
                     <h3>DevOps</h3>
                     
                     <div class="project-links">
@@ -1435,37 +1129,10 @@
                             <i class="fas fa-external-link-alt"></i> See more
                         </button>
                     </div>
-                </div-->
-
-                <div class="projects-container">
-                        <div class="project-card-3d">
-                            <div class="card-content">
-                                <div class="card-front">
-                                    <img src="/api/placeholder/400/250" alt="DevOps" />
-                                    <h3>DevOps</h3>
-                                </div>
-                                <div class="card-details">
-                                    <h3>DevOps</h3>
-                                    <p>DevOps test</p>
-                                    <div class="tech-stack">
-                                        <span>HTML</span>
-                                        <span>CSS</span>
-                                        <span>JavaScript</span>
-                                    </div>
-                                    <button class="see-more">See more</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                
+                </div>
             </div>
             <div class="timeline-item">
-
-
-                
-                <!--div class="card">
+                <div class="card">
                     <h3>Monte Carlo Methods</h3>
                     
                     <div class="project-links">
@@ -1474,30 +1141,7 @@
                             <i class="fas fa-external-link-alt"></i> See more
                         </button>
                     </div>
-                </div-->
-                <div class="projects-container">
-                        <div class="project-card-3d">
-                            <div class="card-content">
-                                <div class="card-front">
-                                    <img src="/api/placeholder/400/250" alt="MonteCarloMethods" />
-                                    <h3>Monte Carlo Methods</h3>
-                                </div>
-                                <div class="card-details">
-                                    <h3>Monte Carlo Methods</h3>
-                                    <p>Monte Carlo Methods test</p>
-                                    <div class="tech-stack">
-                                        <span>HTML</span>
-                                        <span>CSS</span>
-                                        <span>JavaScript</span>
-                                    </div>
-                                    <button class="see-more">See more</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                
+                </div>
             </div>
         </div>
     </section>
@@ -1515,7 +1159,7 @@
             const navLinksContainer = document.querySelector('.nav-links');
             const projectModal = document.getElementById('project-modal');
             const projectDetails = document.querySelector('.project-details');
-            //const cards = document.querySelectorAll('.experience-card');
+            const cards = document.querySelectorAll('.experience-card');
             const themeToggle = document.querySelector('.theme-toggle');
             const htmlElement = document.documentElement;
             function setTheme(theme) {
@@ -1553,17 +1197,7 @@
                     });
                 });
             });
-            //here
-            const cards = document.querySelectorAll('.project-card-3d');
-            cards.forEach(card => {
-                card.addEventListener('mouseenter', () => {
-                    card.style.transform = 'rotateY(180deg)';
-                });
-                card.addEventListener('mouseleave', () => {
-                    card.style.transform = 'rotateY(0)';
-                });
-            });
-//here
+
             const projectsData = {
                 haghob: {
                     title: "haghob Website",
