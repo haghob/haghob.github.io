@@ -700,6 +700,61 @@
             padding-right: 0.5em;
         }
 
+        .project-details-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: var(--color-card);
+            color: var(--color-text);
+        }
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .project-header h2 {
+            margin: 0;
+        }
+        .project-header button {
+            background: var(--color-primary);
+            color: var(--color-background);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .project-section {
+            margin-bottom: 20px;
+        }
+        .project-section h3 {
+            margin-top: 0;
+        }
+        .technologies, .main-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .technologies span, .main-features span {
+            background: var(--color-secondary);
+            color: var(--color-text);
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        .project-details-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .project-details-list li {
+            margin-bottom: 5px;
+        }
+        
+
+
+        
+
 
         
             
@@ -1002,7 +1057,28 @@
                    
             </div>
         </section> 
-        <section id="projects" class="section">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+
+
+
+       <!--h3>haghob Website</h3-->
+                    
+        <!--section id="projects" class="section">
             <h2 class="section-title">Projects</h2>
             <div class="timeline">
                 <div class="timeline-item">
@@ -1016,7 +1092,58 @@
                         </button>
                     </div>
                 </div>
+                </div-->
+            <section id="projects" class="section">
+        <h2 class="section-title">Projects</h2>
+        <div class="project-details-container">
+            <div class="project-header">
+                <h2 id="project-title">haghob Website</h2>
+                <div>
+                    <button onclick="openLiveDemo()">Live Demo</button>
+                    <a href="https://github.com/haghob/haghob.github.io" target="_blank">
+                        <button>Source Code</button>
+                    </a>
+                </div>
             </div>
+            <div class="project-section">
+                <h3>Description</h3>
+                <p id="project-description">Individual project - Created a professional portfolio website to showcase my projects and technical journey. Built with modern web technologies and hosted on GitHub Pages.</p>
+            </div>
+            <div class="project-section">
+                <h3>Technologies</h3>
+                <div class="technologies" id="project-technologies">
+                    <span>JavaScript</span>
+                    <span>CSS3</span>
+                    <span>HTML5</span>
+                    <span>GitHub Actions</span>
+                </div>
+            </div>
+            <div class="project-section">
+                <h3>Main Features</h3>
+                <ul class="project-details-list" id="project-features">
+                    <li>Implemented responsive design for optimal viewing across all devices</li>
+                    <li>Created dynamic project showcases with detailed documentation</li>
+                    <li>Developed custom styling and animations for enhanced user experience</li>
+                </ul>
+            </div>
+            <div class="project-section">
+                <h3>Project Details</h3>
+                <div class="project-details-list" id="project-details">
+                    <div>Status: Completed</div>
+                    <div>Duration: 2 months</div>
+                    <div>Team Size: Individual</div>
+                    <div>Role: Full Stack Developer</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!--h3>haghob Website</h3-->
+
+
+
+
+                
                 <div class="timeline-item">
                     <div class="card">
                         <h3>AgriFlow</h3>
@@ -1158,6 +1285,10 @@
             duration: 800,
             once: true
         });
+        function openLiveDemo() {
+            window.open("https://haghob.github.io", "_blank");
+        }
+        
         document.addEventListener('DOMContentLoaded', function() {
             const navLinks = document.querySelectorAll('.nav-link');
             const sections = document.querySelectorAll('.section');
@@ -1203,7 +1334,57 @@
                     });
                 });
             });
+            function updateProjectDetails(project) {
+            document.getElementById('project-title').innerText = project.title;
+            document.getElementById('project-description').innerText = project.description;
 
+            const technologiesContainer = document.getElementById('project-technologies');
+            technologiesContainer.innerHTML = '';
+            project.technologies.forEach(tech => {
+                const span = document.createElement('span');
+                span.innerText = tech;
+                technologiesContainer.appendChild(span);
+            });
+
+            const featuresList = document.getElementById('project-features');
+            featuresList.innerHTML = '';
+            project.features.forEach(feature => {
+                const li = document.createElement('li');
+                li.innerText = feature;
+                featuresList.appendChild(li);
+            });
+
+            document.getElementById('project-details').innerHTML = `
+                <div>Status: ${project.status}</div>
+                <div>Duration: ${project.duration}</div>
+                <div>Team Size: ${project.teamSize}</div>
+                <div>Role: ${project.role}</div>
+            `;
+        }
+            // Exemple d'utilisation
+        const exampleProject = {
+            title: "haghob Website",
+            description: "Individual project - Created a professional portfolio website to showcase my projects and technical journey. Built with modern web technologies and hosted on GitHub Pages.",
+            technologies: ["JavaScript", "CSS3", "HTML5", "GitHub Actions"],
+            features: [
+                "Implemented responsive design for optimal viewing across all devices",
+                "Created dynamic project showcases with detailed documentation",
+                "Developed custom styling and animations for enhanced user experience"
+            ],
+            status: "Completed",
+            duration: "2 months",
+            teamSize: "Individual",
+            role: "Full Stack Developer"
+        };
+
+        // Mettre à jour les détails du projet lors du chargement de la page
+        document.addEventListener('DOMContentLoaded', () => {
+            updateProjectDetails(exampleProject);
+        });
+
+
+
+            
             const projectsData = {
                 haghob: {
                     title: "haghob Website",
