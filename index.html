@@ -1275,6 +1275,7 @@
                         "Performance optimization steps",
                         "Content organization strategy"
                     ],
+                    advisor: "N/A",
                     technologies: ["JavaScript", "CSS3", "HTML5","GitHub Actions"],
                     github: "https://github.com/haghob/haghob.github.io"
                 },
@@ -1314,6 +1315,7 @@
                         "User guides and deployment documentation",
                         "Detailed step-by-step project documentation including : system architecture development process, IoT sensor network implementation, ML model training methodology, testing and validation procedures and deployment and maintenance guidelines"
                     ],
+                    advisor: "N/A",
                     technologies: ["Python", "FastAPI", "SQLite","Docker","MQTT","Prometheus", "Grafana"],
                     github: "https://github.com/haghob/AgriFLow"
                 },
@@ -1353,6 +1355,7 @@
                         "Analysis methodology documentation",
                         "Detailed step-by-step project documentation including: data collection and preprocessing methodology, dashboard development process, implementation of analysis features, testing and validation procedures, deployment and maintenance guidelines"
                     ],
+                    advisor: "N/A",
                     technologies: ["Power BI"],
                     github: "https://github.com/haghob/HR_agence"
                 },
@@ -1393,6 +1396,7 @@
                         "Sprint retrospectives and improvements",
                         "Service tier differentiation documentation"
                     ],
+                    advisor: "N/A",
                     technologies: ["CamemBERT", "Google AI" ,"ChatGPT", "TensorFlow", "PyTorch","Python"," Agile/Scrum"],
                     github: "https://github.com/haghob/M2_project"
                 },
@@ -1428,6 +1432,7 @@
                         "Managing containerized deployments",
                         "Developing comprehensive test coverage"
                     ],
+                    advisor: "N/A",
                     documentation: [
                         "Detailed step-by-step project documentation including: system architecture specifications, database schema and relationships, API documentation and usage guides, development and deployment procedures, testing and validation processes and Power BI dashboard documentation"
                     ],
@@ -1474,6 +1479,7 @@
                         "Performance metrics reports",
                         "Comprehensive step-by-step documentation: detailed AI model architecture and implementation steps, model training procedures with code examples, integration guides for each AI service tier, performance testing methodology and results, sprint progress and team collaboration notes, troubleshooting guides for each AI component, future improvement recommendations"
                     ],
+                    advisor: "N/A",
                     technologies: ["Python","RASA","RASA NLU","RASA Core","Agile/Scrum"],
                     github: "https://github.com/haghob/ChatBot_ydays"
                 },
@@ -1513,6 +1519,7 @@
                         "here",
                         "here"
                     ],
+                    advisor: "N/A",
                     technologies: ["Python"],
                     github: "https://github.com/haghob/breast_cancer_MRI"
                 },
@@ -1556,6 +1563,7 @@
                         "Unity integration guidelines",
                         "Comprehensive step-by-step documentation: unity project setup and configuration, maze generation algorithm implementation, pathfinding system design and code structure, database integration procedures, REST API endpoints and usage, testing methodology and results, performance optimization techniques, future A* implementation guidelines"
                     ],
+                    advisor: "Mahmoud GHORBEL",
                     technologies: ["Unity","C#"],
                     github: "https://github.com/haghob/unity_project"
                 },
@@ -1595,6 +1603,7 @@
                         "here",
                         "here"
                     ],
+                    advisor: "Mahmoud GHORBEL",
                     technologies: ["Unreal Engine 4","C++"],
                 },
                 iRecipe: {
@@ -1635,6 +1644,7 @@
                         "here",
                         "here"
                     ],
+                    advisor: "Mahmoud GHORBEL",
                     technologies: ["Kotlin","Android Studio","MVVM Architecture"],
                     github: "https://github.com/haghob/dev_mobile"
                 },
@@ -1674,6 +1684,7 @@
                         "here",
                         "here"
                     ],
+                    advisor: "Mahmoud GHORBEL",
                     technologies: ["Ansible","Jenkins","Terraform"],
                     github: "https://github.com/haghob/devops_project"
                 },
@@ -1713,6 +1724,7 @@
                         "Visual result presentations",
                         "Detailed step-by-step project documentation including: algorithm implementation process, testing methodology, performance optimization steps, validation procedures, results analysis methodology"
                     ],
+                    advisor: "Mr. Afif MASMOUDI",
                     technologies: ["Python", "MATLAB", "LaTeX"],
                     github: "https://github.com/haghob/Monte-Carlo-Methods"
                 }
@@ -1751,8 +1763,11 @@
                             <ul>
                                 ${project.documentation.map(doc => `<li>${doc}</li>`).join('')}
                             </ul>
+                            
+                            <h3>Academic advisor / Mentor</h3>
+                            <p>${project.advisor}</p>
 
-
+        
                             <h3>Technologies used</h3>
                             <div class="project-tech">
                                 ${project.technologies.map(tech => `<span class="skill-tag">${tech}</span>`).join('')}
