@@ -1776,6 +1776,8 @@
                     github: "https://github.com/haghob/Monte-Carlo-Methods"
                 }
             };
+            //<h2 class="project-title">${project.title}</h2>
+            //<p class="period">${project.period}</p>
             document.querySelectorAll('.view-details').forEach(button => {
                 button.addEventListener('click', (e) => {
                     const projectId = e.currentTarget.dataset.project;
@@ -1793,8 +1795,7 @@
                          <div class="project-content">   
                                 
                             
-                            <h2 class="project-title">${project.title}</h2>
-                            <p class="period">${project.period}</p>
+                            
                             <div class="project-content">
                                 <h3>Description</h3>
                                 <p>${project.description}</p>
