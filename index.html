@@ -255,10 +255,13 @@
         .nav-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 20px 0;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
+            gap: 20px;
+            position: relative;
+            z-index: 2;
         }
         .nav-links {
             display: flex;
@@ -286,6 +289,16 @@
             color: var(--color-background);
             transform: translateY(-2px);
         }
+        .nav-button {
+          background-color: #fff;  
+          padding: 8px 16px;
+          border-radius: 4px;
+          cursor: pointer;
+          border: none;
+          transition: all 0.3s ease;
+        }
+
+        
         .section {
             display: none;
             opacity: 0;
@@ -770,7 +783,12 @@
                 height: 60px;
             }
         }
-        
+        .background-line {
+          position: absolute;
+          left: 0;
+          height: 100%;
+          z-index: 1;
+        }
 
         
         
