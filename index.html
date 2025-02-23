@@ -195,6 +195,9 @@
             z-index: 2000;
         }
         .project-card {
+            background: var(--color-card);
+            padding: 2rem;
+            margin-bottom: 2rem;
             position: relative;
             overflow: hidden;
             border-radius: 1rem;
@@ -223,6 +226,19 @@
             z-index: 1001;
             transition: width 0.2s ease-out;
         }
+
+        .projects-section {
+            padding: 4rem 2rem;
+            margin-top: 80px;
+        }
+
+        .projects-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+
+        
         @media (max-width: 768px) {
             .header-content {
                 margin-left: 0;
@@ -345,6 +361,7 @@
         .timeline {
             position: relative;
             padding-left: 2rem;
+            margin-top: 2rem;
         }
         .timeline::before {
             content: '';
