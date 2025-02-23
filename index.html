@@ -195,9 +195,6 @@
             z-index: 2000;
         }
         .project-card {
-            background: var(--color-card);
-            padding: 2rem;
-            margin-bottom: 2rem;
             position: relative;
             overflow: hidden;
             border-radius: 1rem;
@@ -226,19 +223,6 @@
             z-index: 1001;
             transition: width 0.2s ease-out;
         }
-
-        .projects-section {
-            padding: 4rem 2rem;
-            margin-top: 80px;
-        }
-
-        .projects-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-
-        
         @media (max-width: 768px) {
             .header-content {
                 margin-left: 0;
@@ -259,7 +243,7 @@
         }
         .nav {
             position: fixed;
-            top: 20px;
+            top: 0;
             left: 0;
             right: 0;
             height: 70px;
@@ -288,7 +272,7 @@
         .nav-link {
             cursor: pointer;
             border: none;
-            background: rgba(255, 105, 180, 0.2);
+            background: rgba(255, 105, 180, 0.1);
             border-radius: 6px;
             color: var(--color-text);
             text-decoration: none;
@@ -361,7 +345,6 @@
         .timeline {
             position: relative;
             padding-left: 2rem;
-            margin-top: 2rem;
         }
         .timeline::before {
             content: '';
