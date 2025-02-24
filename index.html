@@ -46,6 +46,7 @@
             --color-primary: #2196F3;
             --color-secondary: #F06292;
             --color-accent: #BA68C8;
+            
         }      
         
         [data-theme="light"] .nav-link {
@@ -58,6 +59,13 @@
         }
         [data-theme="light"] .social-link {
             color: var(--color-background);
+        }
+        [data-theme="light"] .contact-item span {
+            color: #F06292; /* Rose plus doux pour le thème clair */
+        }
+        [data-theme="light"] .skill-tag {
+            background: rgba(33, 150, 243, 0.1); /* Fond semi-transparent basé sur #2196F3 */
+            color: #2196F3; /* Texte bleu clair pour correspondre au thème clair */
         }
          
         * {
@@ -341,10 +349,10 @@
         .skill-tag {
             display: inline-block;
             padding: 0.75rem 1.25rem;
-            background: rgba(255, 105, 180, 0.1);
+            background: rgba(74, 144, 226, 0.1);
             border-radius: 2rem;
             margin: 0.3rem;
-            color: var(--color-secondary);
+            color: #4A90E2;
             transition: var(--transition);
             text-decoration: none;
             font-size: 1rem;
@@ -840,6 +848,10 @@
             color: var(--pink); 
             padding-right: 0.5em;
         }
+        .contact-item span {
+            color: var(--color-secondary); /* Utilise la couleur secondaire (actuellement #D81B60 dans le thème sombre) */
+        }
+        
             
     </style>
 </head>
