@@ -9,18 +9,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <style>
         :root {
-            --color-primary: #FF69B4;
-            --color-secondary: #a0606a;
-            --color-accent: #4A90E2;
-            --color-background: #1a1a1a;
-            --color-card: #252525;
-            --color-text: #ffffff;
-            --gradient-primary: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
-            --shadow-sm: 0 2px 4px rgba(255, 105, 180, 0.1);
-            --shadow-md: 0 4px 6px rgba(255, 105, 180, 0.15);
-            --shadow-lg: 0 10px 15px rgba(255, 105, 180, 0.2);
+            --color-primary: #1E3A8A; /* Bleu profond, couleur principale */
+            --color-secondary: #4A148C; /* Violet foncé, couleur secondaire */
+            --color-accent: #D81B60; /* Rose/violet clair, couleur d’accent complémentaire */
+            --color-background: #1a1a1a; /* Fond gris foncé (resté inchangé) */
+            --color-card: #252525; /* Cartes gris foncé (resté inchangé) */
+            --color-text: #ffffff; /* Texte blanc (resté inchangé) */
+            --gradient-primary: linear-gradient(135deg, #1E3A8A 0%, #4A148C 100%); /* Dégradé bleu à violet */
+            --shadow-sm: 0 2px 4px rgba(30, 58, 138, 0.1); /* Ombre basée sur le bleu primaire */
+            --shadow-md: 0 4px 6px rgba(30, 58, 138, 0.15);
+            --shadow-lg: 0 10px 15px rgba(30, 58, 138, 0.2);
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            
         }
         .social-link i,
         .social-link svg {
@@ -41,13 +40,14 @@
             transform: scale(1.2);
         }
         [data-theme="light"] { 
-            --color-background: #ffffff;
-            --color-card: #f5f5f5;
-            --color-text: #1a1a1a;
-            --color-primary: #FF69B4;
-            --color-secondary: #FFB6C1;
-            --color-accent: #4A90E2;
-        }
+            --color-background: #ffffff; /* Fond blanc (resté inchangé) */
+            --color-card: #f5f5f5; /* Cartes gris clair (resté inchangé) */
+            --color-text: #1a1a1a; /* Texte gris foncé (resté inchangé) */
+            --color-primary: #1976D2; /* Bleu plus clair pour le thème clair, dérivé de #1E3A8A */
+            --color-secondary: #AB47BC; /* Violet plus clair pour le thème clair */
+            --color-accent: #E91E63; /* Rose plus doux pour le thème clair, dérivé de #D81B60 */
+        }        
+        
         [data-theme="light"] .nav-link {
             background: rgba(255, 105, 180, 0.15);
             color: var(--color-text);
