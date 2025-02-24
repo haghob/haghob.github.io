@@ -24,14 +24,14 @@
         .social-link i,
         .social-link svg {
             color: #ffffff !important;
-            fill: #ffffff !important; /* Pour les SVG */
+            fill: #ffffff !important;
             font-size: 1.5rem;
             transition: all 0.3s ease;
         }
         [data-theme="light"] .social-link i,
         [data-theme="light"] .social-link svg {
             color: #1a1a1a !important;
-            fill: #1a1a1a !important; /* Pour les SVG */
+            fill: #1a1a1a !important;
         }
         .social-link:hover i,
         .social-link:hover svg {
@@ -61,11 +61,11 @@
             color: var(--color-background);
         }
         [data-theme="light"] .contact-item span {
-            color: #F06292; /* Rose plus doux pour le thème clair */
+            color: #F06292;
         }
         [data-theme="light"] .skill-tag {
-            background: rgba(33, 150, 243, 0.1); /* Fond semi-transparent basé sur #2196F3 */
-            color: #2196F3; /* Texte bleu clair pour correspondre au thème clair */
+            background: rgba(33, 150, 243, 0.1);
+            color: #2196F3;
         }
          
         * {
@@ -849,7 +849,7 @@
             padding-right: 0.5em;
         }
         .contact-item span {
-            color: #F06292; /* Utilise la couleur secondaire (actuellement #D81B60 dans le thème sombre) */
+            color: #F06292;
         }
         
             
@@ -1823,9 +1823,7 @@
                     github: "https://github.com/haghob/Monte-Carlo-Methods"
                 }
             };
-            //<h2 class="project-title">${project.title}</h2>
-            //<p class="period">${project.period}</p>
-            //<i class="fas fa-code"></i>
+         
             document.querySelectorAll('.view-details').forEach(button => {
                 button.addEventListener('click', (e) => {
                     const projectId = e.currentTarget.dataset.project;
