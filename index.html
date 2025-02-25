@@ -851,6 +851,165 @@
         .contact-item span {
             color: #F06292;
         }
+
+        #certifications {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            min-height: 50vh;
+        }
+
+        #certifications .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .certification-card {
+            background: var(--color-card);
+            border-radius: 1rem;
+            padding: 1rem;
+            transition: var(--transition);
+            border: 1px solid rgba(74, 144, 226, 0.1);
+            overflow: hidden;
+        }
+
+        .certification-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--color-primary);
+            box-shadow: var(--shadow-md);
+        }
+
+        .certification-image {
+            width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+            object-fit: contain;
+        }
+
+        [data-theme="light"] .certification-card {
+            background: var(--color-card);
+            border-color: rgba(33, 150, 243, 0.1);
+        }
+
+        [data-theme="light"] .certification-card:hover {
+            border-color: var(--color-primary);
+        }
+        #certification-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(26, 26, 26, 0.95);
+            backdrop-filter: blur(8px);
+            z-index: 2000;
+            overflow-y: auto;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        #certification-modal.active {
+            display: block;
+            opacity: 1;
+        }
+
+        .project-modal-content {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 2.5rem;
+            position: relative;
+            background: var(--color-card);
+            border-radius: 1.5rem;
+            border: 1px solid rgba(74, 144, 226, 0.1);
+            box-shadow: var(--shadow-lg);
+            transform: translateY(20px);
+            transition: var(--transition);
+        }
+
+        #certification-modal.active .project-modal-content {
+            transform: translateY(0);
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: rgba(74, 144, 226, 0.1);
+            border: none;
+            color: var(--color-text);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .close-modal:hover {
+            background: var(--gradient-primary);
+            color: var(--color-background);
+            transform: rotate(90deg);
+        }
+
+        .project-title {
+            font-size: 2.5rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        .period, .institution {
+            font-size: 1.1rem;
+            color: var(--color-text);
+            opacity: 0.8;
+            margin-bottom: 1rem;
+        }
+
+        .project-tech .skill-tag {
+            background: rgba(74, 144, 226, 0.1);
+            color: var(--color-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .project-tech .skill-tag:hover {
+            background: var(--gradient-primary);
+            color: var(--color-background);
+            transform: translateY(-2px);
+        }
+
+        [data-theme="light"] .project-modal-content {
+            background: var(--color-card);
+            border-color: rgba(33, 150, 243, 0.1);
+        }
+
+        [data-theme="light"] .close-modal {
+            background: rgba(33, 150, 243, 0.1);
+        }
+
+        [data-theme="light"] .project-tech .skill-tag {
+            background: rgba(33, 150, 243, 0.1);
+            color: var(--color-primary);
+        }
+
+
+
+
+        
         
             
     </style>
@@ -887,7 +1046,9 @@
                 <button class="nav-link" data-section="experience">Experience</button>
                 <button class="nav-link" data-section="skills">Skills</button>
                 <button class="nav-link" data-section="formation">Education</button>
+                <button class="nav-link" data-section="certifications">Certifications</button>
                 <button class="nav-link" data-section="projects">Projects</button>
+                
             </div>
         </div>
     </nav>
@@ -1147,6 +1308,35 @@
                    
             </div>
         </section> 
+        <section id="certifications" class="section">
+            <h2 class="section-title">Certifications</h2>
+            <div class="certifications-grid">
+                <div class="certification-card" data-modal="cert1">
+                    <img src="gomycode.png" alt="Introduction to Artificial Intelligence - GoMyCode" class="certification-image">
+                </div>
+                <div class="certification-card" data-modal="cert2">
+                    <img src="prompting.png" alt="Develop Your Prompt Engineering Skills - LinkedIn Learning" class="certification-image">
+                </div>
+                <div class="certification-card" data-modal="cert3">
+                    <img src="duke.png" alt="Fundamentals of Statistics - Coursera" class="certification-image">
+                </div>
+            </div>
+        </section>
+        <div id="certification-modal" class="project-modal">
+            <div class="project-modal-content">
+                <button class="close-modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            <div class="certification-details"></div>
+        </div>
+    </div>
+            
+
+
+
+
+
+                    
         <section id="projects" class="section">
             <h2 class="section-title">Projects</h2>
             <div class="timeline">
@@ -1288,6 +1478,8 @@
             const navLinksContainer = document.querySelector('.nav-links');
             const projectModal = document.getElementById('project-modal');
             const projectDetails = document.querySelector('.project-details');
+            const certificationModal = document.getElementById('certification-modal');
+            const certificationDetails = document.querySelector('.certification-details');
             const cards = document.querySelectorAll('.experience-card');
             const themeToggle = document.querySelector('.theme-toggle');
             const htmlElement = document.documentElement;
@@ -1892,17 +2084,72 @@
                     document.body.style.overflow = 'hidden';
                 });
             });
-            document.querySelector('.close-modal').addEventListener('click', () => {
-                projectModal.classList.remove('active');
-                document.body.style.overflow = '';
+
+
+            const certificationData = {
+                cert1: {
+                    title: "Introduction to Artificial Intelligence",
+                    institution: "GoMyCode",
+                    period: "July 2021 – October 2021",
+                    skills: ["AI", "Machine Learning", "Python"]
+                },
+                cert2: {
+                    title: "Develop Your Prompt Engineering Skills",
+                    institution: "LinkedIn Learning",
+                    period: "December 2024",
+                    skills: ["NLP", "AI", "Generative AI"]
+                },
+                
+                cert3: {
+                    title: "Data Science Math Skills",
+                    institution: "Duke University via Coursera",
+                    period: "May 2020",
+                    skills: ["Data Science", "Mathematics", "Statistics"]
+                }
+            };
+
+
+            document.querySelectorAll('.certification-card').forEach(card => {
+                card.addEventListener('click', (e) => {
+                    const modalId = e.currentTarget.dataset.modal;
+                    const cert = certificationData[modalId];
+                    certificationDetails.innerHTML = `
+                        <h2 class="project-title">${cert.title}</h2>
+                        <p class="period">${cert.period}</p>
+                        <p class="institution">Institution: ${cert.institution}</p>
+                        <h3>Skills Covered</h3>
+                        <div class="project-tech">
+                            ${cert.skills.map(skill => `<span class="skill-tag">${skill}</span>`).join('')}
+                        </div>
+                    `;
+                    certificationModal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+
+            document.querySelectorAll('.close-modal').forEach(button => {
+                button.addEventListener('click', () => {
+                    if (projectModal.classList.contains('active')) {
+                        projectModal.classList.remove('active');
+                    }
+                    if (certificationModal.classList.contains('active')) {
+                        certificationModal.classList.remove('active');
+                    }
+                    document.body.style.overflow = '';
+                });
             });
             document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape' && projectModal.classList.contains('active')) {
-                    projectModal.classList.remove('active');
+                if (e.key === 'Escape') {
+                    if (projectModal.classList.contains('active')) {
+                        projectModal.classList.remove('active');
+                    }
+                    if (certificationModal.classList.contains('active')) {
+                        certificationModal.classList.remove('active');
+                    }
                     document.body.style.overflow = '';
                 }
             });
-                            
+
             function activateSection(sectionId) {
                 sections.forEach(section => section.classList.remove('active'));
                 navLinks.forEach(link => link.classList.remove('active'));
@@ -1917,15 +2164,7 @@
                     });
                 }
             }
-        window.addEventListener('load', () => {
-            document.querySelector('.loader').style.display = 'none';
-        });
-        window.addEventListener('scroll', () => {
-            const scrollTop = window.scrollY;
-            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-            const scrollPercent = (scrollTop / docHeight) * 100;
-            document.querySelector('.progress-bar').style.width = scrollPercent + '%';
-        });
+
             navLinks.forEach(link => {
                 link.addEventListener('click', (e) => {
                     e.preventDefault();
@@ -1936,21 +2175,23 @@
                     setTimeout(() => {
                         activateSection(sectionId);
                     }, 100);
-                    
                 });
             });
+
             if (menuToggle) {
                 menuToggle.addEventListener('click', () => {
                     menuToggle.classList.toggle('active');
                     navLinksContainer.classList.toggle('active');
                 });
             }
+
             activateSection('about');
             const observerOptions = {
                 root: null,
                 rootMargin: '0px',
                 threshold: 0.5
             };
+
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -1967,7 +2208,20 @@
             }, observerOptions);
 
             sections.forEach(section => observer.observe(section));
+        
+            window.addEventListener('load', () => {
+                document.querySelector('.loader').style.display = 'none';
+            });
+
+            window.addEventListener('scroll', () => {
+                const scrollTop = window.scrollY;
+                const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const scrollPercent = (scrollTop / docHeight) * 100;
+                document.querySelector('.progress-bar').style.width = scrollPercent + '%';
+            });
         });
+
+            
     </script>
     <div id="project-modal" class="project-modal">
         <div class="project-modal-content">
@@ -1976,6 +2230,16 @@
             </button>
             <div class="project-details"></div>
         </div>
+        <div id="certification-modal" class="project-modal">
+            <div class="project-modal-content">
+                <button class="close-modal">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="certification-details"></div>
+            </div>
+            
+        </div>
+        
     </div>
 </body>
 </html>
