@@ -1131,6 +1131,7 @@
         </div>  
     </header>
     <main class="main-container">
+        
         <section id="about" class="section">
              <h2 class="section-title">About me</h2>
              <div class="about-container">
@@ -1154,7 +1155,9 @@
                      </div>
                  </div>
              </div>
+            
         </section>
+        
         <section id="experience" class="section">
             <h2 class="section-title">Experience</h2>
             <div class="timeline">
@@ -1243,14 +1246,15 @@
                         <ul class="experience-list">
                             <li>Taught mathematics to students, focusing on delivering clear explanations and fostering understanding in various mathematical concepts. Developed lesson plans, conducted assessments, and provided personalized support to ensure student success.</li>
                         </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
                 
         </section>
         <section id="skills" class="section">
             <h2 class="section-title">Skills</h2>
             <div class="skills-grid">
+                
                 <div class="card">
                     <h3>Programming languages</h3>
                     <div>
@@ -1259,6 +1263,7 @@
                         <a href="https://learn.microsoft.com/fr-fr/dotnet/csharp/tour-of-csharp/" class="skill-tag" target="_blank">C#</a>
                     </div>
                 </div>
+                
                 <div class="card">
                     <h3>Data Engineering & Big Data</h3>
                     <div>
@@ -1269,6 +1274,7 @@
                         <a href="https://www.dataiku.com/" class="skill-tag" target="_blank">Dataiku</a>   
                     </div>   
                 </div>
+                
                 <div class="card">
                     <h3>Machine Learning & AI</h3>
                     <div>
@@ -1279,6 +1285,7 @@
                         <a href="https://github.com/tesseract-ocr/tesseract" class="skill-tag" target="_blank">Tesseract</a>  
                     </div>
                 </div>
+                
                 <div class="card">
                     <h3>DevOps</h3>
                     <div>
@@ -1289,18 +1296,21 @@
                         <a href="https://docs.ansible.com/" class="skill-tag" target="_blank">Ansible</a>   
                     </div>
                 </div>
+                
                 <div class="card">
                     <h3>Data visualization</h3>
                     <div>
                         <a href="https://www.microsoft.com/fr-fr/power-platform/products/power-bi" class="skill-tag" target="_blank">Power BI</a>
                     </div>
                 </div>
+                
                 <div class="card">
                     <h3>RPA/RDA</h3>
                     <div>
                         <a href="https://www.uipath.com/fr" class="skill-tag" target="_blank">UiPath</a> 
                     </div>
                 </div>
+                
                 <div class="card">
                     <h3>Soft skills</h3>
                     <div>
@@ -1308,6 +1318,7 @@
                         <a href="https://blog-gestion-de-projet.com/gestion-de-projet/project-management-office/" class="skill-tag" target="_blank">Project management</a>  
                     </div>
                 </div>
+                
                 <div class="card">
                     <h3>Game development</h3>
                     <div>
@@ -1315,8 +1326,11 @@
                         <a href="https://www.unrealengine.com/fr" class="skill-tag" target="_blank">Unreal Engine</a>  
                     </div>
                 </div>
+                
             </div>
         </section>
+
+        
         <section id="formation" class="section">
             <h2 class="section-title">Education</h2>
             <div class="card">
@@ -1344,6 +1358,8 @@
                 <p class="education-skills">Microservices Architecture, Linear algebra, Analysis, Topology, Differential equations, Topology, Fourier transform, Matlab, Algorithms</p>      
             </div>
         </section> 
+
+        
         <section id="certifications" class="section">
             <h2 class="section-title">Certifications</h2>
             <div class="certifications-grid">
@@ -1368,13 +1384,12 @@
     </div>                
         <section id="projects" class="section">
             <h2 class="section-title">Projects</h2>
+            
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="card">
-                        <h3>haghob Website</h3>
-                        
+                        <h3>haghob Website</h3>  
                     <div class="project-links">
-                        
                         <button class="project-link view-details" data-project="haghob">
                             <i class="fas fa-external-link-alt"></i> See more
                         </button>
@@ -1598,6 +1613,7 @@
                     skills_rpa: "RPA/RDA",
                     skills_soft_skills: "Soft skills",
                     skills_game_dev: "Game development",
+                    
                     formation_title: "Education",
                     education_master_data_title: "Master's in Data Engineering",
                     education_master_data_institution: "Ynov Campus, Lyon",
@@ -1656,6 +1672,7 @@
                     skills_rpa: "RPA/RDA",
                     skills_soft_skills: "Soft skills",
                     skills_game_dev: "Développement de jeux",
+                    
                     formation_title: "Formation",
                     education_master_data_title: "Mastère en Data Engineering",
                     education_master_data_institution: "Ynov Campus, Lyon",
@@ -2356,11 +2373,18 @@
                 document.querySelector('[data-section="certifications"]').textContent = content.nav_certifications;
                 document.querySelector('[data-section="projects"]').textContent = content.nav_projects;
                 document.querySelector('.header p').innerHTML = content.header_subtitle;
+                
                 document.querySelector('#about .section-title').innerHTML = content.about_title;
+                document.querySelector('#skills .section-title').innerHTML = content.skills_title;
+                document.querySelector('#formation .section-title').innerHTML = content.formation_title;
+                document.querySelector('#certifications .section-title').innerHTML = content.certifications_title;
+                document.querySelector('#projects .section-title').innerHTML = content.projects_title;
+                
                 document.querySelector('.about-content h3').innerHTML = content.about_who;
                 document.querySelector('.about-content p:nth-child(2)').innerHTML = content.about_text1;
                 document.querySelector('.about-content p:nth-child(3)').innerHTML = content.about_text2;
                 document.querySelector('.about-content p:nth-child(4)').innerHTML = content.about_text3;
+                
                 document.querySelector('#experience .section-title').innerHTML = content.experience_title;
                 document.querySelector('#experience .timeline-item:nth-child(1) .card-header h3').innerHTML = content.experience_data_analyst_title;
                 document.querySelector('#experience .timeline-item:nth-child(1) .company').innerHTML = content.experience_data_analyst_company;
@@ -2386,6 +2410,7 @@
                 document.querySelector('#experience .timeline-item:nth-child(4) .company').innerHTML = content.experience_math_teacher_company;
                 document.querySelector('#experience .timeline-item:nth-child(4) .period').innerHTML = content.experience_math_teacher_period;
                 document.querySelector('#experience .timeline-item:nth-child(4) .experience-list li:nth-child(1)').innerHTML = content.experience_math_teacher_desc1;
+                
                 document.querySelector('#skills .section-title').innerHTML = content.skills_title;
                 document.querySelector('#skills .card:nth-child(1) h3').innerHTML = content.skills_programming;
                 document.querySelector('#skills .card:nth-child(2) h3').innerHTML = content.skills_data_engineering;
@@ -2395,15 +2420,12 @@
                 document.querySelector('#skills .card:nth-child(6) h3').innerHTML = content.skills_rpa;
                 document.querySelector('#skills .card:nth-child(7) h3').innerHTML = content.skills_soft_skills;
                 document.querySelector('#skills .card:nth-child(8) h3').innerHTML = content.skills_game_dev;
+                
                 document.querySelector('#formation .section-title').innerHTML = content.formation_title;
                 document.querySelector('#formation .card:nth-child(1) h3').innerHTML = content.education_master_data_title;
                 document.querySelector('#formation .card:nth-child(1) .institution').innerHTML = content.education_master_data_institution;
                 document.querySelector('#formation .card:nth-child(1) .period').innerHTML = content.education_master_data_period;
                 document.querySelector('#formation .card:nth-child(1) .education-skills').innerHTML = content.education_master_data_skills;
-                document.querySelector('#skills .section-title').innerHTML = content.skills_title;
-                document.querySelector('#formation .section-title').innerHTML = content.formation_title;
-                document.querySelector('#certifications .section-title').innerHTML = content.certifications_title;
-                document.querySelector('#projects .section-title').innerHTML = content.projects_title;
                 
             }
             languageBtn.addEventListener('click', () => {
