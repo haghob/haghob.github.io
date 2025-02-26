@@ -991,7 +991,42 @@
             color: var(--color-primary);
         }
 
+        .lang-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px; 
+            padding: 0.5rem 1rem;
+            background: rgba(74, 144, 226, 0.1); 
+            border: none;
+            border-radius: 2rem;
+            color: #4A90E2; 
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            z-index: 10; 
+        }
 
+        .lang-toggle:hover {
+            background: var(--gradient-primary); 
+            color: var(--color-background); 
+            transform: translateY(-2px);
+        }
+
+        [data-theme="light"] .lang-toggle {
+            background: rgba(33, 150, 243, 0.1); 
+            color: #2196F3; 
+        }
+
+        .lang-toggle option {
+            background: var(--color-background); 
+            color: var(--color-text); 
+        }
+
+
+
+
+
+        
 
 
         
@@ -1053,6 +1088,17 @@
                 </a>
             </div>
         </div>
+        <button class="lang-toggle" id="langToggle">🇬🇧/🇫🇷</button>
+        <div class="network">
+            <div class="point"></div>
+            <div class="point"></div>
+            <div class="point"></div>
+            <div class="point"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+
+        
     </header>
     <main class="main-container">
         <section id="about" class="section">
@@ -2188,6 +2234,198 @@
                 const scrollPercent = (scrollTop / docHeight) * 100;
                 document.querySelector('.progress-bar').style.width = scrollPercent + '%';
             });
+
+            document.addEventListener('DOMContentLoaded', function() {
+                const translations = {
+                    en: {
+                        navAbout: "About Me",
+                        navExperience: "Experience",
+                        navSkills: "Skills",
+                        navEducation: "Education",
+                        navCertifications: "Certifications",
+                        navProjects: "Projects",
+            
+                        headerTitle: "Data Engineer | Mathematician",
+                        headerSlogan: "I engineer data into innovative solutions, with the logic of a mathematician",
+            
+                        aboutTitle: "About me",
+                        aboutWho: "Who am I?",
+                        aboutDesc1: "I’m Hana Ghorbel, a <strong>Data Engineer</strong> with a passion for <strong>Mathematics</strong>. I combine technical expertise and analytical precision to transform complex data challenges into impactful solutions.",
+                        aboutDesc2: "My journey blends a strong mathematical foundation with specialized data engineering skills, demonstrating my ability to bridge theory and practice. This unique combination allows me to tackle data challenges with innovative thinking, merging mathematical rigor with cutting-edge technical solutions.",
+                        aboutDesc3: "Curious, persistent, and detail-oriented, I thrive in designing robust, scalable data solutions while keeping a clear focus on business objectives.",
+                        contactPhone: "+33 6 62 05 59 08",
+                        contactLocation: "Lyon, Auvergne-Rhône-Alpes",
+                        experienceTitle: "Experience",
+                        skillsTitle: "Skills",
+                        educationTitle: "Education",
+                        certificationsTitle: "Certifications",
+                        projectsTitle: "Projects",
+
+                        modalDescription: "Description",
+                        modalFeatures: "Main features",
+                        modalAchievements: "Technical achievements",
+                        modalResults: "Results & Impact",
+                        modalChallenges: "Key challenges",
+                        modalDocumentation: "Documentation",
+                        modalAdvisor: "Academic advisor / Mentor",
+                        modalTechnologies: "Technologies used",
+                        modalGithub: "GitHub",
+                        modalSkillsCovered: "Skills Covered"
+                    },
+                    fr: {
+                        navAbout: "À propos de moi",
+                        navExperience: "Expérience",
+                        navSkills: "Compétences",
+                        navEducation: "Formation",
+                        navCertifications: "Certifications",
+                        navProjects: "Projets",
+
+                        headerTitle: "Ingénieure Données | Mathématicienne",
+                        headerSlogan: "Je transforme les données en solutions innovantes, avec la logique d'une mathématicienne",
+            
+                        aboutTitle: "À propos de moi",
+                        aboutWho: "Qui suis-je ?",
+                        aboutDesc1: "Je suis Hana Ghorbel, une <strong>Ingénieure Données</strong> passionnée par les <strong>Mathématiques</strong>. Je combine une expertise technique et une précision analytique pour transformer les défis de données en solutions impactantes.",
+                        aboutDesc2: "Mon parcours mêle une solide base mathématique à une expertise spécialisée en ingénierie des données, démontrant ma capacité à connecter théorie et pratique. Cette double compétence me permet d’aborder les défis de données avec une perspective unique, fusionnant rigueur mathématique et solutions techniques de pointe.",
+                        aboutDesc3: "Curieuse, persévérante et orientée détail, je m’épanouis en concevant des solutions de données robustes et scalables tout en gardant une vision claire des objectifs business.",
+                        contactPhone: "+33 6 62 05 59 08",
+                        contactLocation: "Lyon, Auvergne-Rhône-Alpes",
+            
+                        experienceTitle: "Expérience",
+            
+                        skillsTitle: "Compétences",
+            
+                        educationTitle: "Formation",
+            
+                        certificationsTitle: "Certifications",
+                        projectsTitle: "Projets",
+            
+                        modalDescription: "Description",
+                        modalFeatures: "Fonctionnalités principales",
+                        modalAchievements: "Réalisations techniques",
+                        modalResults: "Résultats & Impact",
+                        modalChallenges: "Défis clés",
+                        modalDocumentation: "Documentation",
+                        modalAdvisor: "Mentor académique / Conseiller",
+                        modalTechnologies: "Technologies utilisées",
+                        modalGithub: "GitHub",
+                        modalSkillsCovered: "Compétences couvertes"
+                    }
+                };
+                        
+                let currentLang = localStorage.getItem('language') || 'en';
+                updateLanguage(currentLang);
+
+                const langToggle = document.getElementById('langToggle');
+                langToggle.addEventListener('click', () => {
+                    currentLang = currentLang === 'en' ? 'fr' : 'en';
+                    updateLanguage(currentLang);
+                    localStorage.setItem('language', currentLang); 
+                });
+
+                if (langToggle.tagName === 'SELECT') {
+                    langToggle.addEventListener('change', (e) => {
+                        currentLang = e.target.value;
+                        updateLanguage(currentLang);
+                        localStorage.setItem('language', currentLang); 
+                    });
+                }
+                function updateLanguage(lang) {
+                    document.querySelector('[data-section="about"]').textContent = translations[lang].navAbout;
+                    document.querySelector('[data-section="experience"]').textContent = translations[lang].navExperience;
+                    document.querySelector('[data-section="skills"]').textContent = translations[lang].navSkills;
+                    document.querySelector('[data-section="formation"]').textContent = translations[lang].navEducation;
+                    document.querySelector('[data-section="certifications"]').textContent = translations[lang].navCertifications;
+                    document.querySelector('[data-section="projects"]').textContent = translations[lang].navProjects;
+                    document.querySelector('.header h1').textContent = translations[lang].headerTitle;
+                    document.querySelector('.header p').textContent = translations[lang].headerSlogan;
+
+                    document.querySelector('#about .section-title').textContent = translations[lang].aboutTitle;
+                    document.querySelector('.about-content h3').textContent = translations[lang].aboutWho;
+                    document.querySelector('.about-content p:nth-child(2)').innerHTML = translations[lang].aboutDesc1;
+                    document.querySelector('.about-content p:nth-child(3)').innerHTML = translations[lang].aboutDesc2;
+                    document.querySelector('.about-content p:nth-child(4)').innerHTML = translations[lang].aboutDesc3;
+                    document.querySelector('.contact-item:nth-child(1) span:nth-child(2)').textContent = translations[lang].contactPhone;
+                    document.querySelector('.contact-item:nth-child(2) span:nth-child(2)').textContent = translations[lang].contactLocation;
+                    document.querySelector('#experience .section-title').textContent = translations[lang].experienceTitle;
+                    document.querySelector('#skills .section-title').textContent = translations[lang].skillsTitle;
+
+                    document.querySelector('#formation .section-title').textContent = translations[lang].educationTitle;
+
+                    document.querySelector('#certifications .section-title').textContent = translations[lang].certificationsTitle;
+
+                    document.querySelector('#projects .section-title').textContent = translations[lang].projectsTitle;
+            
+                    const projectModal = document.getElementById('project-modal');
+                    if (projectModal.classList.contains('active')) {
+                        const projectDetails = document.querySelector('.project-details');
+                        const projectId = Array.from(document.querySelectorAll('.view-details'))
+                            .find(btn => btn.dataset.project && projectModal.classList.contains('active'))
+                            ?.dataset.project;
+                        if (projectId) {
+                            const project = projectsData[projectId];
+                            projectDetails.innerHTML = `
+                                <div class="project-header">
+                                    <div class="project-logo">
+                                        <img src="${project.logo}" alt="${project.title} logo">
+                                    </div>
+                                    <div class="project-title-section">
+                                        <h2 class="project-title">${project.title}</h2>
+                                        <p class="period">${project.period}</p>
+                                    </div>
+                                </div>
+                                <div class="project-content">
+                                    <h3>${translations[lang].modalDescription}</h3>
+                                    <p>${project.description}</p>
+                                    <h3>${translations[lang].modalFeatures}</h3>
+                                    <ul>${project.features.map(feature => `<li>${feature}</li>`).join('')}</ul>
+                                    <h3>${translations[lang].modalAchievements}</h3>
+                                    <ul>${project.technicalAchievements.map(achievement => `<li>${achievement}</li>`).join('')}</ul>
+                                    <h3>${translations[lang].modalResults}</h3>
+                                    <ul>${project.results.map(result => `<li>${result}</li>`).join('')}</ul>
+                                    <h3>${translations[lang].modalChallenges}</h3>
+                                    <ul>${project.challenges.map(challenge => `<li>${challenge}</li>`).join('')}</ul>
+                                    <h3>${translations[lang].modalDocumentation}</h3>
+                                    <ul>${project.documentation.map(doc => `<li>${doc}</li>`).join('')}</ul>
+                                    <h3>${translations[lang].modalAdvisor}</h3>
+                                    <p>${project.advisor}</p>
+                                    <h3>${translations[lang].modalTechnologies}</h3>
+                                    <div class="project-tech">${project.technologies.map(tech => `<span class="skill-tag">${tech}</span>`).join('')}</div>
+                                    <div class="project-links">
+                                        <a href="${project.github}" class="project-link" target="_blank">
+                                            <i class="fab fa-github"></i> ${translations[lang].modalGithub}
+                                        </a>
+                                    </div>
+                                </div>
+                            `;
+                        }
+                    }
+                    const certificationModal = document.getElementById('certification-modal');
+                    if (certificationModal.classList.contains('active')) {
+                        const certificationDetails = document.querySelector('.certification-details');
+                        const modalId = Array.from(document.querySelectorAll('.certification-card'))
+                            .find(card => card.dataset.modal && certificationModal.classList.contains('active'))
+                            ?.dataset.modal;
+                        if (modalId) {
+                            const cert = certificationData[modalId];
+                            certificationDetails.innerHTML = `
+                                <h2 class="project-title">${cert.title}</h2>
+                                <p class="period">${cert.period}</p>
+                                <p class="institution">Institution: ${cert.institution}</p>
+                                <h3>${translations[lang].modalSkillsCovered}</h3>
+                                <div class="project-tech">
+                                    ${cert.skills.map(skill => `<span class="skill-tag">${skill}</span>`).join('')}
+                                </div>
+                            `;
+                        }
+                    }
+                }
+
+                document.getElementById('langToggle').textContent = currentLang === 'en' ? '🇬🇧 English' : '🇫🇷 Français';
+            });
+
+
+                    
         });
 
             
