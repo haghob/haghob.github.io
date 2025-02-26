@@ -1606,8 +1606,11 @@
                     experience_data_analyst_title: "Data Analyst & Data Scientist",
                     experience_data_analyst_company: "Enedis, Lyon",
                     experience_data_analyst_period: "January 2024 - November 2024",
-                    experience_data_analyst_desc: "Development and deployment of interactive dashboards for strategic monitoring of key data: absenteeism tracking for the HR department, activity tracking for lab departments, and monitoring of protection measures for workers on construction sites, enabling better decision-making and optimized resource management (Power BI)"
-                
+                    experience_data_analyst_desc1: "Development and deployment of interactive dashboards for strategic monitoring of key data: absenteeism tracking for the HR department, activity tracking for lab departments, and monitoring of protection measures for workers on construction sites, enabling better decision-making and optimized resource management (Power BI)",
+                    experience_data_analyst_desc2: "Implementation of a data virtualization solution to consolidate heterogeneous sources and simplify queries (Denodo, SQL)",
+                    experience_data_analyst_desc3: "Optimization of fault indicator placement in HV (high-voltage) networks: data analysis and preparation using machine learning algorithms (Dataiku, Python)",
+                    experience_data_analyst_desc4: "Development of robots to automate interactions between two web interfaces as part of an RPA/RDA project (UiPath)",
+                    experience_data_analyst_desc5: "Coordination and management of technical projects: organizing business meetings and drafting technical specifications"                
                 },
                 fr: {
                     header_title: "Ingénieure de Données | Mathématicienne",
@@ -1631,8 +1634,11 @@
                     experience_data_analyst_title: "Data Analyst & Data Scientist",
                     experience_data_analyst_company: "Enedis, Lyon",
                     experience_data_analyst_period: "Janvier 2024 - Novembre 2024",
-                    experience_data_analyst_desc: "Développement et déploiement de tableaux de bord interactifs pour le suivi stratégique des données clés : suivi de l’absentéisme pour le département RH, suivi des activités pour les départements de laboratoire, et surveillance des mesures de protection pour les travailleurs sur les chantiers, permettant une meilleure prise de décision et une gestion optimisée des ressources (Power BI)"
-                }
+                    experience_data_analyst_desc1: "Développement et déploiement de tableaux de bord interactifs pour le suivi stratégique des données clés : suivi de l’absentéisme pour le département RH, suivi des activités pour les départements de laboratoire, et surveillance des mesures de protection pour les travailleurs sur les chantiers, permettant une meilleure prise de décision et une gestion optimisée des ressources (Power BI)",
+                    experience_data_analyst_desc2: "Mise en œuvre d’une solution de virtualisation des données pour consolider des sources hétérogènes et simplifier les requêtes (Denodo, SQL)",
+                    experience_data_analyst_desc3: "Optimisation du placement des indicateurs de défaut dans les réseaux HT (haute tension) : analyse et préparation des données en utilisant des algorithmes d’apprentissage automatique (Dataiku, Python)",
+                    experience_data_analyst_desc4: "Développement de robots pour automatiser les interactions entre deux interfaces web dans le cadre d’un projet RPA/RDA (UiPath)",
+                    experience_data_analyst_desc5: "Coordination et gestion de projets techniques : organisation de réunions avec les parties prenantes et rédaction de spécifications techniques"                }
             };
             //here
 
@@ -2374,8 +2380,12 @@
                 document.querySelector('#experience .timeline-item:nth-child(1) .card-header h3').innerHTML = content.experience_data_analyst_title;
                 document.querySelector('#experience .timeline-item:nth-child(1) .company').innerHTML = content.experience_data_analyst_company;
                 document.querySelector('#experience .timeline-item:nth-child(1) .period').innerHTML = content.experience_data_analyst_period;
-                document.querySelector('#experience .timeline-item:nth-child(1) .experience-list li:nth-child(1)').innerHTML = content.experience_data_analyst_desc;
-
+                document.querySelector('#experience .timeline-item:nth-child(1) .experience-list li:nth-child(1)').innerHTML = content.experience_data_analyst_desc1;
+                document.querySelector('#experience .timeline-item:nth-child(1) .experience-list li:nth-child(2)').innerHTML = content.experience_data_analyst_desc2;
+                document.querySelector('#experience .timeline-item:nth-child(1) .experience-list li:nth-child(3)').innerHTML = content.experience_data_analyst_desc3;
+                document.querySelector('#experience .timeline-item:nth-child(1) .experience-list li:nth-child(4)').innerHTML = content.experience_data_analyst_desc4;
+                document.querySelector('#experience .timeline-item:nth-child(1) .experience-list li:nth-child(5)').innerHTML = content.experience_data_analyst_desc5;
+                
                 document.querySelector('#skills .section-title').innerHTML = content.skills_title;
                 document.querySelector('#formation .section-title').innerHTML = content.formation_title;
                 document.querySelector('#certifications .section-title').innerHTML = content.certifications_title;
