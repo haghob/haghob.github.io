@@ -2313,43 +2313,96 @@
 
                 const langToggle = document.getElementById('langToggle');
                 if (langToggle && langToggle.tagName === 'SELECT') {
-                    langToggle.value = currentLang;
+                    langToggle.value = currentLang; // Définit la valeur initiale du select
                     langToggle.addEventListener('change', (e) => {
                         currentLang = e.target.value;
+                        console.log('Langue sélectionnée :', currentLang); // Débogage
                         updateLanguage(currentLang);
                         localStorage.setItem('language', currentLang);
-                        console.log('Langue changée en:', currentLang); // Pour déboguer
                     });
                 }
                 function updateLanguage(lang) {
-                    console.log('Mise à jour de la langue:', lang); // Pour déboguer
-                    document.querySelector('[data-section="about"]').textContent = translations[lang].navAbout;
-                    document.querySelector('[data-section="experience"]').textContent = translations[lang].navExperience;
-                    document.querySelector('[data-section="skills"]').textContent = translations[lang].navSkills;
-                    document.querySelector('[data-section="formation"]').textContent = translations[lang].navEducation;
-                    document.querySelector('[data-section="certifications"]').textContent = translations[lang].navCertifications;
-                    document.querySelector('[data-section="projects"]').textContent = translations[lang].navProjects;
+                    console.log('Mise à jour de la langue:', lang);
+                    const aboutLink = document.querySelector('[data-section="about"]');
+                    if (aboutLink) aboutLink.textContent = translations[lang].navAbout;
+                    else console.log('Élément nav "about" non trouvé');
 
-                    document.querySelector('.header h1').textContent = translations[lang].headerTitle;
-                    document.querySelector('.header p').textContent = translations[lang].headerSlogan;
+                    const experienceLink = document.querySelector('[data-section="experience"]');
+                    if (experienceLink) experienceLink.textContent = translations[lang].navExperience;
+                    else console.log('Élément nav "experience" non trouvé');
 
-                    document.querySelector('#about .section-title').textContent = translations[lang].aboutTitle;
-                    document.querySelector('.about-content h3').textContent = translations[lang].aboutWho;
-                    document.querySelector('.about-content p:nth-child(2)').innerHTML = translations[lang].aboutDesc1;
-                    document.querySelector('.about-content p:nth-child(3)').innerHTML = translations[lang].aboutDesc2;
-                    document.querySelector('.about-content p:nth-child(4)').innerHTML = translations[lang].aboutDesc3;
-                    document.querySelector('.contact-item:nth-child(1) span:nth-child(2)').textContent = translations[lang].contactPhone;
-                    document.querySelector('.contact-item:nth-child(2) span:nth-child(2)').textContent = translations[lang].contactLocation;
+                    const skillsLink = document.querySelector('[data-section="skills"]');
+                    if (skillsLink) skillsLink.textContent = translations[lang].navSkills;
+                    else console.log('Élément nav "skills" non trouvé');
 
-                    document.querySelector('#experience .section-title').textContent = translations[lang].experienceTitle;
+                    const educationLink = document.querySelector('[data-section="formation"]');
+                    if (educationLink) educationLink.textContent = translations[lang].navEducation;
+                    else console.log('Élément nav "formation" non trouvé');
 
-                    document.querySelector('#skills .section-title').textContent = translations[lang].skillsTitle;
+                    const certificationsLink = document.querySelector('[data-section="certifications"]');
+                    if (certificationsLink) certificationsLink.textContent = translations[lang].navCertifications;
+                    else console.log('Élément nav "certifications" non trouvé');
 
-                    document.querySelector('#formation .section-title').textContent = translations[lang].educationTitle;
+                    const projectsLink = document.querySelector('[data-section="projects"]');
+                    if (projectsLink) projectsLink.textContent = translations[lang].navProjects;
+                    else console.log('Élément nav "projects" non trouvé');
 
-                    document.querySelector('#certifications .section-title').textContent = translations[lang].certificationsTitle;
-                    document.querySelector('#projects .section-title').textContent = translations[lang].projectsTitle;                    
+                    const headerTitle = document.querySelector('.header h1');
+                    if (headerTitle) headerTitle.textContent = translations[lang].headerTitle;
+                    else console.log('Élément header h1 non trouvé');
 
+                    const headerSlogan = document.querySelector('.header p');
+                    if (headerSlogan) headerSlogan.textContent = translations[lang].headerSlogan;
+                    else console.log('Élément header p non trouvé');
+
+                    const aboutTitle = document.querySelector('#about .section-title');
+                    if (aboutTitle) aboutTitle.textContent = translations[lang].aboutTitle;
+                    else console.log('Élément #about .section-title non trouvé');
+
+                    const aboutWho = document.querySelector('.about-content h3');
+                    if (aboutWho) aboutWho.textContent = translations[lang].aboutWho;
+                    else console.log('Élément .about-content h3 non trouvé');
+
+                    const aboutDesc1 = document.querySelector('.about-content p:nth-child(2)');
+                    if (aboutDesc1) aboutDesc1.innerHTML = translations[lang].aboutDesc1;
+                    else console.log('Élément .about-content p:nth-child(2) non trouvé');
+
+                    const aboutDesc2 = document.querySelector('.about-content p:nth-child(3)');
+                    if (aboutDesc2) aboutDesc2.innerHTML = translations[lang].aboutDesc2;
+                    else console.log('Élément .about-content p:nth-child(3) non trouvé');
+
+                    const aboutDesc3 = document.querySelector('.about-content p:nth-child(4)');
+                    if (aboutDesc3) aboutDesc3.innerHTML = translations[lang].aboutDesc3;
+                    else console.log('Élément .about-content p:nth-child(4) non trouvé');
+
+                    const contactPhone = document.querySelector('.contact-item:nth-child(1) span:nth-child(2)');
+                    if (contactPhone) contactPhone.textContent = translations[lang].contactPhone;
+                    else console.log('Élément contact phone non trouvé');
+
+                    const contactLocation = document.querySelector('.contact-item:nth-child(2) span:nth-child(2)');
+                    if (contactLocation) contactLocation.textContent = translations[lang].contactLocation;
+                    else console.log('Élément contact location non trouvé');
+
+                    const experienceTitle = document.querySelector('#experience .section-title');
+                    if (experienceTitle) experienceTitle.textContent = translations[lang].experienceTitle;
+                    else console.log('Élément #experience .section-title non trouvé');
+
+                    const skillsTitle = document.querySelector('#skills .section-title');
+                    if (skillsTitle) skillsTitle.textContent = translations[lang].skillsTitle;
+                    else console.log('Élément #skills .section-title non trouvé');
+
+                    const educationTitle = document.querySelector('#formation .section-title');
+                    if (educationTitle) educationTitle.textContent = translations[lang].educationTitle;
+                    else console.log('Élément #formation .section-title non trouvé');
+
+                    const certificationsTitle = document.querySelector('#certifications .section-title');
+                    if (certificationsTitle) certificationsTitle.textContent = translations[lang].certificationsTitle;
+                    else console.log('Élément #certifications .section-title non trouvé');
+
+                    const projectsTitle = document.querySelector('#projects .section-title');
+                    if (projectsTitle) projectsTitle.textContent = translations[lang].projectsTitle;
+                    else console.log('Élément #projects .section-title non trouvé');
+                    
 
 
 
@@ -2391,7 +2444,7 @@
                                     <p>${project.advisor}</p>
                                     <h3>${translations[lang].modalTechnologies}</h3>
                                     <div class="project-tech">${project.technologies.map(tech => `<span class="skill-tag">${tech}</span>`).join('')}</div>
-                                    <div class="project-links">
+                                        <div class="project-links">
                                         <a href="${project.github}" class="project-link" target="_blank">
                                             <i class="fab fa-github"></i> ${translations[lang].modalGithub}
                                         </a>
@@ -2428,7 +2481,7 @@
                     langToggle.value = currentLang;
                 }
 
-                document.getElementById('langToggle').textContent = currentLang === 'en' ? '🇬🇧 English' : '🇫🇷 Français';
+                
             });
 
 
