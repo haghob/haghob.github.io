@@ -2247,10 +2247,8 @@
                         navEducation: "Education",
                         navCertifications: "Certifications",
                         navProjects: "Projects",
-            
                         headerTitle: "Data Engineer | Mathematician",
                         headerSlogan: "I engineer data into innovative solutions, with the logic of a mathematician",
-            
                         aboutTitle: "About me",
                         aboutWho: "Who am I?",
                         aboutDesc1: "I’m Hana Ghorbel, a <strong>Data Engineer</strong> with a passion for <strong>Mathematics</strong>. I combine technical expertise and analytical precision to transform complex data challenges into impactful solutions.",
@@ -2263,7 +2261,6 @@
                         educationTitle: "Education",
                         certificationsTitle: "Certifications",
                         projectsTitle: "Projects",
-
                         modalDescription: "Description",
                         modalFeatures: "Main features",
                         modalAchievements: "Technical achievements",
@@ -2282,10 +2279,8 @@
                         navEducation: "Formation",
                         navCertifications: "Certifications",
                         navProjects: "Projets",
-
                         headerTitle: "Ingénieure Données | Mathématicienne",
                         headerSlogan: "Je transforme les données en solutions innovantes, avec la logique d'une mathématicienne",
-            
                         aboutTitle: "À propos de moi",
                         aboutWho: "Qui suis-je ?",
                         aboutDesc1: "Je suis Hana Ghorbel, une <strong>Ingénieure Données</strong> passionnée par les <strong>Mathématiques</strong>. Je combine une expertise technique et une précision analytique pour transformer les défis de données en solutions impactantes.",
@@ -2293,16 +2288,11 @@
                         aboutDesc3: "Curieuse, persévérante et orientée détail, je m’épanouis en concevant des solutions de données robustes et scalables tout en gardant une vision claire des objectifs business.",
                         contactPhone: "+33 6 62 05 59 08",
                         contactLocation: "Lyon, Auvergne-Rhône-Alpes",
-            
                         experienceTitle: "Expérience",
-            
                         skillsTitle: "Compétences",
-            
                         educationTitle: "Formation",
-            
                         certificationsTitle: "Certifications",
                         projectsTitle: "Projets",
-            
                         modalDescription: "Description",
                         modalFeatures: "Fonctionnalités principales",
                         modalAchievements: "Réalisations techniques",
@@ -2315,31 +2305,34 @@
                         modalSkillsCovered: "Compétences couvertes"
                     }
                 };
-                        
+
+
+                
                 let currentLang = localStorage.getItem('language') || 'en';
                 updateLanguage(currentLang);
 
                 const langToggle = document.getElementById('langToggle');
-                langToggle.addEventListener('click', () => {
-                    currentLang = currentLang === 'en' ? 'fr' : 'en';
-                    updateLanguage(currentLang);
-                    localStorage.setItem('language', currentLang); 
-                });
-
-                if (langToggle.tagName === 'SELECT') {
-                    langToggle.addEventListener('change', (e) => {
-                        currentLang = e.target.value;
-                        updateLanguage(currentLang);
-                        localStorage.setItem('language', currentLang); 
-                    });
+                
+                if (langToggle) {
+                    if (langToggle.tagName === 'SELECT') {
+                        langToggle.value = currentLang;
+                        langToggle.addEventListener('change', (e) => {
+                            currentLang = e.target.value;
+                            updateLanguage(currentLang);
+                            localStorage.setItem('language', currentLang);
+                            console.log('Langue changée en:', currentLang); // Pour déboguer
+                        });
+                    }
                 }
                 function updateLanguage(lang) {
+                    console.log('Mise à jour de la langue:', lang); 
                     document.querySelector('[data-section="about"]').textContent = translations[lang].navAbout;
                     document.querySelector('[data-section="experience"]').textContent = translations[lang].navExperience;
                     document.querySelector('[data-section="skills"]').textContent = translations[lang].navSkills;
                     document.querySelector('[data-section="formation"]').textContent = translations[lang].navEducation;
                     document.querySelector('[data-section="certifications"]').textContent = translations[lang].navCertifications;
                     document.querySelector('[data-section="projects"]').textContent = translations[lang].navProjects;
+
                     document.querySelector('.header h1').textContent = translations[lang].headerTitle;
                     document.querySelector('.header p').textContent = translations[lang].headerSlogan;
 
@@ -2352,13 +2345,12 @@
                     document.querySelector('.contact-item:nth-child(2) span:nth-child(2)').textContent = translations[lang].contactLocation;
                     document.querySelector('#experience .section-title').textContent = translations[lang].experienceTitle;
                     document.querySelector('#skills .section-title').textContent = translations[lang].skillsTitle;
-
                     document.querySelector('#formation .section-title').textContent = translations[lang].educationTitle;
-
                     document.querySelector('#certifications .section-title').textContent = translations[lang].certificationsTitle;
-
                     document.querySelector('#projects .section-title').textContent = translations[lang].projectsTitle;
-            
+                    
+                    
+                    
                     const projectModal = document.getElementById('project-modal');
                     if (projectModal.classList.contains('active')) {
                         const projectDetails = document.querySelector('.project-details');
@@ -2403,6 +2395,10 @@
                             `;
                         }
                     }
+                    
+                    
+                    
+                    
                     const certificationModal = document.getElementById('certification-modal');
                     if (certificationModal.classList.contains('active')) {
                         const certificationDetails = document.querySelector('.certification-details');
@@ -2422,6 +2418,9 @@
                             `;
                         }
                     }
+                }
+                if (langToggle && langToggle.tagName === 'SELECT') {
+                    langToggle.value = currentLang;
                 }
 
                 document.getElementById('langToggle').textContent = currentLang === 'en' ? '🇬🇧 English' : '🇫🇷 Français';
