@@ -2442,10 +2442,14 @@
                 //document.querySelector('#formation .card:nth-child(1) .institution').innerHTML = content.education_master_data_institution;
                 //document.querySelector('#formation .card:nth-child(1) .period').innerHTML = content.education_master_data_period;
                 //document.querySelector('#formation .card:nth-child(1) .education-skills').innerHTML = content.education_master_data_skills;
-                console.log(document.querySelector('#formation .card:first-child h3'));
-                console.log(document.querySelector('#formation .card:first-child .institution'));
-                console.log(document.querySelector('#formation .card:first-child .period'));
-                console.log(document.querySelector('#formation .card:first-child .education-skills'));
+                const edu1Title = document.querySelector('#formation .card:first-child h3');
+                if (edu1Title) edu1Title.innerHTML = content.education_master_data_title;
+                const edu1Institution = document.querySelector('#formation .card:first-child .institution');
+                if (edu1Institution) edu1Institution.innerHTML = content.education_master_data_institution;
+                const edu1Period = document.querySelector('#formation .card:first-child .period');
+                if (edu1Period) edu1Period.innerHTML = content.education_master_data_period;
+                const edu1Skills = document.querySelector('#formation .card:first-child .education-skills');
+                if (edu1Skills) edu1Skills.innerHTML = content.education_master_data_skills;
             
             }
             languageBtn.addEventListener('click', () => {
