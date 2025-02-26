@@ -1611,6 +1611,23 @@
                     experience_data_analyst_desc3: "Optimization of fault indicator placement in HV (high-voltage) networks: data analysis and preparation using machine learning algorithms (Dataiku, Python)",
                     experience_data_analyst_desc4: "Development of robots to automate interactions between two web interfaces as part of an RPA/RDA project (UiPath)",
                     experience_data_analyst_desc5: "Coordination and management of technical projects: organizing business meetings and drafting technical specifications",
+                    experience_data_scientist_title: "Data Scientist & Data Engineer",
+                    experience_data_scientist_company: "Worldline, Lyon",
+                    experience_data_scientist_period: "September 2022 - November 2023",
+                    experience_data_scientist_desc1: "Evaluation and comparison of AI and Big Data tools: performance analysis of various analysis and machine learning tools in an industrial context (Python, Pandas, Scikit-learn)",
+                    experience_data_scientist_desc2: "Automation of information gathering for client projects: development of web scraping scripts to extract data from web pages using Optical Character Recognition (OCR) (Python, Tesseract, Selenium)",
+                    experience_data_scientist_desc3: "Advanced textual data analysis with NLP (Natural Language Processing): preparation, cleaning, and modeling of textual data for classification and information extraction tasks, particularly using the BERT model (Python, Hugging Face, TensorFlow)",
+                    experience_data_scientist_desc4: "Optimization of AI systems through prompt engineering: development and fine-tuning of prompts to enhance language model performance, ensuring precise and efficient communication with LLMs",
+                    experience_windev_title: "WinDev Developer",
+                    experience_windev_company: "Groupe FORLAM, Lyon",
+                    experience_windev_period: "February 2022 - September 2022",
+                    experience_windev_desc1: "Development of a WinDev application for planning work orders (OF) linked to the company’s internal ERP",
+                    experience_windev_desc2: "Continuous collaboration with users to validate the specifications (functionalities, design, processes)",
+                    experience_math_teacher_title: "Mathematics Teacher",
+                    experience_math_teacher_company: "Private Center, Sfax, Tunisia",
+                    experience_math_teacher_period: "January 2021 – August 2021",
+                    experience_math_teacher_desc1: "Taught mathematics to students, focusing on delivering clear explanations and fostering understanding in various mathematical concepts. Developed lesson plans, conducted assessments, and provided personalized support to ensure student success.",    
+                    
                     skills_title: "Skills",
                     skills_programming: "Programming languages",
                     skills_data_engineering: "Data Engineering & Big Data",
@@ -1658,10 +1675,27 @@
                     experience_data_analyst_desc3: "Optimisation du placement des indicateurs de défaut dans les réseaux HT (haute tension) : analyse et préparation des données en utilisant des algorithmes d’apprentissage automatique (Dataiku, Python)",
                     experience_data_analyst_desc4: "Développement de robots pour automatiser les interactions entre deux interfaces web dans le cadre d’un projet RPA/RDA (UiPath)",
                     experience_data_analyst_desc5: "Coordination et gestion de projets techniques : organisation de réunions avec les parties prenantes et rédaction de spécifications techniques",
+                    experience_data_scientist_title: "Data Scientist & Data Engineer",
+                    experience_data_scientist_company: "Worldline, Lyon",
+                    experience_data_scientist_period: "Septembre 2022 - Novembre 2023",
+                    experience_data_scientist_desc1: "Évaluation et comparaison d’outils d’IA et de Big Data : analyse des performances de divers outils d’analyse et d’apprentissage automatique dans un contexte industriel (Python, Pandas, Scikit-learn)",
+                    experience_data_scientist_desc2: "Automatisation de la collecte d’informations pour les projets clients : développement de scripts de web scraping pour extraire des données à partir de pages web en utilisant la reconnaissance optique de caractères (OCR) (Python, Tesseract, Selenium)",
+                    experience_data_scientist_desc3: "Analyse avancée de données textuelles avec le traitement du langage naturel (NLP) : préparation, nettoyage et modélisation de données textuelles pour des tâches de classification et d’extraction d’informations, notamment en utilisant le modèle BERT (Python, Hugging Face, TensorFlow)",
+                    experience_data_scientist_desc4: "Optimisation des systèmes d’IA par l’ingénierie des prompts : développement et ajustement fin des prompts pour améliorer les performances des modèles de langage, assurant une communication précise et efficace avec les LLMs",
+                    experience_windev_title: "Développeuse WinDev",
+                    experience_windev_company: "Groupe FORLAM, Lyon",
+                    experience_windev_period: "Février 2022 - Septembre 2022",
+                    experience_windev_desc1: "Développement d’une application WinDev pour la planification des ordres de fabrication (OF) connectée au ERP interne de l’entreprise",
+                    experience_windev_desc2: "Collaboration continue avec les utilisateurs pour valider les spécifications (fonctionnalités, design, processus)",
+                    experience_math_teacher_title: "Professeur de Mathématiques",
+                    experience_math_teacher_company: "Centre Privé, Sfax, Tunisie",
+                    experience_math_teacher_period: "Janvier 2021 – Août 2021",
+                    experience_math_teacher_desc1: "J’ai enseigné les mathématiques aux étudiants, en mettant l’accent sur des explications claires et la compréhension des différents concepts mathématiques. J’ai développé des plans de cours, conduit des évaluations et fourni un soutien personnalisé pour garantir la réussite des étudiants.",
+                    
                     skills_title: "Compétences",
                     skills_programming: "Langages de programmation",
                     skills_data_engineering: "Ingénierie des Données & Big Data",
-                    skills_machine_learning: "Machine Learnin & IA",
+                    skills_machine_learning: "Machine Learning & IA",
                     skills_devops: "DevOps",
                     skills_visualization: "Visualisation de données",
                     skills_rpa: "RPA/RDA",
@@ -2413,6 +2447,7 @@
                 document.querySelector('.about-content p:nth-child(2)').innerHTML = content.about_text1;
                 document.querySelector('.about-content p:nth-child(3)').innerHTML = content.about_text2;
                 document.querySelector('.about-content p:nth-child(4)').innerHTML = content.about_text3;
+                
                 document.querySelector('#experience .section-title').innerHTML = content.experience_title;
                 document.querySelector('#experience .timeline-item:nth-child(1) .card-header h3').innerHTML = content.experience_data_analyst_title;
                 document.querySelector('#experience .timeline-item:nth-child(1) .company').innerHTML = content.experience_data_analyst_company;
@@ -2422,6 +2457,17 @@
                 document.querySelector('#experience .timeline-item:nth-child(1) .experience-list li:nth-child(3)').innerHTML = content.experience_data_analyst_desc3;
                 document.querySelector('#experience .timeline-item:nth-child(1) .experience-list li:nth-child(4)').innerHTML = content.experience_data_analyst_desc4;
                 document.querySelector('#experience .timeline-item:nth-child(1) .experience-list li:nth-child(5)').innerHTML = content.experience_data_analyst_desc5;
+                
+                document.querySelector('#experience .timeline-item:nth-child(2) .card-header h3').innerHTML = content.experience_data_scientist_title;
+                document.querySelector('#experience .timeline-item:nth-child(2) .company').innerHTML = content.experience_data_scientist_company;
+                document.querySelector('#experience .timeline-item:nth-child(2) .period').innerHTML = content.experience_data_scientist_period;
+                document.querySelector('#experience .timeline-item:nth-child(2) .experience-list li:nth-child(1)').innerHTML = content.experience_data_scientist_desc1;
+                document.querySelector('#experience .timeline-item:nth-child(2) .experience-list li:nth-child(2)').innerHTML = content.experience_data_scientist_desc2;
+                document.querySelector('#experience .timeline-item:nth-child(2) .experience-list li:nth-child(3)').innerHTML = content.experience_data_scientist_desc3;
+                document.querySelector('#experience .timeline-item:nth-child(2) .experience-list li:nth-child(4)').innerHTML = content.experience_data_scientist_desc4;
+                
+                
+                
                 document.querySelector('#skills .section-title').innerHTML = content.skills_title;
                 document.querySelector('#skills .card:nth-child(1) h3').innerHTML = content.skills_programming;
                 document.querySelector('#skills .card:nth-child(2) h3').innerHTML = content.skills_data_engineering;
@@ -2431,8 +2477,15 @@
                 document.querySelector('#skills .card:nth-child(6) h3').innerHTML = content.skills_rpa;
                 document.querySelector('#skills .card:nth-child(7) h3').innerHTML = content.skills_soft_skills;
                 document.querySelector('#skills .card:nth-child(8) h3').innerHTML = content.skills_game_dev;
-                
-                
+                document.querySelector('#experience .timeline-item:nth-child(3) .card-header h3').innerHTML = content.experience_windev_title;
+                document.querySelector('#experience .timeline-item:nth-child(3) .company').innerHTML = content.experience_windev_company;
+                document.querySelector('#experience .timeline-item:nth-child(3) .period').innerHTML = content.experience_windev_period;
+                document.querySelector('#experience .timeline-item:nth-child(3) .experience-list li:nth-child(1)').innerHTML = content.experience_windev_desc1;
+                document.querySelector('#experience .timeline-item:nth-child(3) .experience-list li:nth-child(2)').innerHTML = content.experience_windev_desc2;
+                document.querySelector('#experience .timeline-item:nth-child(4) .card-header h3').innerHTML = content.experience_math_teacher_title;
+                document.querySelector('#experience .timeline-item:nth-child(4) .company').innerHTML = content.experience_math_teacher_company;
+                document.querySelector('#experience .timeline-item:nth-child(4) .period').innerHTML = content.experience_math_teacher_period;
+                document.querySelector('#experience .timeline-item:nth-child(4) .experience-list li:nth-child(1)').innerHTML = content.experience_math_teacher_desc1;
                 
                 
                 document.querySelector('#formation .section-title').innerHTML = content.formation_title;
