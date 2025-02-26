@@ -1610,7 +1610,26 @@
                     experience_data_analyst_desc2: "Implementation of a data virtualization solution to consolidate heterogeneous sources and simplify queries (Denodo, SQL)",
                     experience_data_analyst_desc3: "Optimization of fault indicator placement in HV (high-voltage) networks: data analysis and preparation using machine learning algorithms (Dataiku, Python)",
                     experience_data_analyst_desc4: "Development of robots to automate interactions between two web interfaces as part of an RPA/RDA project (UiPath)",
-                    experience_data_analyst_desc5: "Coordination and management of technical projects: organizing business meetings and drafting technical specifications"                
+                    experience_data_analyst_desc5: "Coordination and management of technical projects: organizing business meetings and drafting technical specifications",
+                    skills_title: "Skills",
+                    skills_programming: "Programming languages",
+                    skills_data_engineering: "Data Engineering & Big Data",
+                    skills_machine_learning: "Machine Learning & AI",
+                    skills_devops: "DevOps",
+                    skills_visualization: "Data visualization",
+                    skills_rpa: "RPA/RDA",
+                    skills_soft_skills: "Soft skills",
+                    skills_game_dev: "Game development",
+                    
+                    
+                    formation_title: "Education",
+                    education_master_data_title: "Master's in Data Engineering",
+                    education_master_data_institution: "Ynov Campus, Lyon",
+                    education_master_data_period: "2022 - 2024",
+                    education_master_data_skills: "Machine Learning, Deep Learning, Big Data, Data Visualization, MlOps"
+                    
+
+                    
                 },
                 fr: {
                     header_title: "Ingénieure de Données | Mathématicienne",
@@ -1638,7 +1657,25 @@
                     experience_data_analyst_desc2: "Mise en œuvre d’une solution de virtualisation des données pour consolider des sources hétérogènes et simplifier les requêtes (Denodo, SQL)",
                     experience_data_analyst_desc3: "Optimisation du placement des indicateurs de défaut dans les réseaux HT (haute tension) : analyse et préparation des données en utilisant des algorithmes d’apprentissage automatique (Dataiku, Python)",
                     experience_data_analyst_desc4: "Développement de robots pour automatiser les interactions entre deux interfaces web dans le cadre d’un projet RPA/RDA (UiPath)",
-                    experience_data_analyst_desc5: "Coordination et gestion de projets techniques : organisation de réunions avec les parties prenantes et rédaction de spécifications techniques"                }
+                    experience_data_analyst_desc5: "Coordination et gestion de projets techniques : organisation de réunions avec les parties prenantes et rédaction de spécifications techniques",
+                    skills_title: "Compétences",
+                    skills_programming: "Langages de programmation",
+                    skills_data_engineering: "Ingénierie des Données & Big Data",
+                    skills_machine_learning: "Machine Learnin & IA",
+                    skills_devops: "DevOps",
+                    skills_visualization: "Visualisation de données",
+                    skills_rpa: "RPA/RDA",
+                    skills_soft_skills: "Soft skills",
+                    skills_game_dev: "Développement de jeux",
+                    
+                    
+                    formation_title: "Formation",
+                    education_master_data_title: "Mastère en Data Engineering",
+                    education_master_data_institution: "Ynov Campus, Lyon",
+                    education_master_data_period: "2022 - 2024",
+                    education_master_data_skills: "Machine Learning, Deep Learning, Big Data, Data Visualization, MlOps"
+                }
+                
             };
             //here
 
@@ -2385,7 +2422,24 @@
                 document.querySelector('#experience .timeline-item:nth-child(1) .experience-list li:nth-child(3)').innerHTML = content.experience_data_analyst_desc3;
                 document.querySelector('#experience .timeline-item:nth-child(1) .experience-list li:nth-child(4)').innerHTML = content.experience_data_analyst_desc4;
                 document.querySelector('#experience .timeline-item:nth-child(1) .experience-list li:nth-child(5)').innerHTML = content.experience_data_analyst_desc5;
+                document.querySelector('#skills .section-title').innerHTML = content.skills_title;
+                document.querySelector('#skills .card:nth-child(1) h3').innerHTML = content.skills_programming;
+                document.querySelector('#skills .card:nth-child(2) h3').innerHTML = content.skills_data_engineering;
+                document.querySelector('#skills .card:nth-child(3) h3').innerHTML = content.skills_machine_learning;
+                document.querySelector('#skills .card:nth-child(4) h3').innerHTML = content.skills_devops;
+                document.querySelector('#skills .card:nth-child(5) h3').innerHTML = content.skills_visualization;
+                document.querySelector('#skills .card:nth-child(6) h3').innerHTML = content.skills_rpa;
+                document.querySelector('#skills .card:nth-child(7) h3').innerHTML = content.skills_soft_skills;
+                document.querySelector('#skills .card:nth-child(8) h3').innerHTML = content.skills_game_dev;
                 
+                
+                
+                
+                document.querySelector('#formation .section-title').innerHTML = content.formation_title;
+                document.querySelector('#formation .card:nth-child(1) h3').innerHTML = content.education_master_data_title;
+                document.querySelector('#formation .card:nth-child(1) .institution').innerHTML = content.education_master_data_institution;
+                document.querySelector('#formation .card:nth-child(1) .period').innerHTML = content.education_master_data_period;
+                document.querySelector('#formation .card:nth-child(1) .education-skills').innerHTML = content.education_master_data_skills;
                 document.querySelector('#skills .section-title').innerHTML = content.skills_title;
                 document.querySelector('#formation .section-title').innerHTML = content.formation_title;
                 document.querySelector('#certifications .section-title').innerHTML = content.certifications_title;
