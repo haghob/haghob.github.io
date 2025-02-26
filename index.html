@@ -2439,10 +2439,14 @@
                 document.querySelector('#skills .card:nth-child(8) h3').innerHTML = content.skills_game_dev;
                 
                 //document.querySelector('#formation .card:nth-child(1) h3').innerHTML = content.education_master_data_title;
-                document.querySelector('#formation .card:nth-child(1) .institution').innerHTML = content.education_master_data_institution;
-                document.querySelector('#formation .card:nth-child(1) .period').innerHTML = content.education_master_data_period;
-                document.querySelector('#formation .card:nth-child(1) .education-skills').innerHTML = content.education_master_data_skills;
-                
+                //document.querySelector('#formation .card:nth-child(1) .institution').innerHTML = content.education_master_data_institution;
+                //document.querySelector('#formation .card:nth-child(1) .period').innerHTML = content.education_master_data_period;
+                //document.querySelector('#formation .card:nth-child(1) .education-skills').innerHTML = content.education_master_data_skills;
+                console.log(document.querySelector('#formation .card:first-child h3'));
+                console.log(document.querySelector('#formation .card:first-child .institution'));
+                console.log(document.querySelector('#formation .card:first-child .period'));
+                console.log(document.querySelector('#formation .card:first-child .education-skills'));
+            
             }
             languageBtn.addEventListener('click', () => {
                 languageDropdown.classList.toggle('active');
