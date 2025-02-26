@@ -1589,14 +1589,37 @@
                     header_subtitle: "I engineer data into innovative solutions, with the logic of a mathematician",
                     about_title: "About me",
                     about_who: "Who am I?",
-                    about_text1: "I'm Hana Ghorbel, a <strong>Data Engineer</strong> with a passion for <strong>Mathematics</strong> combining technical prowess and analytical precision to transform data challenges into impactful solutions."
+                    about_text1: "I'm Hana Ghorbel, a <strong>Data Engineer</strong> with a passion for <strong>Mathematics</strong> combining technical prowess and analytical precision to transform data challenges into impactful solutions.",
+                    about_text2: "My journey, blending a strong mathematical foundation with specialized data engineering expertise, demonstrates my ability to bridge theory and practice. This dual competency allows me to approach data challenges with a unique perspective, merging mathematical rigor with technical innovation.",
+                    about_text3: "Curious and persistent, I thrive in designing robust and scalable data solutions while maintaining a clear vision of business objectives.",
+                    experience_title: "Experience",
+                    skills_title: "Skills",
+                    formation_title: "Education",
+                    certifications_title: "Certifications",
+                    projects_title: "Projects",
+                    experience_data_analyst_title: "Data Analyst & Data Scientist",
+                    experience_data_analyst_company: "Enedis, Lyon",
+                    experience_data_analyst_period: "January 2024 - November 2024",
+                    experience_data_analyst_desc: "Development and deployment of interactive dashboards for strategic monitoring of key data: absenteeism tracking for the HR department, activity tracking for lab departments, and monitoring of protection measures for workers on construction sites, enabling better decision-making and optimized resource management (Power BI)"
+                
                 },
                 fr: {
                     header_title: "Ingénieure de Données | Mathématicienne",
                     header_subtitle: "Je transforme les données en solutions innovantes, avec la logique d'une mathématicienne",
                     about_title: "À propos de moi",
                     about_who: "Qui suis-je ?",
-                    about_text1: "Je suis Hana Ghorbel, une <strong>ingénieure de données</strong> passionnée par les <strong>mathématiques</strong>, alliant expertise technique et précision analytique pour convertir les défis liés aux données en solutions percutantes."
+                    about_text1: "Je suis Hana Ghorbel, une <strong>ingénieure de données</strong> passionnée par les <strong>mathématiques</strong>, alliant expertise technique et précision analytique pour convertir les défis liés aux données en solutions percutantes.",
+                    about_text2: "Mon parcours, combinant une solide base mathématique avec une expertise spécialisée en ingénierie de données, démontre ma capacité à relier théorie et pratique. Cette double compétence me permet d’aborder les défis liés aux données avec une perspective unique, fusionnant rigueur mathématique et innovation technique.",
+                    about_text3: "Curieuse et persévérante, je m’épanouis dans la conception de solutions de données robustes et évolutives tout en conservant une vision claire des objectifs commerciaux.",
+                    experience_title: "Expérience",
+                    skills_title: "Compétences",
+                    formation_title: "Formation",
+                    certifications_title: "Certifications",
+                    projects_title: "Projets",
+                    experience_data_analyst_title: "Analyste de Données & Scientifique des Données",
+                    experience_data_analyst_company: "Enedis, Lyon",
+                    experience_data_analyst_period: "Janvier 2024 - Novembre 2024",
+                    experience_data_analyst_desc: "Développement et déploiement de tableaux de bord interactifs pour le suivi stratégique des données clés : suivi de l’absentéisme pour le département RH, suivi des activités pour les départements de laboratoire, et surveillance des mesures de protection pour les travailleurs sur les chantiers, permettant une meilleure prise de décision et une gestion optimisée des ressources (Power BI)"
                 }
             };
             //here
@@ -2323,9 +2346,23 @@
 
                 document.querySelector('.header h1').innerHTML = content.header_title;
                 document.querySelector('.header p').innerHTML = content.header_subtitle;
+                
                 document.querySelector('#about .section-title').innerHTML = content.about_title;
                 document.querySelector('.about-content h3').innerHTML = content.about_who;
                 document.querySelector('.about-content p:nth-child(2)').innerHTML = content.about_text1;
+                document.querySelector('.about-content p:nth-child(3)').innerHTML = content.about_text2;
+                document.querySelector('.about-content p:nth-child(4)').innerHTML = content.about_text3;
+                document.querySelector('#experience .section-title').innerHTML = content.experience_title;
+                document.querySelector('#experience .timeline-item:nth-child(1) .card-header h3').innerHTML = content.experience_data_analyst_title;
+                document.querySelector('#experience .timeline-item:nth-child(1) .company').innerHTML = content.experience_data_analyst_company;
+                document.querySelector('#experience .timeline-item:nth-child(1) .period').innerHTML = content.experience_data_analyst_period;
+                document.querySelector('#experience .timeline-item:nth-child(1) .experience-list li:nth-child(1)').innerHTML = content.experience_data_analyst_desc;
+
+                document.querySelector('#skills .section-title').innerHTML = content.skills_title;
+                document.querySelector('#formation .section-title').innerHTML = content.formation_title;
+                document.querySelector('#certifications .section-title').innerHTML = content.certifications_title;
+                document.querySelector('#projects .section-title').innerHTML = content.projects_title;
+                
             }
 
             languageBtn.addEventListener('click', () => {
