@@ -2312,20 +2312,17 @@
                 updateLanguage(currentLang);
 
                 const langToggle = document.getElementById('langToggle');
-                
-                if (langToggle) {
-                    if (langToggle.tagName === 'SELECT') {
-                        langToggle.value = currentLang;
-                        langToggle.addEventListener('change', (e) => {
-                            currentLang = e.target.value;
-                            updateLanguage(currentLang);
-                            localStorage.setItem('language', currentLang);
-                            console.log('Langue changée en:', currentLang); // Pour déboguer
-                        });
-                    }
+                if (langToggle && langToggle.tagName === 'SELECT') {
+                    langToggle.value = currentLang;
+                    langToggle.addEventListener('change', (e) => {
+                        currentLang = e.target.value;
+                        updateLanguage(currentLang);
+                        localStorage.setItem('language', currentLang);
+                        console.log('Langue changée en:', currentLang); // Pour déboguer
+                    });
                 }
                 function updateLanguage(lang) {
-                    console.log('Mise à jour de la langue:', lang); 
+                    console.log('Mise à jour de la langue:', lang); // Pour déboguer
                     document.querySelector('[data-section="about"]').textContent = translations[lang].navAbout;
                     document.querySelector('[data-section="experience"]').textContent = translations[lang].navExperience;
                     document.querySelector('[data-section="skills"]').textContent = translations[lang].navSkills;
@@ -2343,16 +2340,24 @@
                     document.querySelector('.about-content p:nth-child(4)').innerHTML = translations[lang].aboutDesc3;
                     document.querySelector('.contact-item:nth-child(1) span:nth-child(2)').textContent = translations[lang].contactPhone;
                     document.querySelector('.contact-item:nth-child(2) span:nth-child(2)').textContent = translations[lang].contactLocation;
+
                     document.querySelector('#experience .section-title').textContent = translations[lang].experienceTitle;
+
                     document.querySelector('#skills .section-title').textContent = translations[lang].skillsTitle;
+
                     document.querySelector('#formation .section-title').textContent = translations[lang].educationTitle;
+
                     document.querySelector('#certifications .section-title').textContent = translations[lang].certificationsTitle;
-                    document.querySelector('#projects .section-title').textContent = translations[lang].projectsTitle;
+                    document.querySelector('#projects .section-title').textContent = translations[lang].projectsTitle;                    
+
+
+
+
                     
                     
                     
                     const projectModal = document.getElementById('project-modal');
-                    if (projectModal.classList.contains('active')) {
+                    if (projectModal && projectModal.classList.contains('active')) {
                         const projectDetails = document.querySelector('.project-details');
                         const projectId = Array.from(document.querySelectorAll('.view-details'))
                             .find(btn => btn.dataset.project && projectModal.classList.contains('active'))
@@ -2400,7 +2405,7 @@
                     
                     
                     const certificationModal = document.getElementById('certification-modal');
-                    if (certificationModal.classList.contains('active')) {
+                    if (certificationModal && certificationModal.classList.contains('active')) {
                         const certificationDetails = document.querySelector('.certification-details');
                         const modalId = Array.from(document.querySelectorAll('.certification-card'))
                             .find(card => card.dataset.modal && certificationModal.classList.contains('active'))
