@@ -1586,6 +1586,12 @@
             const translations = {
                 en: {
                     header_title: "Data Engineer | Mathematician",
+                    nav_about: "About Me",
+                    nav_experience: "Experience",
+                    nav_skills: "Skills",
+                    nav_formation: "Education",
+                    nav_certifications: "Certifications",
+                    nav_projects: "Projects",
                     header_subtitle: "I engineer data into innovative solutions, with the logic of a mathematician",
                     about_title: "About me",
                     about_who: "Who am I?",
@@ -1605,6 +1611,12 @@
                 },
                 fr: {
                     header_title: "Ingénieure de Données | Mathématicienne",
+                    nav_about: "À propos de moi",
+                    nav_experience: "Expérience",
+                    nav_skills: "Compétences",
+                    nav_formation: "Formation",
+                    nav_certifications: "Certifications",
+                    nav_projects: "Projets",
                     header_subtitle: "Je transforme les données en solutions innovantes, avec la logique d'une mathématicienne",
                     about_title: "À propos de moi",
                     about_who: "Qui suis-je ?",
@@ -1616,7 +1628,7 @@
                     formation_title: "Formation",
                     certifications_title: "Certifications",
                     projects_title: "Projets",
-                    experience_data_analyst_title: "Analyste de Données & Scientifique des Données",
+                    experience_data_analyst_title: "Data Analyst & Data Scientist",
                     experience_data_analyst_company: "Enedis, Lyon",
                     experience_data_analyst_period: "Janvier 2024 - Novembre 2024",
                     experience_data_analyst_desc: "Développement et déploiement de tableaux de bord interactifs pour le suivi stratégique des données clés : suivi de l’absentéisme pour le département RH, suivi des activités pour les départements de laboratoire, et surveillance des mesures de protection pour les travailleurs sur les chantiers, permettant une meilleure prise de décision et une gestion optimisée des ressources (Power BI)"
@@ -2345,6 +2357,12 @@
                 const content = translations[lang];
 
                 document.querySelector('.header h1').innerHTML = content.header_title;
+                document.querySelector('[data-section="about"]').textContent = content.nav_about;
+                document.querySelector('[data-section="experience"]').textContent = content.nav_experience;
+                document.querySelector('[data-section="skills"]').textContent = content.nav_skills;
+                document.querySelector('[data-section="formation"]').textContent = content.nav_formation;
+                document.querySelector('[data-section="certifications"]').textContent = content.nav_certifications;
+                document.querySelector('[data-section="projects"]').textContent = content.nav_projects;
                 document.querySelector('.header p').innerHTML = content.header_subtitle;
                 
                 document.querySelector('#about .section-title').innerHTML = content.about_title;
