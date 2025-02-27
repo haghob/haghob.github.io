@@ -290,6 +290,8 @@
           border: none;
           transition: all 0.3s ease;
         }
+
+        
         .section {
             display: none;
             opacity: 0;
@@ -401,6 +403,7 @@
             .nav-links {
                 display: none;
             }
+
             .section {
                 padding: 4rem 1rem;
             }
@@ -460,6 +463,7 @@
         .about-content {
             flex: 1;
         }
+
         .about-content h3 {
             font-size: 1.8rem;
             margin-bottom: 1rem;
@@ -566,7 +570,8 @@
             z-index: 2000;
             overflow-y: auto;
             opacity: 0;
-            transition: var(--transition);   
+            transition: var(--transition);
+            
         }
         .project-modal.active {
             display: block;
@@ -582,11 +587,13 @@
             border: 1px solid rgba(255, 105, 180, 0.1);
             box-shadow: var(--shadow-lg);
             transform: translateY(20px);
-            transition: var(--transition);  
+            transition: var(--transition);
+            
         }
         .project-modal.active .project-modal-content {
             transform: translateY(0);
         }
+
         .project-header {
             display: flex;
             align-items: center;
@@ -595,6 +602,7 @@
             padding-bottom: 1.5rem;
             border-bottom: 1px solid rgba(255, 105, 180, 0.1);
         }
+
         .project-logo {
             width: 80px;
             height: 80px;
@@ -609,15 +617,18 @@
             font-size: 2.5rem;
             color: var(--color-background);
         }
+        
         .project-title-section {
             flex-grow: 1;
         }
+        
         .project-logo img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             border-radius: 1rem;
         }
+        
         .close-modal {
             position: fixed;
             top: 20px;
@@ -670,6 +681,8 @@
             background: var(--gradient-primary);
             border-radius: 3px;
         }
+
+        
         .project-content p {
             line-height: 1.8;
             margin-bottom: 1.5rem;
@@ -699,6 +712,7 @@
             transform: translateX(5px);
             color: var(--color-secondary);
         }
+        
         .project-tech {
             display: flex;
             flex-wrap: wrap;
@@ -713,6 +727,7 @@
             font-size: 0.9rem;
             transition: var(--transition);
         }
+
         .project-tech .skill-tag:hover {
             background: var(--gradient-primary);
             color: var(--color-background);
@@ -734,6 +749,7 @@
             align-items: center;
             justify-content: center;
         }
+
         .close-modal:hover {
             background: var(--gradient-primary);
             color: var(--color-background);
@@ -750,9 +766,11 @@
                 gap: 1rem;
                 align-items: flex-start;
             }
+
             .project-title {
                 font-size: 2rem;
             }
+
             .project-logo {
                 width: 60px;
                 height: 60px;
@@ -764,6 +782,9 @@
           height: 100%;
           z-index: 1;
         }
+
+        
+        
         .experience-card {
             transition: all 0.3s ease;
         }
@@ -815,6 +836,7 @@
         .contact-item span {
             color: #F06292;
         }
+
         #certifications {
             padding: 4rem 2rem;
             max-width: 1200px;
@@ -834,6 +856,7 @@
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
         }
+
         .certification-card {
             background: var(--color-card);
             border-radius: 1rem;
@@ -842,11 +865,13 @@
             border: 1px solid rgba(74, 144, 226, 0.1);
             overflow: hidden;
         }
+
         .certification-card:hover {
             transform: translateY(-5px);
             border-color: var(--color-primary);
             box-shadow: var(--shadow-md);
         }
+
         .certification-image {
             width: 100%;
             height: auto;
@@ -858,6 +883,7 @@
             background: var(--color-card);
             border-color: rgba(33, 150, 243, 0.1);
         }
+
         [data-theme="light"] .certification-card:hover {
             border-color: var(--color-primary);
         }
@@ -875,10 +901,12 @@
             opacity: 0;
             transition: var(--transition);
         }
+
         #certification-modal.active {
             display: block;
             opacity: 1;
         }
+
         .project-modal-content {
             max-width: 1000px;
             margin: 40px auto;
@@ -891,6 +919,7 @@
             transform: translateY(20px);
             transition: var(--transition);
         }
+
         #certification-modal.active .project-modal-content {
             transform: translateY(0);
         }
@@ -961,81 +990,13 @@
             background: rgba(33, 150, 243, 0.1);
             color: var(--color-primary);
         }
-        .language-toggle {
-            position: fixed;
-            right: 70px;
-            bottom: 20px;
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-        }
 
-        .language-btn {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 10px;
-            border-radius: 50%;
-            background: var(--color-card);
-            border: 1px solid var(--color-primary);
-            cursor: pointer;
-            transition: var(--transition);
-            color: var(--color-text);
-        }
-        .language-btn:hover {
-            background: var(--gradient-primary);
-            color: var(--color-background);
-        }
 
-        .language-btn i {
-            font-size: 1.2rem;
-        }
 
-        .current-lang {
-            font-size: 1rem;
-            font-weight: 500;
-        }
 
-        .language-dropdown {
-            display: none;
-            position: absolute;
-            bottom: 100%;
-            right: 0;
-            background: var(--color-card);
-            border: 1px solid rgba(255, 105, 180, 0.1);
-            border-radius: 0.5rem;
-            box-shadow: var(--shadow-md);
-            flex-direction: column;
-            overflow: hidden;
-            margin-bottom: 10px;
-        }
-        .language-dropdown.active {
-            display: flex;
-        }
-
-        .lang-option {
-            padding: 0.75rem 1.5rem;
-            background: none;
-            border: none;
-            color: var(--color-text);
-            text-align: left;
-            cursor: pointer;
-            transition: var(--transition);
-            width: 100%;
-        }
-
-        .lang-option:hover {
-            background: var(--gradient-primary);
-            color: var(--color-background);
-        }
-
-        @media (max-width: 768px) {
-            .language-toggle {
-                right: 60px;
-                bottom: 60px; 
-            }
-        }
-              
+        
+        
+            
     </style>
 </head>
     <!-- Google tag (gtag.js) -->
@@ -1046,7 +1007,8 @@
         gtag('js', new Date());
         
         gtag('config', 'G-4BP2T7VL8P');
-    </script> 
+    </script>
+    
 <body>
     <div class="loader">
         <div class="loader-content">
@@ -1057,18 +1019,6 @@
     <button class="theme-toggle" aria-label="Toggle theme">
         <i class="fas fa-moon"></i>
     </button>
-    
-    <!--div class="language-toggle" aria-label="Language selection">
-        <button class="language-btn" aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-globe"></i>
-            <span class="current-lang">EN</span>
-        </button>
-        <div class="language-dropdown">
-            <button class="lang-option" data-lang="en">English</button>
-            <button class="lang-option" data-lang="fr">Français</button>
-        </div>
-    </div-->
-    
     <nav class="nav">
         <div class="nav-container">
             <button class="menu-toggle" aria-label="Toggle menu">
@@ -1082,7 +1032,8 @@
                 <button class="nav-link" data-section="skills">Skills</button>
                 <button class="nav-link" data-section="formation">Education</button>
                 <button class="nav-link" data-section="certifications">Certifications</button>
-                <button class="nav-link" data-section="projects">Projects</button> 
+                <button class="nav-link" data-section="projects">Projects</button>
+                
             </div>
         </div>
     </nav>
@@ -1101,10 +1052,9 @@
                     <i class="fas fa-envelope"></i>
                 </a>
             </div>
-        </div>  
+        </div>
     </header>
     <main class="main-container">
-        
         <section id="about" class="section">
              <h2 class="section-title">About me</h2>
              <div class="about-container">
@@ -1128,9 +1078,7 @@
                      </div>
                  </div>
              </div>
-            
         </section>
-        
         <section id="experience" class="section">
             <h2 class="section-title">Experience</h2>
             <div class="timeline">
@@ -1181,7 +1129,6 @@
                     </div>
                 </div>
             </div>
-                
                 <div class="timeline-item">
                     <div class="card experience-card">
                         <div class="card-header">
@@ -1201,8 +1148,6 @@
                             </ul>
                         </div>
                     </div>
-                </div>
-                
                 <div class="timeline-item">
                     <div class="card experience-card">
                         <div class="card-header">
@@ -1219,15 +1164,14 @@
                         <ul class="experience-list">
                             <li>Taught mathematics to students, focusing on delivering clear explanations and fostering understanding in various mathematical concepts. Developed lesson plans, conducted assessments, and provided personalized support to ensure student success.</li>
                         </ul>
-                        </div>
                     </div>
                 </div>
-                
+            </div>
+        </div>
         </section>
         <section id="skills" class="section">
             <h2 class="section-title">Skills</h2>
             <div class="skills-grid">
-                
                 <div class="card">
                     <h3>Programming languages</h3>
                     <div>
@@ -1236,7 +1180,6 @@
                         <a href="https://learn.microsoft.com/fr-fr/dotnet/csharp/tour-of-csharp/" class="skill-tag" target="_blank">C#</a>
                     </div>
                 </div>
-                
                 <div class="card">
                     <h3>Data Engineering & Big Data</h3>
                     <div>
@@ -1244,10 +1187,10 @@
                         <a href="https://hadoop.apache.org/" class="skill-tag" target="_blank">Hadoop</a>
                         <a href="https://www.denodo.com/fr" class="skill-tag" target="_blank">Denodo</a>
                         <a href="https://min.io/" class="skill-tag" target="_blank">MinIO</a>
-                        <a href="https://www.dataiku.com/" class="skill-tag" target="_blank">Dataiku</a>   
+                        <a href="https://www.dataiku.com/" class="skill-tag" target="_blank">Dataiku</a>
+                        
                     </div>   
                 </div>
-                
                 <div class="card">
                     <h3>Machine Learning & AI</h3>
                     <div>
@@ -1255,10 +1198,10 @@
                         <a href="https://www.tensorflow.org/learn?hl=fr" class="skill-tag" target="_blank">TensorFlow</a>
                         <a href="https://pytorch.org/" class="skill-tag" target="_blank">PyTorch</a>
                         <a href="https://huggingface.co/" class="skill-tag" target="_blank">Hugging Face</a>
-                        <a href="https://github.com/tesseract-ocr/tesseract" class="skill-tag" target="_blank">Tesseract</a>  
+                        <a href="https://github.com/tesseract-ocr/tesseract" class="skill-tag" target="_blank">Tesseract</a>
+                        
                     </div>
                 </div>
-                
                 <div class="card">
                     <h3>DevOps</h3>
                     <div>
@@ -1266,82 +1209,83 @@
                         <a href="https://docs.github.com/fr/actions" class="skill-tag" target="_blank">GitHub Actions</a>
                         <a href="https://docs.docker.com/" class="skill-tag" target="_blank">Docker</a>
                         <a href="https://www.terraform.io/" class="skill-tag" target="_blank">Terraform</a>
-                        <a href="https://docs.ansible.com/" class="skill-tag" target="_blank">Ansible</a>   
+                        <a href="https://docs.ansible.com/" class="skill-tag" target="_blank">Ansible</a>
+                        
                     </div>
                 </div>
-                
                 <div class="card">
                     <h3>Data visualization</h3>
                     <div>
                         <a href="https://www.microsoft.com/fr-fr/power-platform/products/power-bi" class="skill-tag" target="_blank">Power BI</a>
                     </div>
                 </div>
-                
                 <div class="card">
                     <h3>RPA/RDA</h3>
                     <div>
                         <a href="https://www.uipath.com/fr" class="skill-tag" target="_blank">UiPath</a> 
                     </div>
                 </div>
-                
                 <div class="card">
                     <h3>Soft skills</h3>
                     <div>
                         <a href="https://www.atlassian.com/fr/agile" class="skill-tag" target="_blank">Agile/Scrum</a>
-                        <a href="https://blog-gestion-de-projet.com/gestion-de-projet/project-management-office/" class="skill-tag" target="_blank">Project management</a>  
+                        <a href="https://blog-gestion-de-projet.com/gestion-de-projet/project-management-office/" class="skill-tag" target="_blank">Project management</a>
+                        
                     </div>
                 </div>
-                
                 <div class="card">
                     <h3>Game development</h3>
                     <div>
                         <a href="https://unity.com/fr" class="skill-tag" target="_blank">Unity</a>
-                        <a href="https://www.unrealengine.com/fr" class="skill-tag" target="_blank">Unreal Engine</a>  
+                        <a href="https://www.unrealengine.com/fr" class="skill-tag" target="_blank">Unreal Engine</a>
+                        
                     </div>
                 </div>
-                
             </div>
         </section>
-
-        
         <section id="formation" class="section">
             <h2 class="section-title">Education</h2>
             <div class="card">
                 <h3>Master's in Data Engineering</h3>
-                <p class="institution">Ynov Campus, Lyon</p>
+                <p class="institution">Ynov Campus, Lyon|</p>
                 <p class="period">2022 - 2024</p>
-                <p class="education-skills">Machine Learning, Deep Learning, Big Data, Data Visualization, MlOps</p>   
+                <p class="education-skills">Machine Learning, Deep Learning, Big Data, Data Visualization, MlOps</p>
+    
+                
             </div>
             <div class="card">
                 <h3>Bachelor's in Computer Science – Software Engineering</h3>
-                <p class="institution">Ynov Campus, Lyon</p>
+                <p class="institution">Ynov Campus, Lyon|</p>
                 <p class="period">2021 - 2022</p>
-                <p class="education-skills">Microservices Architecture, DevOps, IoT, Mobile development, SQL</p>  
+                <p class="education-skills">Microservices Architecture, DevOps, IoT, Mobile development, SQL</p>
+                
             </div>
             <div class="card">
                 <h3>Master's in Research – Mathematics & Applications</h3>
-                <p class="institution">Faculty of Sciences of Sfax, Tunisia</p>
+                <p class="institution">Faculty of Sciences of Sfax, Tunisia|</p>
                 <p class="period">2019 - 2021</p>
                 <p class="education-skills">Probability, Statistics, Functional analysis, Fourier analysis & Distributions, Differential equations & Dynamical systems, Convex analysis & Optimization, Python, Research project</p>
+    
             </div>
             <div class="card">
                 <h3>Bachelor's in Fundamental Mathematics</h3>
-                <p class="institution">Faculty of Sciences of Sfax, Tunisia</p>
+                <p class="institution">Faculty of Sciences of Sfax, Tunisia|</p>
                 <p class="period">2017 - 2019</p>
-                <p class="education-skills">Microservices Architecture, Linear algebra, Analysis, Topology, Differential equations, Topology, Fourier transform, Matlab, Algorithms</p>      
+                <p class="education-skills">Microservices Architecture, Linear algebra, Analysis, Topology, Differential equations, Topology, Fourier transform, Matlab, Algorithms</p>
+                   
             </div>
         </section> 
-
-        
         <section id="certifications" class="section">
             <h2 class="section-title">Certifications</h2>
             <div class="certifications-grid">
                 <div class="certification-card" data-modal="cert2">
                     <img src="prompting.png" alt="Develop Your Prompt Engineering Skills - LinkedIn Learning" class="certification-image">
                 </div>
+                
                 <div class="certification-card" data-modal="cert1">
                     <img src="gomycode.png" alt="Introduction to Artificial Intelligence - GoMyCode" class="certification-image">
                 </div>
+                
                 <div class="certification-card" data-modal="cert3">
                     <img src="duke.png" alt="Data Science Math Skills - Coursera" class="certification-image">
                 </div>
@@ -1354,15 +1298,23 @@
                 </button>
             <div class="certification-details"></div>
         </div>
-    </div>                
+    </div>
+            
+
+
+
+
+
+                    
         <section id="projects" class="section">
             <h2 class="section-title">Projects</h2>
-            
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="card">
-                        <h3>haghob Website</h3>  
+                        <h3>haghob Website</h3>
+                        
                     <div class="project-links">
+                        
                         <button class="project-link view-details" data-project="haghob">
                             <i class="fas fa-external-link-alt"></i> See more
                         </button>
@@ -1379,7 +1331,6 @@
                     </div>
                 </div>
             </div>
-                
             <div class="timeline-item">
                 <div class="card">
                     <h3>HR Agence</h3>
@@ -1390,7 +1341,6 @@
                     </div>
                 </div>
             </div>
-                
             <div class="timeline-item">
                 <div class="card">
                     <h3>Your Video Finder</h3>
@@ -1401,7 +1351,6 @@
                     </div>
                 </div>
             </div>
-                
             <div class="timeline-item">
                 <div class="card">
                     <h3>PharmaStock</h3>
@@ -1412,7 +1361,6 @@
                     </div>
                 </div>
             </div>
-                
             <div class="timeline-item">
                 <div class="card">
                     <h3>StartMatch</h3>
@@ -1423,7 +1371,6 @@
                     </div>
                 </div>
             </div>
-                
             <div class="timeline-item">
                 <div class="card">
                     <h3>PathalogIA</h3>
@@ -1434,7 +1381,6 @@
                     </div>
                 </div>
             </div>
-                
             <div class="timeline-item">
                 <div class="card">
                     <h3>The Maze</h3>
@@ -1445,7 +1391,6 @@
                     </div>
                 </div>
             </div>
-                
             <div class="timeline-item">
                 <div class="card">
                     <h3>Space Smuggler</h3>
@@ -1456,7 +1401,6 @@
                     </div>
                 </div>
             </div>
-                
             <div class="timeline-item">
                 <div class="card">
                     <h3>iRecipe</h3>
@@ -1467,8 +1411,7 @@
                     </div>
                 </div>
             </div>
-            
-                <div class="timeline-item">
+            <div class="timeline-item">
                 <div class="card">
                     <h3>DevOps</h3>
                     <div class="project-links">
@@ -1478,7 +1421,6 @@
                     </div>
                 </div>
             </div>
-                
             <div class="timeline-item">
                 <div class="card">
                     <h3>Monte Carlo Methods</h3>
@@ -1489,11 +1431,8 @@
                     </div>
                 </div>
             </div>
-                
         </div>
     </section>
-    
-    
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
@@ -1541,134 +1480,6 @@
                     });
                 });
             });
-            const languageToggle = document.querySelector('.language-toggle');
-            const languageBtn = document.querySelector('.language-btn');
-            const languageDropdown = document.querySelector('.language-dropdown');
-            const currentLangSpan = document.querySelector('.current-lang');
-            const langOptions = document.querySelectorAll('.lang-option');
-            const translations = {
-                en: {
-                    header_title: "Data Engineer | Mathematician",
-                    nav_about: "About Me",
-                    nav_experience: "Experience",
-                    nav_skills: "Skills",
-                    nav_formation: "Education",
-                    nav_certifications: "Certifications",
-                    nav_projects: "Projects",
-                    header_subtitle: "I engineer data into innovative solutions, with the logic of a mathematician",
-                    about_title: "About me",
-                    about_who: "Who am I?",
-                    about_text1: "I'm Hana Ghorbel, a <strong>Data Engineer</strong> with a passion for <strong>Mathematics</strong> combining technical prowess and analytical precision to transform data challenges into impactful solutions.",
-                    about_text2: "My journey, blending a strong mathematical foundation with specialized data engineering expertise, demonstrates my ability to bridge theory and practice. This dual competency allows me to approach data challenges with a unique perspective, merging mathematical rigor with technical innovation.",
-                    about_text3: "Curious and persistent, I thrive in designing robust and scalable data solutions while maintaining a clear vision of business objectives.",
-                    
-                    experience_title: "Experience",
-                    skills_title: "Skills",
-                    formation_title: "Education",
-                    certifications_title: "Certifications",
-                    projects_title: "Projects",
-                    
-                    experience_data_analyst_title: "Data Analyst & Data Scientist",
-                    experience_data_analyst_company: "Enedis, Lyon",
-                    experience_data_analyst_period: "January 2024 - November 2024",
-                    experience_data_analyst_desc1: "Development and deployment of interactive dashboards for strategic monitoring of key data: absenteeism tracking for the HR department, activity tracking for lab departments, and monitoring of protection measures for workers on construction sites, enabling better decision-making and optimized resource management (Power BI)",
-                    experience_data_analyst_desc2: "Implementation of a data virtualization solution to consolidate heterogeneous sources and simplify queries (Denodo, SQL)",
-                    experience_data_analyst_desc3: "Optimization of fault indicator placement in HV (high-voltage) networks: data analysis and preparation using machine learning algorithms (Dataiku, Python)",
-                    experience_data_analyst_desc4: "Development of robots to automate interactions between two web interfaces as part of an RPA/RDA project (UiPath)",
-                    experience_data_analyst_desc5: "Coordination and management of technical projects: organizing business meetings and drafting technical specifications",
-                    experience_data_scientist_title: "Data Scientist & Data Engineer",
-                    experience_data_scientist_company: "Worldline, Lyon",
-                    experience_data_scientist_period: "September 2022 - November 2023",
-                    experience_data_scientist_desc1: "Evaluation and comparison of AI and Big Data tools: performance analysis of various analysis and machine learning tools in an industrial context (Python, Pandas, Scikit-learn)",
-                    experience_data_scientist_desc2: "Automation of information gathering for client projects: development of web scraping scripts to extract data from web pages using Optical Character Recognition (OCR) (Python, Tesseract, Selenium)",
-                    experience_data_scientist_desc3: "Advanced textual data analysis with NLP (Natural Language Processing): preparation, cleaning, and modeling of textual data for classification and information extraction tasks, particularly using the BERT model (Python, Hugging Face, TensorFlow)",
-                    experience_data_scientist_desc4: "Optimization of AI systems through prompt engineering: development and fine-tuning of prompts to enhance language model performance, ensuring precise and efficient communication with LLMs",
-                    experience_windev_title: "WinDev Developer",
-                    experience_windev_company: "Groupe FORLAM, Lyon",
-                    experience_windev_period: "February 2022 - September 2022",
-                    experience_windev_desc1: "Development of a WinDev application for planning work orders (OF) linked to the company’s internal ERP",
-                    experience_windev_desc2: "Continuous collaboration with users to validate the specifications (functionalities, design, processes)",
-                    experience_math_teacher_title: "Mathematics Teacher",
-                    experience_math_teacher_company: "Private Center, Sfax, Tunisia",
-                    experience_math_teacher_period: "January 2021 – August 2021",
-                    experience_math_teacher_desc1: "Taught mathematics to students, focusing on delivering clear explanations and fostering understanding in various mathematical concepts. Developed lesson plans, conducted assessments, and provided personalized support to ensure student success.",    
-                    
-                    skills_programming: "Programming languages",
-                    skills_data_engineering: "Data Engineering & Big Data",
-                    skills_machine_learning: "Machine Learning & AI",
-                    skills_devops: "DevOps",
-                    skills_visualization: "Data visualization",
-                    skills_rpa: "RPA/RDA",
-                    skills_soft_skills: "Soft skills",
-                    skills_game_dev: "Game development",
-                    
-                    education_master_data_title: "Master's in Data Engineering",
-                    education_master_data_institution: "Ynov Campus, Lyon",
-                    education_master_data_period: "2022 - 2024",
-                    education_master_data_skills: "Machine Learning, Deep Learning, Big Data, Data Visualization, MlOps"    
-                },
-                fr: {
-                    header_title: "Ingénieure de Données | Mathématicienne",
-                    nav_about: "À propos de moi",
-                    nav_experience: "Expérience",
-                    nav_skills: "Compétences",
-                    nav_formation: "Formation",
-                    nav_certifications: "Certifications",
-                    nav_projects: "Projets",
-                    header_subtitle: "Je transforme les données en solutions innovantes, avec la logique d'une mathématicienne",
-                    about_title: "À propos de moi",
-                    about_who: "Qui suis-je ?",
-                    about_text1: "Je suis Hana Ghorbel, une <strong>ingénieure de données</strong> passionnée par les <strong>mathématiques</strong>, alliant expertise technique et précision analytique pour convertir les défis liés aux données en solutions percutantes.",
-                    about_text2: "Mon parcours, combinant une solide base mathématique avec une expertise spécialisée en ingénierie de données, démontre ma capacité à relier théorie et pratique. Cette double compétence me permet d’aborder les défis liés aux données avec une perspective unique, fusionnant rigueur mathématique et innovation technique.",
-                    about_text3: "Curieuse et persévérante, je m’épanouis dans la conception de solutions de données robustes et évolutives tout en conservant une vision claire des objectifs commerciaux.",
-                    
-                    experience_title: "Expérience",
-                    skills_title: "Compétences",
-                    formation_title: "Formation",
-                    certifications_title: "Certifications",
-                    projects_title: "Projets",
-                    
-                    experience_data_analyst_title: "Data Analyst & Data Scientist",
-                    experience_data_analyst_company: "Enedis, Lyon",
-                    experience_data_analyst_period: "Janvier 2024 - Novembre 2024",
-                    experience_data_analyst_desc1: "Développement et déploiement de tableaux de bord interactifs pour le suivi stratégique des données clés : suivi de l’absentéisme pour le département RH, suivi des activités pour les départements de laboratoire, et surveillance des mesures de protection pour les travailleurs sur les chantiers, permettant une meilleure prise de décision et une gestion optimisée des ressources (Power BI)",
-                    experience_data_analyst_desc2: "Mise en œuvre d’une solution de virtualisation des données pour consolider des sources hétérogènes et simplifier les requêtes (Denodo, SQL)",
-                    experience_data_analyst_desc3: "Optimisation du placement des indicateurs de défaut dans les réseaux HT (haute tension) : analyse et préparation des données en utilisant des algorithmes d’apprentissage automatique (Dataiku, Python)",
-                    experience_data_analyst_desc4: "Développement de robots pour automatiser les interactions entre deux interfaces web dans le cadre d’un projet RPA/RDA (UiPath)",
-                    experience_data_analyst_desc5: "Coordination et gestion de projets techniques : organisation de réunions avec les parties prenantes et rédaction de spécifications techniques",
-                    experience_data_scientist_title: "Data Scientist & Data Engineer",
-                    experience_data_scientist_company: "Worldline, Lyon",
-                    experience_data_scientist_period: "Septembre 2022 - Novembre 2023",
-                    experience_data_scientist_desc1: "Évaluation et comparaison d’outils d’IA et de Big Data : analyse des performances de divers outils d’analyse et d’apprentissage automatique dans un contexte industriel (Python, Pandas, Scikit-learn)",
-                    experience_data_scientist_desc2: "Automatisation de la collecte d’informations pour les projets clients : développement de scripts de web scraping pour extraire des données à partir de pages web en utilisant la reconnaissance optique de caractères (OCR) (Python, Tesseract, Selenium)",
-                    experience_data_scientist_desc3: "Analyse avancée de données textuelles avec le traitement du langage naturel (NLP) : préparation, nettoyage et modélisation de données textuelles pour des tâches de classification et d’extraction d’informations, notamment en utilisant le modèle BERT (Python, Hugging Face, TensorFlow)",
-                    experience_data_scientist_desc4: "Optimisation des systèmes d’IA par l’ingénierie des prompts : développement et ajustement fin des prompts pour améliorer les performances des modèles de langage, assurant une communication précise et efficace avec les LLMs",
-                    experience_windev_title: "Développeuse WinDev",
-                    experience_windev_company: "Groupe FORLAM, Lyon",
-                    experience_windev_period: "Février 2022 - Septembre 2022",
-                    experience_windev_desc1: "Développement d’une application WinDev pour la planification des ordres de fabrication (OF) connectée au ERP interne de l’entreprise",
-                    experience_windev_desc2: "Collaboration continue avec les utilisateurs pour valider les spécifications (fonctionnalités, design, processus)",
-                    experience_math_teacher_title: "Professeur de Mathématiques",
-                    experience_math_teacher_company: "Centre Privé, Sfax, Tunisie",
-                    experience_math_teacher_period: "Janvier 2021 – Août 2021",
-                    experience_math_teacher_desc1: "J’ai enseigné les mathématiques aux étudiants, en mettant l’accent sur des explications claires et la compréhension des différents concepts mathématiques. J’ai développé des plans de cours, conduit des évaluations et fourni un soutien personnalisé pour garantir la réussite des étudiants.",
-                    
-                    skills_programming: "Langages de programmation",
-                    skills_data_engineering: "Ingénierie des Données & Big Data",
-                    skills_machine_learning: "Machine Learning & IA",
-                    skills_devops: "DevOps",
-                    skills_visualization: "Visualisation de données",
-                    skills_rpa: "RPA/RDA",
-                    skills_soft_skills: "Soft skills",
-                    skills_game_dev: "Développement de jeux",
-                    
-                    education_master_data_title: "Mastère en Data Engineering",
-                    education_master_data_institution: "Ynov Campus, Lyon",
-                    education_master_data_period: "2022 - 2024",
-                    education_master_data_skills: "Machine Learning, Deep Learning, Big Data, Data Visualization, MlOps"
-                }
-                
-            };
             const projectsData = {
                 haghob: {
                     title: "haghob Website",
@@ -1876,7 +1687,10 @@
                     description: "Team project - AI development role - Led the development of an intelligent movie recommendation chatbot using the RASA framework. The chatbot engages users in natural conversations to understand their preferences through specific questions about age, gender, interests, and other demographic factors, offering personalized movie suggestions without requiring user accounts.",
                     features: [
                         "Designed conversational AI system : dynamic question flow based on user responses, contextual understanding of user preferences, demographic-based recommendation logic, natural language processing for user inputs",
-                        "Implemented movie recommendation engine : multi-factor analysis for suggestions, age-appropriate content filtering, genre and theme matching, preference-based ranking system"     
+                        "Implemented movie recommendation engine : multi-factor analysis for suggestions, age-appropriate content filtering, genre and theme matching, preference-based ranking system"
+                
+                    
+                       
                     ],
                     technicalAchievements: [
                         "Built custom RASA pipeline for movie recommendation domain",
@@ -2170,6 +1984,7 @@
                     github: "https://github.com/haghob/Monte-Carlo-Methods"
                 }
             };
+         
             document.querySelectorAll('.view-details').forEach(button => {
                 button.addEventListener('click', (e) => {
                     const projectId = e.currentTarget.dataset.project;
@@ -2186,6 +2001,9 @@
                             </div>
                          </div>
                          <div class="project-content">   
+                                
+                            
+                            
                             <div class="project-content">
                                 <h3>Description</h3>
                                 <p>${project.description}</p>
@@ -2193,28 +2011,36 @@
                                 <ul>
                                     ${project.features.map(feature => `<li>${feature}</li>`).join('')}
                                 </ul>
+
                                 <h3>Technical achievements</h3>
                                 <ul>
                                     ${project.technicalAchievements.map(achievement => `<li>${achievement}</li>`).join('')}
                                 </ul>
+
                                 <h3>Results & Impact</h3>
                                 <ul>
                                     ${project.results.map(result => `<li>${result}</li>`).join('')}
                                 </ul>
+
                                 <h3>Key challenges</h3>
                                 <ul>
                                     ${project.challenges.map(challenge => `<li>${challenge}</li>`).join('')}
                                 </ul>
+
                                 <h3>Documentation</h3>
                                 <ul>
                                     ${project.documentation.map(doc => `<li>${doc}</li>`).join('')}
                                 </ul>
+                            
                                 <h3>Academic advisor / Mentor</h3>
                                 <p>${project.advisor}</p>
+
+        
                                 <h3>Technologies used</h3>
                                 <div class="project-tech">
                                     ${project.technologies.map(tech => `<span class="skill-tag">${tech}</span>`).join('')}
                                 </div>
+
                                 <div class="project-links">
                                     <a href="${project.github}" class="project-link" target="_blank">
                                         <i class="fab fa-github"></i> GitHub
@@ -2227,6 +2053,8 @@
                     document.body.style.overflow = 'hidden';
                 });
             });
+
+
             const certificationData = {
                 cert2: {
                     title: "Develop Your Prompt Engineering Skills",
@@ -2240,6 +2068,8 @@
                     period: "July 2021 – October 2021",
                     skills: ["AI", "Machine Learning", "Python"]
                 },
+                
+                
                 cert3: {
                     title: "Data Science Math Skills",
                     institution: "Duke University via Coursera",
@@ -2247,6 +2077,8 @@
                     skills: ["Data Science", "Mathematics", "Statistics"]
                 }
             };
+
+
             document.querySelectorAll('.certification-card').forEach(card => {
                 card.addEventListener('click', (e) => {
                     const modalId = e.currentTarget.dataset.modal;
@@ -2264,6 +2096,7 @@
                     document.body.style.overflow = 'hidden';
                 });
             });
+
             document.querySelectorAll('.close-modal').forEach(button => {
                 button.addEventListener('click', () => {
                     if (projectModal.classList.contains('active')) {
@@ -2286,6 +2119,7 @@
                     document.body.style.overflow = '';
                 }
             });
+
             function activateSection(sectionId) {
                 sections.forEach(section => section.classList.remove('active'));
                 navLinks.forEach(link => link.classList.remove('active'));
@@ -2300,6 +2134,7 @@
                     });
                 }
             }
+
             navLinks.forEach(link => {
                 link.addEventListener('click', (e) => {
                     e.preventDefault();
@@ -2319,12 +2154,14 @@
                     navLinksContainer.classList.toggle('active');
                 });
             }
+
             activateSection('about');
             const observerOptions = {
                 root: null,
                 rootMargin: '0px',
                 threshold: 0.5
             };
+
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -2339,100 +2176,22 @@
                     }
                 });
             }, observerOptions);
+
             sections.forEach(section => observer.observe(section));
+        
             window.addEventListener('load', () => {
                 document.querySelector('.loader').style.display = 'none';
             });
+
             window.addEventListener('scroll', () => {
                 const scrollTop = window.scrollY;
                 const docHeight = document.documentElement.scrollHeight - window.innerHeight;
                 const scrollPercent = (scrollTop / docHeight) * 100;
                 document.querySelector('.progress-bar').style.width = scrollPercent + '%';
             });
-            function setLanguage(lang) {
-                localStorage.setItem('language', lang);
-                currentLangSpan.textContent = lang.toUpperCase();
-                const content = translations[lang];
-                document.querySelector('.header h1').innerHTML = content.header_title;
-                document.querySelector('[data-section="about"]').textContent = content.nav_about;
-                document.querySelector('[data-section="experience"]').textContent = content.nav_experience;
-                document.querySelector('[data-section="skills"]').textContent = content.nav_skills;
-                document.querySelector('[data-section="formation"]').textContent = content.nav_formation;
-                document.querySelector('[data-section="certifications"]').textContent = content.nav_certifications;
-                document.querySelector('[data-section="projects"]').textContent = content.nav_projects;
-                document.querySelector('.header p').innerHTML = content.header_subtitle;
-                
-                document.querySelector('#about .section-title').innerHTML = content.about_title;
-                document.querySelector('#experience .section-title').innerHTML = content.experience_title;
-                document.querySelector('#skills .section-title').innerHTML = content.skills_title;
-                document.querySelector('#formation .section-title').innerHTML = content.formation_title;
-                document.querySelector('#certifications .section-title').innerHTML = content.certifications_title;
-                document.querySelector('#projects .section-title').innerHTML = content.projects_title;
-                
-                document.querySelector('.about-content h3').innerHTML = content.about_who;
-                document.querySelector('.about-content p:nth-child(2)').innerHTML = content.about_text1;
-                document.querySelector('.about-content p:nth-child(3)').innerHTML = content.about_text2;
-                document.querySelector('.about-content p:nth-child(4)').innerHTML = content.about_text3;
-                
-                document.querySelector('#experience .timeline-item:nth-child(1) .card-header h3').innerHTML = content.experience_data_analyst_title;
-                document.querySelector('#experience .timeline-item:nth-child(1) .company').innerHTML = content.experience_data_analyst_company;
-                document.querySelector('#experience .timeline-item:nth-child(1) .period').innerHTML = content.experience_data_analyst_period;
-                document.querySelector('#experience .timeline-item:nth-child(1) .experience-list li:nth-child(1)').innerHTML = content.experience_data_analyst_desc1;
-                document.querySelector('#experience .timeline-item:nth-child(1) .experience-list li:nth-child(2)').innerHTML = content.experience_data_analyst_desc2;
-                document.querySelector('#experience .timeline-item:nth-child(1) .experience-list li:nth-child(3)').innerHTML = content.experience_data_analyst_desc3;
-                document.querySelector('#experience .timeline-item:nth-child(1) .experience-list li:nth-child(4)').innerHTML = content.experience_data_analyst_desc4;
-                document.querySelector('#experience .timeline-item:nth-child(1) .experience-list li:nth-child(5)').innerHTML = content.experience_data_analyst_desc5;
-                
-                document.querySelector('#experience .timeline-item:nth-child(2) .card-header h3').innerHTML = content.experience_data_scientist_title;
-                document.querySelector('#experience .timeline-item:nth-child(2) .company').innerHTML = content.experience_data_scientist_company;
-                document.querySelector('#experience .timeline-item:nth-child(2) .period').innerHTML = content.experience_data_scientist_period;
-                document.querySelector('#experience .timeline-item:nth-child(2) .experience-list li:nth-child(1)').innerHTML = content.experience_data_scientist_desc1;
-                document.querySelector('#experience .timeline-item:nth-child(2) .experience-list li:nth-child(2)').innerHTML = content.experience_data_scientist_desc2;
-                document.querySelector('#experience .timeline-item:nth-child(2) .experience-list li:nth-child(3)').innerHTML = content.experience_data_scientist_desc3;
-                document.querySelector('#experience .timeline-item:nth-child(2) .experience-list li:nth-child(4)').innerHTML = content.experience_data_scientist_desc4;
-                
-                document.querySelector('#experience .timeline-item:nth-child(3) .card-header h3').innerHTML = content.experience_windev_title;
-                document.querySelector('#experience .timeline-item:nth-child(3) .company').innerHTML = content.experience_windev_company;
-                document.querySelector('#experience .timeline-item:nth-child(3) .period').innerHTML = content.experience_windev_period;
-                document.querySelector('#experience .timeline-item:nth-child(3) .experience-list li:nth-child(1)').innerHTML = content.experience_windev_desc1;
-                document.querySelector('#experience .timeline-item:nth-child(3) .experience-list li:nth-child(2)').innerHTML = content.experience_windev_desc2;
-                
-                document.querySelector('#experience .timeline-item:nth-child(4) .card-header h3').innerHTML = content.experience_math_teacher_title;
-                document.querySelector('#experience .timeline-item:nth-child(4) .company').innerHTML = content.experience_math_teacher_company;
-                document.querySelector('#experience .timeline-item:nth-child(4) .period').innerHTML = content.experience_math_teacher_period;
-                document.querySelector('#experience .timeline-item:nth-child(4) .experience-list li:nth-child(1)').innerHTML = content.experience_math_teacher_desc1;
-                
-                document.querySelector('#skills .card:nth-child(1) h3').innerHTML = content.skills_programming;
-                document.querySelector('#skills .card:nth-child(2) h3').innerHTML = content.skills_data_engineering;
-                document.querySelector('#skills .card:nth-child(3) h3').innerHTML = content.skills_machine_learning;
-                document.querySelector('#skills .card:nth-child(4) h3').innerHTML = content.skills_devops;
-                document.querySelector('#skills .card:nth-child(5) h3').innerHTML = content.skills_visualization;
-                document.querySelector('#skills .card:nth-child(6) h3').innerHTML = content.skills_rpa;
-                document.querySelector('#skills .card:nth-child(7) h3').innerHTML = content.skills_soft_skills;
-                document.querySelector('#skills .card:nth-child(8) h3').innerHTML = content.skills_game_dev;
-                
-                document.querySelector('#formation .card:nth-child(1) h3').innerHTML = content.education_master_data_title;
-                document.querySelector('#formation .card:nth-child(1) .institution').innerHTML = content.education_master_data_institution;
-                document.querySelector('#formation .card:nth-child(1) .period').innerHTML = content.education_master_data_period;
-                document.querySelector('#formation .card:nth-child(1) .education-skills').innerHTML = content.education_master_data_skills;
-                
-            }
-            languageBtn.addEventListener('click', () => {
-                languageDropdown.classList.toggle('active');
-                const isExpanded = languageDropdown.classList.contains('active');
-                languageBtn.setAttribute('aria-expanded', isExpanded);
-            });
-            langOptions.forEach(option => {
-                option.addEventListener('click', () => {
-                    const lang = option.dataset.lang;
-                    setLanguage(lang);
-                    languageDropdown.classList.remove('active');
-                    languageBtn.setAttribute('aria-expanded', 'false');
-                });
-            });
-            const savedLang = localStorage.getItem('language') || 'en';
-            setLanguage(savedLang);    
-        });       
+        });
+
+            
     </script>
     <div id="project-modal" class="project-modal">
         <div class="project-modal-content">
@@ -2447,8 +2206,10 @@
                     <i class="fas fa-times"></i>
                 </button>
                 <div class="certification-details"></div>
-            </div>     
-        </div> 
+            </div>
+            
+        </div>
+        
     </div>
 </body>
 </html>
