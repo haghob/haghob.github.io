@@ -290,8 +290,6 @@
           border: none;
           transition: all 0.3s ease;
         }
-
-        
         .section {
             display: none;
             opacity: 0;
@@ -403,7 +401,6 @@
             .nav-links {
                 display: none;
             }
-
             .section {
                 padding: 4rem 1rem;
             }
@@ -463,7 +460,6 @@
         .about-content {
             flex: 1;
         }
-
         .about-content h3 {
             font-size: 1.8rem;
             margin-bottom: 1rem;
@@ -570,8 +566,7 @@
             z-index: 2000;
             overflow-y: auto;
             opacity: 0;
-            transition: var(--transition);
-            
+            transition: var(--transition);   
         }
         .project-modal.active {
             display: block;
@@ -587,13 +582,11 @@
             border: 1px solid rgba(255, 105, 180, 0.1);
             box-shadow: var(--shadow-lg);
             transform: translateY(20px);
-            transition: var(--transition);
-            
+            transition: var(--transition);  
         }
         .project-modal.active .project-modal-content {
             transform: translateY(0);
         }
-
         .project-header {
             display: flex;
             align-items: center;
@@ -602,7 +595,6 @@
             padding-bottom: 1.5rem;
             border-bottom: 1px solid rgba(255, 105, 180, 0.1);
         }
-
         .project-logo {
             width: 80px;
             height: 80px;
@@ -617,18 +609,15 @@
             font-size: 2.5rem;
             color: var(--color-background);
         }
-        
         .project-title-section {
             flex-grow: 1;
         }
-        
         .project-logo img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             border-radius: 1rem;
         }
-        
         .close-modal {
             position: fixed;
             top: 20px;
@@ -681,8 +670,6 @@
             background: var(--gradient-primary);
             border-radius: 3px;
         }
-
-        
         .project-content p {
             line-height: 1.8;
             margin-bottom: 1.5rem;
@@ -712,7 +699,6 @@
             transform: translateX(5px);
             color: var(--color-secondary);
         }
-        
         .project-tech {
             display: flex;
             flex-wrap: wrap;
@@ -727,7 +713,6 @@
             font-size: 0.9rem;
             transition: var(--transition);
         }
-
         .project-tech .skill-tag:hover {
             background: var(--gradient-primary);
             color: var(--color-background);
@@ -749,7 +734,6 @@
             align-items: center;
             justify-content: center;
         }
-
         .close-modal:hover {
             background: var(--gradient-primary);
             color: var(--color-background);
@@ -766,11 +750,9 @@
                 gap: 1rem;
                 align-items: flex-start;
             }
-
             .project-title {
                 font-size: 2rem;
             }
-
             .project-logo {
                 width: 60px;
                 height: 60px;
@@ -782,9 +764,6 @@
           height: 100%;
           z-index: 1;
         }
-
-        
-        
         .experience-card {
             transition: all 0.3s ease;
         }
@@ -836,7 +815,6 @@
         .contact-item span {
             color: #F06292;
         }
-
         #certifications {
             padding: 4rem 2rem;
             max-width: 1200px;
@@ -856,7 +834,6 @@
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
         }
-
         .certification-card {
             background: var(--color-card);
             border-radius: 1rem;
@@ -865,13 +842,11 @@
             border: 1px solid rgba(74, 144, 226, 0.1);
             overflow: hidden;
         }
-
         .certification-card:hover {
             transform: translateY(-5px);
             border-color: var(--color-primary);
             box-shadow: var(--shadow-md);
         }
-
         .certification-image {
             width: 100%;
             height: auto;
@@ -883,7 +858,6 @@
             background: var(--color-card);
             border-color: rgba(33, 150, 243, 0.1);
         }
-
         [data-theme="light"] .certification-card:hover {
             border-color: var(--color-primary);
         }
@@ -901,12 +875,10 @@
             opacity: 0;
             transition: var(--transition);
         }
-
         #certification-modal.active {
             display: block;
             opacity: 1;
         }
-
         .project-modal-content {
             max-width: 1000px;
             margin: 40px auto;
@@ -919,7 +891,6 @@
             transform: translateY(20px);
             transition: var(--transition);
         }
-
         #certification-modal.active .project-modal-content {
             transform: translateY(0);
         }
@@ -2440,10 +2411,10 @@
                 document.querySelector('#skills .card:nth-child(7) h3').innerHTML = content.skills_soft_skills;
                 document.querySelector('#skills .card:nth-child(8) h3').innerHTML = content.skills_game_dev;
                 
-                //document.querySelector('#formation .card:nth-child(1) h3').innerHTML = content.education_master_data_title;
-                //document.querySelector('#formation .card:nth-child(1) .institution').innerHTML = content.education_master_data_institution;
-                //document.querySelector('#formation .card:nth-child(1) .period').innerHTML = content.education_master_data_period;
-                //document.querySelector('#formation .card:nth-child(1) .education-skills').innerHTML = content.education_master_data_skills;
+                document.querySelector('#formation .card:nth-child(1) h3').innerHTML = content.education_master_data_title;
+                document.querySelector('#formation .card:nth-child(1) .institution').innerHTML = content.education_master_data_institution;
+                document.querySelector('#formation .card:nth-child(1) .period').innerHTML = content.education_master_data_period;
+                document.querySelector('#formation .card:nth-child(1) .education-skills').innerHTML = content.education_master_data_skills;
                 
             }
             languageBtn.addEventListener('click', () => {
