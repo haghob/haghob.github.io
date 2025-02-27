@@ -980,6 +980,47 @@
             background: rgba(33, 150, 243, 0.1);
             color: var(--color-primary);
         }
+
+        .timeline-item .card {
+            position: relative;
+            background: var(--color-card);
+            border-radius: 1rem;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 105, 180, 0.1);
+            transform-style: preserve-3d; 
+            perspective: 1000px; 
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
+        }
+
+        .timeline-item .card:hover {
+            transform: rotateY(10deg) rotateX(5deg) translateZ(10px); 
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); 
+            border-color: var(--color-primary); 
+        }
+
+        .timeline-item .card h3 {
+            transition: all 0.3s ease;
+        }
+
+        .timeline-item .card:hover h3 {
+            color: var(--color-secondary); 
+        }
+
+        [data-theme="light"] .timeline-item .card {
+            background: var(--color-card);
+            border-color: rgba(33, 150, 243, 0.1);
+        }
+
+        [data-theme="light"] .timeline-item .card:hover {
+            border-color: var(--color-primary);
+        }
+
+        
+
+
+        
             
     </style>
 </head>
