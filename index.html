@@ -534,21 +534,41 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            padding: 0.75rem 1.5rem;
-            background: rgba(255, 105, 180, 0.1);
+            padding: 0.8rem 1.5rem;
+            background: linear-gradient(45deg, #4A90E2 0%, #D81B60 100%);
             border-radius: 0.5rem;
-            color: var(--color-text);
+            color: #ffffff;
             text-decoration: none;
-            transition: var(--transition);
+            font-weight: 600;
             font-size: 1.1rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(74, 144, 226, 0.3);
         }
+
         .project-link:hover {
-            background: var(--gradient-primary);
+            background: linear-gradient(45deg, #357ABD 0%, #B71C1C 100%);
             transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(74, 144, 226, 0.5);
         }
         .project-link i {
             font-size: 1.2rem;
         }
+        [data-theme="light"] .project-link {
+            background: linear-gradient(45deg, #2196F3 0%, #F06292 100%);
+            color: #ffffff;
+            box-shadow: 0 4px 10px rgba(33, 150, 243, 0.3);
+        }
+
+        [data-theme="light"] .project-link:hover {
+            background: linear-gradient(45deg, #1976D2 0%, #C2185B 100%);
+            box-shadow: 0 6px 15px rgba(33, 150, 243, 0.5);
+        }
+
+
+
+        
         .project-modal {
             display: none;
             position: fixed;
