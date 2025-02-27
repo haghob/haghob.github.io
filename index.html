@@ -696,7 +696,7 @@
             color: var(--color-secondary);
         }
         .project-tech {
-            display: flex;
+            display: inline;
             flex-wrap: wrap;
             gap: 0.8rem;
             margin: 1.5rem 0;
@@ -872,6 +872,21 @@
             display: block;
             opacity: 1;
         }
+        
+        .certification-skill-text {
+            display: inline; 
+            margin: 0.3rem;
+            color: #4A90E2;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+
+        [data-theme="light"] .certification-skill-text {
+            color: #2196F3;
+        }
+
+
+        
         .project-modal-content {
             max-width: 1000px;
             margin: 40px auto;
@@ -2015,7 +2030,7 @@
                         <p class="institution">Institution: ${cert.institution}</p>
                         <h3>Skills Covered</h3>
                         <div class="project-tech">
-                            ${cert.skills.map(skill => `<span class="skill-tag">${skill}</span>`).join('')}
+                            ${cert.skills.map(skill => `<span class="certification-skill-text">${skill}</span>`).join(', ')}
                         </div>
                     `;
                     certificationModal.classList.add('active');
