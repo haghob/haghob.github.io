@@ -1332,6 +1332,21 @@
             </div>
             <div class="timeline-item">
                 <div class="card">
+                    <h3>AudioAlert</h3>
+                    <div class="project-links">
+                        <button class="project-link view-details" data-project="AudioAlert">
+                            <i class="fas fa-external-link-alt"></i> See more
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+                
+            <div class="timeline-item">
+                <div class="card">
                     <h3>StartMatch</h3>
                     <div class="project-links">
                         <button class="project-link view-details" data-project="StartMatch">
@@ -1649,6 +1664,50 @@
                     ],
                     technologies: ["Java", "Spring Boot", "SQL Server","Docker","Power BI"],
                     github: "https://github.com/haghob/PharmaStock"
+                },
+                AudioAlert: {
+                    title: "AudioAlert: Continuous Deployment of Emergency Call Prediction",
+                    logo: "logo_AudioAlert.png",
+                    period: "June 2024",
+                    description: "Individual project - Developed AudioAlert, a robust system for the continuous deployment and prediction of emergency 911 call audio data, leveraging machine learning and data engineering techniques. The project implements a predictive model for analyzing audio files, containerized with Docker, and deployed via a FastAPI serving API and a Streamlit web interface. It includes automated training, real-time prediction, and performance monitoring, using the Kaggle dataset '911 Recordings: The First 6 Seconds' to process and predict emergency call urgency.",
+                    features: [
+                        "Implemented a real-time audio prediction system for emergency 911 calls using Librosa for audio processing",
+                        "Developed a FastAPI serving API with a POST endpoint for predictions, handling JSON and WAV data inputs",
+                        "Created a Streamlit web interface allowing users to upload audio files, view predictions, and provide feedback",
+                        "Established continuous training and deployment pipelines using Docker and Docker Compose for container orchestration",
+                        "Integrated performance reporting and monitoring with Evidently for real-time model evaluation and data drift detection"
+                    ],
+                    technicalAchievements: [
+                        "Designed and implemented a Convolutional Neural Network (CNN) model for audio classification, trained on preprocessed audio features using Librosa",
+                        "Built a scalable FastAPI backend with global model loading from artifacts, ensuring instant prediction availability",
+                        "Containerized the serving API and web interface using Dockerfiles and Docker Compose, managing dynamic IP communication between containers",
+                        "Optimized model parameters with GridSearch and automated feature selection, reducing dimensionality from 300 to 221 columns",
+                        "Developed automated CI/CD pipelines with Jenkins for continuous training, deployment, and monitoring using Pickle for model serialization"
+                    ],
+                    results: [
+                        "Achieved over 90% accuracy in predicting emergency call urgency, reducing response time by 50% in simulations.",
+                        "Successfully deployed a production-ready system accessible via http://localhost:8080/docs for the API and http://localhost:8081 for the Streamlit interface.",
+                        "Enabled real-time feedback collection and model improvement, enhancing system reliability for emergency services.",
+                        "Reduced deployment errors by 80% through Docker containerization and automated testing, ensuring consistent performance across platforms.",
+                        "Provided actionable insights for emergency response teams, improving decision-making with data-driven predictions."
+                    ],
+                    challenges: [
+                        "Handling dynamic IP addresses in Docker containers, requiring Docker Compose for network management between the serving API and web interface.",
+                        "Optimizing audio preprocessing with Librosa for a 50 Hz sampling rate, ensuring compatibility with the 11 kHz dataset from Kaggle.",
+                        "Managing large-scale audio data and model training, requiring efficient feature selection and parameter tuning with GridSearch.",
+                        "Ensuring real-time performance and scalability in the FastAPI and Streamlit applications, particularly under high load.",
+                        "Implementing secure and reliable feedback mechanisms for users, while maintaining data integrity in prod-data.csv."
+                    ],
+                    documentation: [
+                        "Comprehensive API documentation using Swagger/OpenAPI for the FastAPI endpoints.",
+                        "Detailed step-by-step project documentation including system architecture, Docker configuration, and Streamlit interface design.",
+                        "Model training and optimization reports, including feature selection methodology and GridSearch results.",
+                        "Deployment guides for Docker Compose setup, with instructions for starting services via docker-compose up.",
+                        "Performance monitoring reports using Evidently, detailing model accuracy, data drift, and prediction trends."
+                    ],
+                    advisor: "N/A",
+                    technologies: ["Python", "FastAPI", "Streamlit", "Librosa", "Docker", "Docker Compose", "Evidently", "Pickle", "Jenkins", "Kaggle", "GridSearch"],
+                    github: "https://github.com/haghob/mlops_project/tree/main"
                 },
                 StartMatch: {
                     title: "StartMatch",
