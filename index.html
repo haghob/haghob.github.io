@@ -1321,6 +1321,19 @@
                     </div>
                 </div>
             </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="card">
+                        <h3>CoolTech</h3>
+                        
+                    <div class="project-links">
+                        
+                        <button class="project-link view-details" data-project="Cooltech">
+                            <i class="fas fa-external-link-alt"></i> See more
+                        </button>
+                    </div>
+                </div>
+            </div>
                 
                 <div class="timeline-item">
                     <div class="card">
@@ -1534,6 +1547,54 @@
                     advisor: "N/A",
                     technologies: ["Figma","Node.js", "Express", "React", "MongoDB"],
                     github: "https://github.com/haghob/MarketMatchBackoffice"
+                },
+                Cooltech: {
+                    title: "CoolTech",
+                    logo: "logo.png",
+                    period: "May 2025 - June 2025",
+                    description: "Individual project - Designed and implemented a test IT infrastructure for a fictional company named CoolTech, utilizing virtualization to optimize resource usage and centralize administration. The infrastructure includes a virtualization server, Active Directory with DNS, an SMB file server, a MySQL database on Ubuntu, an active-passive Apache web cluster with Pacemaker/Corosync, and domain-joined Windows and Linux workstations.",
+                    features: [
+                        "Deployed a virtualization server to host multiple virtual machines",
+                        "Configured a Windows Server 2019 with Active Directory and DNS roles under the 'coolTech.local' domain",
+                        "Set up an SMB file server on Windows Server 2019 with a network share named 'cooltechshare'",
+                        "Installed and configured a MySQL database server on Ubuntu 22.04",
+                        "Implemented an active-passive Apache web cluster using Pacemaker/Corosync, hosting a custom web application",
+                        "Integrated a Windows 10 Pro workstation and an Ubuntu 22.04 workstation into the 'coolTech.local' domain with access to 'cooltechshare'"
+                       
+                    ],
+                    technicalAchievements: [
+                        "Created and configured virtual machines using a virtualization platform",
+                        "Installed and promoted a Windows Server 2019 to a domain controller with Active Directory and DNS roles",
+                        "Developed organizational units and group policies (GPO) for user management",
+                        "Configured an SMB file server with domain authentication and share permissions",
+                        "Set up a MySQL database on Ubuntu 22.04 with network configuration and remote access",
+                        "Deployed an Apache web server with PHP on AlmaLinux, configured on port 10080 with SELinux adjustments",
+                        "Built an active-passive cluster using Pacemaker/Corosync, including web application development and testing",
+                        "Joined a Windows 10 Pro and an Ubuntu 22.04 workstation to the Active Directory domain with file share access"
+                    ],
+                    results: [
+                        "Successfully established a fully functional virtualized IT infrastructure for testing",
+                        "Achieved centralized user and resource management through Active Directory",
+                        "Ensured high availability of the web application via the Apache cluster",
+                        "Verified seamless integration and accessibility across Windows and Linux workstations"
+                    ],
+                    challenges: [
+                        "Coordinating the configuration of multiple virtualized components",
+                        "Ensuring compatibility between Windows and Linux systems in the domain",
+                        "Optimizing network settings for the Apache cluster and MySQL server"
+                    ],
+                    documentation: [
+                        "Detailed infrastructure architecture diagram",
+                        "Step-by-step guides for virtual machine setup and server configuration",
+                        "Active Directory and GPO management documentation",
+                        "MySQL installation and network configuration procedures",
+                        "Apache cluster setup and web application development notes",
+                        "Workstation integration and testing guidelines",
+                        "Comprehensive project documentation including virtualization setup, server configurations, cluster deployment, and testing procedures"
+                    ],
+                    advisor: "N/A",
+                    technologies: ["VMware", "Windows Server 2019", "Active Directory", "DNS", "Ubuntu 22.04", "MySQL", "AlmaLinux", "Apache", "PHP", "Pacemaker", "Corosync"],
+                    github: " "
                 },
                 haghob: {
                     title: "haghob Website",
