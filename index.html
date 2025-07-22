@@ -1305,19 +1305,23 @@
                     
         <section id="projects" class="section">
             <h2 class="section-title">Projects</h2>
+
+
+            
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="card">
-                        <h3>haghob Website</h3>
+                        <h3>MarketMatch</h3>
                         
                     <div class="project-links">
                         
-                        <button class="project-link view-details" data-project="haghob">
+                        <button class="project-link view-details" data-project="Market">
                             <i class="fas fa-external-link-alt"></i> See more
                         </button>
                     </div>
                 </div>
             </div>
+                
                 <div class="timeline-item">
                     <div class="card">
                         <h3>AgriFlow</h3>
@@ -1494,6 +1498,38 @@
                 });
             });
             const projectsData = {
+                Market: {
+                    title: "MarketMatch",
+                    logo: "logo.png",
+                    period: "February 2025 - May 2025",
+                    description: "Individual project - Developed a platform to connect local vendors with consumers using real-time market data analysis.",
+                    features: [
+                        "Real-time price comparison across multiple vendors",
+                        "User-friendly interface for browsing market trends",
+                        "Automated notifications for price drops"
+                       
+                    ],
+                    technicalAchievements: [
+                        "Built a scalable backend with Node.js and Express",
+                        "Integrated real-time data APIs for market updates",
+                        "Designed responsive front-end with React"
+                    ],
+                    results: [
+                        "Increased user engagement by 40%",
+                        "Reduced price comparison time by 60%"
+                    ],
+                    challenges: [
+                        "Handling large-scale real-time data",
+                        "Ensuring API reliability and performance"
+                    ],
+                    documentation: [
+                        "API integration guide",
+                        "User interface design documentation"
+                    ],
+                    advisor: "N/A",
+                    technologies: ["Node.js", "Express", "React", "MongoDB"],
+                    github: "https://github.com/haghob/MarketMatchBackoffice"
+                },
                 haghob: {
                     title: "haghob Website",
                     logo: "logo.png",
